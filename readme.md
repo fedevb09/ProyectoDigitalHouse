@@ -9,8 +9,7 @@ Sitios de referencia:
 
 Que ofrece?
 
-Nuestra audiencia serán personas que disfruten del arte de nuevos creadores pero a precios razonables.
-Que busquen obras artísticas pero sin invertir tanto dinero pero recibiendo obras autenticas.
+Ofrecerá artículos vinculados con el arte, desde cuadros y álbumes hasta NFT´s.
 
 A quien?
 
