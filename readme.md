@@ -32,6 +32,6 @@ Ivan es nuestro compañero trabajador, ese compañero que cuando preguntas "Quie
 
 Omar , querido Omar. Siempre de buen humor, se rie 24/7 y es copado. Es PM en una empresa de software y ahora esta buscando ampliar sus conocimientos en el mundo del código. A Omar le encanta la fiesta, por eso escucha Don Omar y en su "modo serio" es fanático de las obras de Jackson Pollock.
 
-Nacho,  COMPLETAR.
+Nacho, el alma del equipo, artista por naturaleza, nacido en la epoca equivocada, predispuesto a trabajar en cualquier momento, le gusta jugar al ajedrez mientras escucha musica clasica, hincha del rojo en sus buenas epocas.
 
 
