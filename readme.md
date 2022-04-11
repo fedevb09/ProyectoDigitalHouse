@@ -34,4 +34,11 @@ Omar , querido Omar. Siempre de buen humor, se rie 24/7 y es copado. Es PM en un
 
 Nacho, el alma del equipo, artista por naturaleza, nacido en la epoca equivocada, predispuesto a trabajar en cualquier momento, le gusta jugar al ajedrez mientras escucha musica clasica, hincha del rojo en sus buenas epocas.
 
+Colores:
+
+1- #29C6C1
+2- #FE1F62
+3- #F2D66A
+4- #6902DF
+
 
