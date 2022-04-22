@@ -1,0 +1,23 @@
+{
+  "name": "grupo2artplace",
+  "version": "1.0.0",
+  "description": "E-Commerce: artplace",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nachoalquati/grupo2Artplace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nachoalquati/grupo2Artplace/issues"
+  },
+  "homepage": "https://github.com/nachoalquati/grupo2Artplace#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
