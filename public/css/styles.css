@@ -9,3 +9,8 @@ colores{
     color: #F2D66A;
     color: #6902DF;
 }
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
