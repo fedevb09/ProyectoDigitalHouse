@@ -41,4 +41,7 @@ Colores:
 3- #F2D66A
 4- #6902DF
 
-a
+Colores:
+
+1-Titulos: League Spartan
+2-Textos: Ubuntu
