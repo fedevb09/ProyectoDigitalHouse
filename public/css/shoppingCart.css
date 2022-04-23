@@ -1,0 +1,14 @@
+colores{
+    color: #29C6C1;
+    color: #FE1F62;
+    color: #F2D66A;
+    color: #6902DF;
+}
+
+body{
+    font-family: 'League Spartan', sans-serif
+}
+
+.lista{
+    list-style: none;
+}
