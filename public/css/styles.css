@@ -7,10 +7,11 @@ colores{
     color: #29C6C1;
     color: #FE1F62;
     color: #F2D66A;
-    color: #6902DF;
+    color: #9565cd;
 }
 
 *{
     margin: 0;
     box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif
 }

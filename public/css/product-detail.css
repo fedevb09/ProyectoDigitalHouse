@@ -1,0 +1,58 @@
+colores{
+    color: #29C6C1;
+    color: #FE1F62;
+    color: #F2D66A;
+    color: #6902DF;
+}
+
+body{
+    font-family: 'League Spartan', sans-serif
+}
+
+.product-title{
+    font-weight: 300;
+    font-size: 20px;
+    background-color: #F2D66A;
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.92);
+}
+.product-title-container{
+    margin: 20px;
+}
+
+.barrier{
+    background:linear-gradient(to top, #ededed 5%, #bab1ba 100%);
+    display: block;
+    margin: auto;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.92);
+    margin-bottom: 30px;
+    height: 10px;
+}
+.left-product-section{
+    border-right: solid 2px black;
+    display:inline-block;
+}
+.product-miniature{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.miniature-numbers{
+    margin: auto;
+}
+.main-product-container{
+    display: flex;
+}
+
+.minature-image{
+    width: 90%;
+    height: 10%;
+    box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.92);
+}
