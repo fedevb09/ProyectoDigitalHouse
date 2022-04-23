@@ -8,8 +8,12 @@ colores{
 
 body{
     font-family: 'League Spartan', sans-serif;
+    text-decoration: none;
 }
-
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: black;
+}
 .product-title{
     font-weight: 300;
     font-size: 20px;
@@ -83,6 +87,7 @@ body{
     margin-left: 10px;
 }
 .seller-creator{
+    color: white;
     background-color: #29C6C1;
     display: inline-block;
     padding: 8px 8px 5px 8px;
@@ -98,6 +103,7 @@ body{
     width: 50px;
     height: 50px;
     padding: 10px;
+    border-radius: 50%;
 }
 
 .creator-seller-container{
@@ -151,10 +157,78 @@ align-items: center;
 
 .buy-button{
     background-color: #FE1F62;
+    color: white;
     border: none;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
     padding: 13px 20px 10px 20px;
     margin-bottom: 30px;
+    box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.92);
+}
+.buy-button:hover{
+    box-shadow: 0px 0px 6px 3px black;
+    font-weight: 500;
+}
+
+.mini-stars{
+    font-size: 0.7em;
+    color: #F2D66A;
+}
+
+.recomended-product-titles{
+    color: white;
+    font-weight: 300;
+    font-size: 15px;
+    background-color: #29C6C1;
+    display: inline-block ;
+    padding: 8px 8px 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.92);
+    width: fit-content;
+}
+
+.little-product{
+    width: 30%;
+}
+
+.recomended-product-img{
+    width: 100%;
+}
+.img-box-overflow{
+    display:flex;
+    overflow: hidden;
+    height: 230px;
+    width: 230px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.92);
+}
+.recomended-image-title-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+
+.recomended-products{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.recomended-price-usd{
+    display: inline-block;
+    padding-right: 6px;
+}
+
+.recomended-product-img:hover{
+    width: 110%;
+}
+.img-box-overflow:hover{
+    box-shadow: 0px 2px 7px 3px black;
+}
+
+.recomended-products-container{
+    margin-left: 20px;
 }
