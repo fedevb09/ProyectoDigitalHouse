@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body{
+    text-decoration: none;
+    list-style: none;
+}
+
+.top-header{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height:10vw
+}
+
+.logo{
+    width: 15%
+}
+
+.input{
+    background-color: white;
+    color: black;
+    height: 20%;
+    font-size: 24px
+}
+
+.submit{
+    background-color: white;
+    color: black;
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    flex-grow: 2;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: black;
+}
+
+nav{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav-site{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    flex-grow: 2;
+}
+
+.nav-user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.nav-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+    color:white
+}
+
+
+

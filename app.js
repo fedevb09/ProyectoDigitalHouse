@@ -15,3 +15,7 @@ app.get('/', (req,res)=>{
 app.get('/producto', (req,res)=>{
     res.sendFile(path.resolve(__dirname,'./views/productDetail.html'))
 })
+
+app.get('/registro', (req,res)=>{
+    res.sendFile(path.resolve(__dirname,'./views/signup.html'))
+})
