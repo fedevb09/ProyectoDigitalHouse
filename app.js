@@ -19,3 +19,7 @@ app.get('/producto', (req,res)=>{
 app.get('/registro', (req,res)=>{
     res.sendFile(path.resolve(__dirname,'./views/signup.html'))
 })
+
+app.get('/footer', (req,res)=>{
+    res.sendFile(path.resolve(__dirname,'./views/footer.html'))
+})
