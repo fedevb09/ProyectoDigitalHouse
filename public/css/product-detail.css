@@ -10,7 +10,7 @@ body{
     font-family: 'League Spartan', sans-serif;
     text-decoration: none;
 }
-a:link, a:visited, a:active {
+main a:link, a:visited, a:active {
     text-decoration:none;
     color: black;
 }
@@ -21,12 +21,13 @@ a:link, a:visited, a:active {
     display: inline-block;
     padding: 8px 8px 5px 8px;
     border-radius: 5px;
-    box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.92);
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.92);
 }
 .product-title-container{
     margin: 20px;
 }
 .link-icons{
+    margin: 10px 0px;
     display: flex;
     justify-content: right;
 }
@@ -40,14 +41,14 @@ a:link, a:visited, a:active {
     margin: auto;
     width: 90%;
     border-radius: 5px;
-    box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.92);
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.92);
     margin-bottom: 30px;
     margin-top: 30px;
     height: 10px;
 }
 .left-product-section{
     border-right: solid 2px black;
-    display:inline-block;
+    display:flex;
     width: 20%;
 }
 .product-miniature{
@@ -55,8 +56,9 @@ a:link, a:visited, a:active {
     flex-direction: column;
     margin-left: 10px;
     margin-right: 10px;
-    justify-content:space-evenly;
+    justify-content:space-between;
     align-items: center;
+    width: 100%;
 }
 .miniature-numbers{
     margin: auto;
@@ -69,12 +71,12 @@ a:link, a:visited, a:active {
 
 .minature-image{
     width: 90%;
-    height: 10%;
-    box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.92);
+    transition-duration: 0.5s;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.92);
 }
 .middle-product-section{
     border-right: black solid 2px;
-    margin: 0px 10px;
+    margin: 10px;
     width: 60%;
     display: inline-block;
 }
@@ -87,14 +89,16 @@ a:link, a:visited, a:active {
     margin-left: 10px;
 }
 .seller-creator{
+
     color: white;
     background-color: #29C6C1;
     display: inline-block;
     padding: 8px 8px 5px 8px;
     border-radius: 5px;
-    box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.92);
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.92);
 }
 .seller-creator-titles{
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
 }
@@ -123,6 +127,7 @@ align-items: center;
     justify-content: space-between;
 }
 .product-description{
+    margin: 10px 0px 0px 0px;
     border-bottom: 2px solid black;
 }
 .propularity-container{
@@ -164,7 +169,8 @@ align-items: center;
     justify-content: center;
     padding: 13px 20px 10px 20px;
     margin-bottom: 30px;
-    box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.92);
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.92);
+    transition-duration: 0.5s;
 }
 .buy-button:hover{
     box-shadow: 0px 0px 6px 3px black;
@@ -172,11 +178,14 @@ align-items: center;
 }
 
 .mini-stars{
+    margin: 10px 0px 0px 0px;
     font-size: 0.7em;
     color: #F2D66A;
 }
 
 .recomended-product-titles{
+    margin-top: 20px;
+    margin-bottom: 10px;
     color: white;
     font-weight: 300;
     font-size: 15px;
@@ -184,7 +193,7 @@ align-items: center;
     display: inline-block ;
     padding: 8px 8px 5px 8px;
     border-radius: 5px;
-    box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.92);
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.92);
     width: fit-content;
 }
 
@@ -194,15 +203,17 @@ align-items: center;
 
 .recomended-product-img{
     width: 100%;
+    transition-duration: 0.5s;
 }
 .img-box-overflow{
+    transition-duration: 0.5s;
     display:flex;
     overflow: hidden;
     height: 230px;
     width: 230px;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.92);
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.92);
 }
 .recomended-image-title-container{
     display: flex;
@@ -216,19 +227,25 @@ align-items: center;
     justify-content: space-evenly;
 
 }
-
 .recomended-price-usd{
+    margin: 5px 0px;
     display: inline-block;
     padding-right: 6px;
+    transition-duration: 0.5s;
+    color: black;
 }
 
 .recomended-product-img:hover{
     width: 110%;
 }
 .img-box-overflow:hover{
-    box-shadow: 0px 2px 7px 3px black;
+    box-shadow: 0px 0px 7px 3px black;
 }
 
 .recomended-products-container{
     margin-left: 20px;
+}
+.minature-image:hover{
+    box-shadow: 0px 0px 7px 3px rgb(155, 155, 155);
+
 }
