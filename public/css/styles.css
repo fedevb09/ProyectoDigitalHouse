@@ -43,7 +43,9 @@ boxshadow{
     /* FIN - BOTONES */
 
        /* SEPARADORES DE SECCIONES */ 
-       
+       /* Para usar el separador debemos crear en nuestra
+       pagina de html un div con clase class="end-section-line"
+       para linkearla al siguiente estilo */ 
 .end-section-line{
         background:linear-gradient(to top, #ededed 5%, #bab1ba 100%);
         display: block;
