@@ -9,12 +9,16 @@ colores{
 body{
     font-family: 'League Spartan', sans-serif;
     text-decoration: none;
+    height: 100vw;
+    width:100vw;
 }
 main a:link, a:visited, a:active {
     text-decoration:none;
     color: black;
 }
+
 .product-title{
+    margin-top:60px ;
     font-weight: 300;
     font-size: 20px;
     background-color: #F2D66A;
@@ -225,6 +229,7 @@ align-items: center;
 .recomended-products{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 30px;
 
 }
 .recomended-price-usd{

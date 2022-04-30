@@ -1,0 +1,129 @@
+
+*{
+    font-family: 'League Spartan', sans-serif;
+    margin: 0;
+}
+body{
+    width: 100%;
+}
+
+header{
+    margin-top: 1px;
+    background: rgb(255,255,255);
+    background-image: linear-gradient(to right,black,black,rgb(107, 107, 107), grey);
+    height: 100px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 6px 2px black;
+    width: 100%;
+    z-index: 1000;
+    color: white;
+}
+header ul{
+    list-style: none;
+    display: inline-block;
+}
+
+.top-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 75%;
+}
+
+.logo img{
+
+    width: 50%;
+    box-shadow: 0px 0px 8px 3px black;
+    margin: 10px 0px 0px 0px;
+    border-radius: 0px 0px 14px 14px;
+}
+
+.header-searchbar-input{
+    background-color: white;
+    font-size: 18px;
+    width: 40%;
+    padding: 7.5px;
+    border-radius: 10px 0px 0px 10px;
+    border: none;
+}
+
+.submit-header-searchbar{
+    background-color: white;
+    padding: 10px;
+    color: grey;
+    display: flex;
+    align-items: center;
+    border-radius: 0px 10px 10px 0px;
+}
+
+
+.form-header-searchbar{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: -5%;
+    align-items: center;
+    flex-grow: 2;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+header nav{
+    width: 80%;
+    display: flex;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+header a:hover{
+    color: white;
+}
+header a:visited{
+    color: white;
+}
+header a:active{
+    color: white;
+}
+header a:link{
+    color: white;
+}
+.nav-container{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-site{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    flex-grow: 2;
+    margin: 0;
+}
+
+.nav-user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.nav-icons{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    color:white;
+    margin: 0;
+}
+.header-nav-links{
+    color: white;
+}
