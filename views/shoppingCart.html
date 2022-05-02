@@ -1,33 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <script src="https://kit.fontawesome.com/5309449a51.js" crossorigin="anonymous"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>artplace</title>
-    <link rel="stylesheet" href="/public/css/normalize.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="https://kit.fontawesome.com/5309449a51.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/public/css/shoppingCart.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <title>Shopping Cart</title>
 
 </head>
 <body>
-    <nav>
-        <div><img src="/public/images/artplace.png" alt="artplace"></div>
-        <div>
-            <ul class="lista">
-                <li> <i class="fa-solid fa-phone"></i> Linea de concatcto</li>
-                <li> <i class="fa-solid fa-envelope"></i> Correo contacto</li>
-            </ul>
+    <header>
+        <div class="top-header">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="form-header-searchbar" action="#" method="GET">
+                <input type="text" class="header-searchbar-input" placeholder="Buscar musica, pinturas, artistas..."></input>
+                <div class="submit-header-searchbar"><i class="fa fa-search"></i></div>
+            </div>
         </div>
-    </nav>
+        <div class="nav-container">
+            <nav>
+                <ul class="nav-site">
+                    <li><a href="#" class="header-nav-links">Categorías</a></li>
+                    <li><a href="#" class="header-nav-links">Promociones</a></li>
+                    <li><a href="#" class="header-nav-links">Más buscados</a></li>
+                </ul>
+                <ul class="nav-icons">
+                    <li><a href="#" class="header-nav-links"> <i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="/carrito" class="header-nav-links"> <i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
+        
         <p>Espacio para carrito de compra</p>
+    
     </main>
+
+    <footer class="footer-styles">
+        <section class="footer-menu">
+            <article class="right-menu-container">
+                <ul class="lists-style">
+                    <li> <a class="footer-links"  href="/views/index.html">Inicio</a></li>
+                    <li> <a class="footer-links"  href="#">Contacto</a></li>
+                    <li> <a class="footer-links"  href="#">Sobre Nosotros</a> </li>
+                </ul>
+            </article>
+            <article class="right-menu-container">
+                <ul class="lists-style">
+                    <li> <a class="footer-links"  href="/">Iniciar sesión</a></li>
+                    <li><a class="footer-links"  href="/registro">Registrarme</a></li>
+                    <li> <a class="footer-links"  href="#">Preguntas frecuentes</a></li>
+                </ul>
+                
+            </article>
+
+        </section>
+        <section class="social-media-links-container">
+            <div class="single-icon-container">
+                <a href="" class="footer-links" > 
+                    <i class="fa-brands fa-facebook-f icons"></i>
+                </a>
+            </div>
+            <div class="single-icon-container">
+                <a href="" class="footer-links" > 
+                    <i class="fa-brands fa-instagram icons"></i>
+                </a>
+            </div>
+            <div class="single-icon-container">
+                <a class="footer-links" href="">
+                    <i class="fa-brands fa-twitter icons"></i>
+                </a>
+            </div>
+        </section>
+        <section class="footer-texts">
+            <article>
+                <p class="website-rigths-text">Todos los derechos reservados | artplace® </p>
+            </article>
+        </section>
+    </footer>
 
 </body>
 </html>

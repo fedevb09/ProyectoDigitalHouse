@@ -27,3 +27,7 @@ app.get('/footer', (req,res)=>{
 app.get('/header', (req,res)=>{
     res.sendFile(path.resolve(__dirname,'./views/header.html'))
 })
+
+app.get('/carrito', (req,res)=>{
+    res.sendFile(path.resolve(__dirname,'./views/shoppingCart.html'))
+})
