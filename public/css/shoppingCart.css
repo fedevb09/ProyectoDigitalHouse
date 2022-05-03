@@ -8,12 +8,12 @@ colores{
 main{
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 20vw;
+    justify-content: center;
+    padding-top: 50px;
 }
 
 .carrito{
+    padding-right: 100px;
 
 }
 
@@ -22,14 +22,17 @@ table{
 }
 
 th,td{
-
+    padding:20px;
+    border-bottom: solid;
+    text-align: center;
 }
 
 .modulo_pago{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    padding-top: 50px;
+    padding: 30px;
+    background-color: #F2D66A;
 }
 
 form{
@@ -63,4 +66,8 @@ p{
 .resumen_pago div{
     display: flex;
     justify-content: space-between;
+}
+
+img{
+    width: 100px;
 }
