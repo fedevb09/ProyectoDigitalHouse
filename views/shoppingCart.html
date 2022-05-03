@@ -53,7 +53,7 @@
                         <th>Descripción</th>
                         <th>Eliminar</th>
                         <th>Precio inicial</th>
-                        <th>descuento</th>
+                        <th>Descuento</th>
                         <th>Precio final</th>
                     </tr>
                 </thead>
@@ -78,9 +78,13 @@
 
         <div class="modulo_pago">
             <form action="" method="">
-                <label for="codigo" class="codigo">Ingresa código de descuento:
-                    <input type="text" name="código" id="codigo">
-                </label>
+                
+                <div class="bono">
+                    <label for="codigo" class="codigo">Ingresa código de descuento:
+                        <input type="text" name="código" id="codigo">
+                    </label>
+                    <button> Aplicar </button>
+                </div>
                 
                 
                 <label for="envio" class="envios">Selecciona tipo de envio:
@@ -88,7 +92,6 @@
                     <Label><input type="radio" name="envio" value="4 dias">4 dias</Label>
                     <Label><input type="radio" name="envio" value="10 dias">10 dias</Label>
                 </label>
-
 
             </form>
             
@@ -111,10 +114,7 @@
                     <span>1.300</span>
                 </div>
             </div>
-
-            <button>
-
-            </button>
+            <button class="boton-pagar"> Ir a Pagar </button>
         </div>
     </main>
 

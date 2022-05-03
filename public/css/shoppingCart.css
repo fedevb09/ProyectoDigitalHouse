@@ -17,10 +17,6 @@ main{
 
 }
 
-table{
-
-}
-
 th,td{
     padding:20px;
     border-bottom: solid;
@@ -70,4 +66,13 @@ p{
 
 img{
     width: 100px;
+}
+
+.boton-pagar{
+    margin: 20px;
+}
+
+.bono{
+    display: flex;
+    align-items: flex-end;
 }
