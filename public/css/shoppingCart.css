@@ -29,6 +29,7 @@ th,td{
     flex-wrap: nowrap;
     padding: 30px;
     background-color: #F2D66A;
+    height: 50%;
 }
 
 form{
