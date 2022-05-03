@@ -11,9 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/shoppingCart.css">
+
     <title>Shopping Cart</title>
 
 </head>
@@ -44,9 +45,71 @@
     </header>
 
     <main>
-        
-        <p>Espacio para carrito de compra</p>
-    
+        <div class="carrito">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Eliminar</th>
+                        <th>Precio inicial</th>
+                        <th>Precio final</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>imagen</td>
+                    <td>icono</td>
+                    <td>precio 1</td>
+                    <td>precio 2</td>
+                </tr>
+                <tr>
+                    <td>imagen</td>
+                    <td>icono</td>
+                    <td>precio 1</td>
+                    <td>precio 2</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="modulo_pago">
+            <form action="" method="">
+                <label for="codigo" class="codigo">Ingresa código de descuento:
+                    <input type="text" name="código" id="codigo">
+                </label>
+                
+                
+                <label for="envio" class="envios">Selecciona tipo de envio:
+                    <Label><input type="radio" name="envio" value="Dia siguiente">Dia siguiente</Label>
+                    <Label><input type="radio" name="envio" value="4 dias">4 dias</Label>
+                    <Label><input type="radio" name="envio" value="10 dias">10 dias</Label>
+                </label>
+
+
+            </form>
+            
+            <div class="resumen_pago">
+                <h2>Resumen de compra</h2>
+                <div>
+                    <p>Subtotal:</p>
+                    <span>1.000</span>
+                </div>
+                <div>
+                    <p>Costo de envio:</p>
+                    <span>200</span>
+                </div>
+                <div>
+                    <p>Impuestos:</p>
+                    <span>50</span>
+                </div>
+                <div>
+                    <p>Total:</p>
+                    <span>1.300</span>
+                </div>
+            </div>
+
+            <button>
+
+            </button>
+        </div>
     </main>
 
     <footer class="footer-styles">

@@ -5,10 +5,62 @@ colores{
     color: #6902DF;
 }
 
-body{
-    font-family: 'League Spartan', sans-serif
+main{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20vw;
 }
 
-.lista{
-    list-style: none;
+.carrito{
+
+}
+
+table{
+
+}
+
+th,td{
+
+}
+
+.modulo_pago{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-top: 50px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.codigo{
+    display: flex;
+    flex-direction: column;
+}
+
+.envios{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+
+.resumen_pago{
+    padding-top: 20px;
+}
+
+h2{
+    padding: 15px 0px;
+}
+
+p{
+    font-weight: 500;
+}
+
+.resumen_pago div{
+    display: flex;
+    justify-content: space-between;
 }
