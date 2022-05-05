@@ -1,7 +1,7 @@
 Conclusiones del segundo Sprint:
 
 1. Mantener: 
-    *seguir ayudandonos como equipp
+    *seguir ayudandonos como equipo
     *realizar reuniones de trabajo conjunto
     *continuar con el compromiso en el proyecto
     *tener una comunicación constante
