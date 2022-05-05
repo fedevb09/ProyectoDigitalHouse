@@ -31,3 +31,5 @@ app.get('/header', (req,res)=>{
 app.get('/carrito', (req,res)=>{
     res.sendFile(path.resolve(__dirname,'./views/shoppingCart.html'))
 })
+
+app.get('/login', (req, res) => res.sendFile(path.resolve(__dirname, './views/logIn.html')))

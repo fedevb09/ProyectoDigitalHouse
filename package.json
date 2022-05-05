@@ -19,6 +19,7 @@
   "homepage": "https://github.com/nachoalquati/grupo2Artplace#readme",
   "dependencies": {
     "express": "^4.18.0",
-    "flexbox": "^0.0.3"
+    "flexbox": "^0.0.3",
+    "nodemon": "^2.0.16"
   }
 }

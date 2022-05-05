@@ -11,9 +11,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/css/signup.css">
         <link rel="stylesheet" href="/css/header.css">
         <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/signUp.css">
         
     </head>
 <body>
@@ -42,10 +42,10 @@
         </div>
     </header>
     <main>
-        <section>
+        <section style="background-image: url('../images/background-signup.webp')">
             <div class="form-container">
-            <h2>Crea tu cuenta en artplace!</h2>
-            <h3>Completa el formulario de registro</h3>
+            <h2>¡Crea tu cuenta en artplace!</h2>
+            <h4>Completa el formulario de registro</h4>
                 <form action="/registro" method="post">
                     <label for="nombre">Nombre y apellido</label>
                     <input type="text" name="nombre" id="nombre">
@@ -61,12 +61,8 @@
 
                     <label for="userProfile">Perfil del usuario</label>
                     <div class="radio-container">
-                    <div>
-                        <label><input type="radio" name="perfil" value="Comprar">Comprar</label>
-                    </div>
-                    <div>
-                        <label><input type="radio" name="perfil" value="Vender">Vender</label>
-                    </div>
+                    <input type="radio" name="perfil" value="Comprar"><label>Comprar</label>
+                    <input type="radio" name="perfil" value="Vender"><label>Vender</label>
                     </div>
 
                     <div class="profilePicInput">

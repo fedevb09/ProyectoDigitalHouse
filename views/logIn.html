@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/header.css">
+    <title>Artplace</title>
     <script src="https://kit.fontawesome.com/5309449a51.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/shoppingCart.css">
-
-    <title>Shopping Cart</title>
-
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/logIn.css">
 </head>
 <body>
     <header>
@@ -37,103 +34,30 @@
                     <li><a href="#" class="header-nav-links">Más buscados</a></li>
                 </ul>
                 <ul class="nav-icons">
-                    <li><a href="/login" class="header-nav-links"> <i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="#" class="header-nav-links"> <i class="fa-solid fa-user"></i></a></li>
                     <li><a href="/carrito" class="header-nav-links"> <i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
     <main>
-        <div class="carrito">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Descripción</th>
-                        <th>Eliminar</th>
-                        <th>Precio inicial</th>
-                        <th>Descuento</th>
-                        <th>Precio final</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td><img src="/images/lebron.jpg" alt=""></td>
-                    <td><div><p>40X50</p><p>Marco de madera</p></div></td>
-                    <td><i class="fa-regular fa-trash-can"></i></td>
-                    <td>250</td>
-                    <td>no aplica</td>
-                    <td>250</td>
-                </tr>
-                <tr>
-                    <td><img src="/images/pop-trooper.jpeg" alt=""></td>
-                    <td><div><p>90X50</p><p>Marco de madera</p></div></td>
-                    <td><i class="fa-regular fa-trash-can"></i></td>
-                    <td>250</td>
-                    <td>no aplica</td>
-                    <td>250</td>
-                </tr>
-                <tr>
-                    <td><img src="/images/Cuadro-bobba.png" alt=""></td>
-                    <td><div><p>35X50</p><p>Marco de madera</p></div></td>
-                    <td><i class="fa-regular fa-trash-can"></i></td>
-                    <td>250</td>
-                    <td>no aplica</td>
-                    <td>250</td>
-                </tr>
-                <tr>
-                    <td><img src="/images/cerati2.jpg" alt=""></td>
-                    <td><div><p>24X34</p><p>Marco de madera</p></div></td>
-                    <td><i class="fa-regular fa-trash-can"></i></td>
-                    <td>250</td>
-                    <td>no aplica</td>
-                    <td>250</td>
-                </tr>
-            </table>
-        </div>
+        <section style="background-image: url('../images/background-signup.webp')">
+            <div class="loginContainer">
+                <h2>Inicia sesión</h2>
+                <form action="/registro" method="post">
+                    <label for="userName">Nombre de usuario o correo electrónico</label>
+                    <input type="text" name="userName" id="userName">
 
-        <div class="modulo_pago">
-            <form action="" method="">
-                
-                <div class="bono">
-                    <label for="codigo" class="codigo">Ingresa código de descuento:
-                        <input type="text" name="código" id="codigo">
-                    </label>
-                    <button> Aplicar </button>
-                </div>
-                
-                
-                <label for="envio" class="envios">Selecciona tipo de envio:
-                    <Label><input type="radio" name="envio" value="Dia siguiente">Dia siguiente</Label>
-                    <Label><input type="radio" name="envio" value="4 dias">4 dias</Label>
-                    <Label><input type="radio" name="envio" value="10 dias">10 dias</Label>
-                </label>
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" id="password">
 
-            </form>
-            
-            <div class="resumen_pago">
-                <h2>Resumen de compra</h2>
-                <div>
-                    <p>Subtotal:</p>
-                    <span>1.000</span>
-                </div>
-                <div>
-                    <p>Costo de envio:</p>
-                    <span>200</span>
-                </div>
-                <div>
-                    <p>Impuestos:</p>
-                    <span>50</span>
-                </div>
-                <div>
-                    <p>Total:</p>
-                    <span>1.300</span>
-                </div>
+                    <div class="loginButton">
+                        <button type="submit">Entrar</button>
+                    </div>
+                </form>
             </div>
-            <button class="boton-pagar"> Ir a Pagar </button>
-        </div>
+        </section>
     </main>
-
     <footer class="footer-styles">
         <section class="footer-menu">
             <article class="right-menu-container">
@@ -176,6 +100,5 @@
             </article>
         </section>
     </footer>
-
 </body>
 </html>

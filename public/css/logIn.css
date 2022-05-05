@@ -1,11 +1,7 @@
 *{
+    margin: 0;
     box-sizing: border-box;
-    font-family: 'League Spartan', sans-serif;
-}
-
-body{
-    text-decoration: none;
-    list-style: none;
+    font-family: 'League Spartan', sans-serif
 }
 
 section{
@@ -20,20 +16,21 @@ header{
     margin-bottom: 0;
 }
 
-.form-container{
+.loginContainer{
     background-color: white;
     display: flex;
     flex-direction: column;
     border: solid 3px #FE1F62;
     border-radius: 10px;
-    margin: 70px 0px;
+    width: 25%;
+    margin: 70px;
 }
 
 form{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
 h2{
@@ -43,61 +40,26 @@ h2{
     margin-top: 3%;
 }
 
-h4{
-    color:white;
-    text-shadow: 2px 0 0 rgb(0, 0, 0), -2px 0 0 rgb(0,0,0), 0 2px 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
-    text-align: center;
-}
-
-.form-container input{
+.loginContainer input{
     border-radius: 10px;
     padding-left: 1%;
-    margin-left: 5%;
     border: solid 2px #FE1F62;
 }
 
-.form-container label{
+.loginContainer label{
     font-weight: bold;
     margin-top: 4%;
-    margin-left: 5%;
 }
 
-.radio-container{
-    margin-top: 4%;
-    margin-left: 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.radio-container label{
-    margin-top: 0%;
-    margin-left: 2%;
-}
-
-.radio-container input{
-    margin-top: 0%;
-    margin-left: 0%;
-}
-
-.profilePicInput{
-    margin-top: 4%;
-}
-
-.profilePicInput input{
-    padding-left: 0%;
-    border-radius: 0%;
-    border: none;
-}
-
-.buttonContainer{
-    margin-left: 30%;
+.loginButton{
     width: 50%;
     margin-top: 7%;
     margin-bottom: 4%;
+    display: flex;
+    justify-content: center;
 }
 
-.buttonContainer button{
+.loginButton button{
     background-color: white;
     width: 70%;
     border-radius: 10px;
@@ -110,7 +72,7 @@ h4{
     margin-bottom: 4%;
 }
 
-.buttonContainer button:hover{
+.loginButton button:hover{
     box-shadow: 0px 0px 6px 3px black;
     font-weight: 500;
     background-color: #FE1F62;
