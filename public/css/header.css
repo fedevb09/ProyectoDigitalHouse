@@ -19,6 +19,8 @@ header{
     z-index: 1000;
     color: white;
     margin-bottom: 60px;
+    position: relative;
+    z-index: 1000;
 }
 header ul{
     list-style: none;
