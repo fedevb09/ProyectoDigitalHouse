@@ -3,80 +3,104 @@
     font-family: 'League Spartan', sans-serif;
 }
 
-body{
-    text-decoration: none;
-    list-style: none;
-}
-
-.top-header{
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    height:10vw
-}
-
-.logo img{
-    width: 50%;
-    margin: 15%;
-}
-
-.input{
-    height: 20%;
-    font-size: 24px;
-    width: 40%;
-}
-
-.submit{
-    color: white;
-    height: 20%;
-    display: flex;
-    align-items: center;
-}
-
-.form{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 2;
-}
-
-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    background-color: black;
-    list-style: none;
-}
-
 a{
     text-decoration: none;
     color: #FE1F62;
 }
 
-.nav-site{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    align-items: center;
-    flex-grow: 2;
+body{
+    text-decoration: none;
+    list-style: none;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 34%, rgba(212,221,8,1) 86%);
 }
 
-.nav-user{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    flex-grow: 1;
+main{
+    width: 100%;
+    height: 100%;
 }
 
-.nav-icons{
+.featured h2{
+    justify-content: start;
+    color: white;
+}
+
+.offers span{
+  
+    justify-content: start;
+    color: white;
+
+}
+
+.products{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    flex-grow: 1;
-    color:white;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 34%, rgba(212,221,8,1) 86%);
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
 }
+
+.products-offers{
+    display: flex;
+    flex-direction: row;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 34%, rgba(212,221,8,1) 86%);
+    width: 80%;
+    height: 100%;
+    margin-left: 12%;
+}
+
+.product{
+    background-color: white;
+    width: 45vh;
+    height: 45vh;
+    margin: 2%;
+}
+
+.metods-container{
+    color: white;
+    width: 20%;
+    height: 70%;
+    margin: 2%;
+}
+
+.product img{
+    height: 30vh;
+    width: 35vh;
+    margin-left: 5vh;
+    margin-top: 2vh;
+    border-right: 3px solid brown;
+    border-top: 3px solid  brown;
+    border-left: 3px solid  brown;
+}
+
+.product h3{
+    text-align: center;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+}
+
+.price-product{
+    margin-left: 5vh;
+    margin-bottom: 1vh;
+}
+
+.buy-button{
+    color: white;
+    background-color: black;
+    margin-left: 10vh;
+    width: 25vh;
+    border-radius: 1rem;
+}
+
+.buy-button:hover{
+    color: black;
+    background-color: white;
+    margin-left: 10vh;
+    width: 25vh;
+    border-radius: 1rem;
+}
+
 
