@@ -9,6 +9,12 @@ section{
     flex-direction: row;
     justify-content: center;
 }
+.footer-styles{
+    margin-top: 0;
+}
+header{
+    margin-bottom: 0;
+}
 
 .loginContainer{
     background-color: white;
