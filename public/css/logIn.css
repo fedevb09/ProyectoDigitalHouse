@@ -8,6 +8,7 @@ section{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-bottom: 5%
 }
 .footer-styles{
     margin-top: 0;
