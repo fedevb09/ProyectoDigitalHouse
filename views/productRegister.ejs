@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    
+        <script src="https://kit.fontawesome.com/5309449a51.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>artplace</title>
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/signUp.css">
+        
+    </head>
+<body>
+    <%- include ("./partials/header") %> 
+    <main>
+        <section style="background-image: url('../images/general-bg.webp')">
+            <div class="form-container">
+            <h2>Registra tu producto</h2>
+                <form action="/registro" method="post">
+                    <label for="productName">Nombre del producto</label>
+                    <input type="text" name="productName" id="productName" required>
+
+                    <label for="description">Descripción</label>
+                    <input type="text" name="description" id="description" required> 
+
+                    <label for="category">Categoría</label>
+                    <input type="text" name="category" id="category" required>
+
+                    <div class="profilePicInput">
+                        <label for="productImage">Foto de producto</label>
+                        <input type="file" name="productImage" accept=".jpg" id="productImage">
+                    </div>
+
+                        <label for="price">Precio</label>
+                        <input type="text" name="price" id="price">
+
+                        <label for="colours">Colores</label>
+                        <input type="text" name="colours" id="colours">
+
+                        <label for="sizes">Tamaño</label>
+                        <input type="text" name="sizes" id="sizes">
+                        
+                    <div class="buttonContainer">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <%- include ("./partials/footer") %> 
+</body>
+</html>

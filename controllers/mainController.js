@@ -17,6 +17,10 @@ const mainController = {
 
     logIn: (req, res) => {
         res.render("logIn")
+    },
+
+    productRegister: (req, res) => {
+        res.render("productRegister")
     }
 }
 
