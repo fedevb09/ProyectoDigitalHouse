@@ -11,7 +11,7 @@ body{
 header{
     background: rgb(255,255,255);
     background-image: linear-gradient(to right,black,black,rgb(107, 107, 107), grey);
-    height: 100px;
+    height: 120px;
     border-radius: 0px 0px 10px 10px;
     box-shadow: 0px 0px 6px 2px black;
     width: 100%;
@@ -97,6 +97,7 @@ header a:link{
     width: 100%;
     justify-content: flex-end;
     align-items: center;
+    font-size: 24px;
 }
 
 .nav-site{
@@ -106,7 +107,6 @@ header a:link{
     justify-content:space-between;
     align-items: center;
     flex-grow: 2;
-    margin: 0;
 }
 
 .nav-user{
@@ -125,7 +125,6 @@ header a:link{
     justify-content: space-evenly;
     flex-grow: 1;
     color:white;
-    margin: 0;
 }
 .header-nav-links{
     color: white;
