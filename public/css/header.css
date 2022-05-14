@@ -49,6 +49,7 @@ header ul{
     padding: 7.5px;
     border-radius: 10px 0px 0px 10px;
     border: none;
+    height: 40px;
 }
 
 .submit-header-searchbar{
@@ -58,6 +59,7 @@ header ul{
     display: flex;
     align-items: center;
     border-radius: 0px 10px 10px 0px;
+    height: 40px;
 }
 
 
