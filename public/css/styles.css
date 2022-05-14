@@ -88,3 +88,9 @@ boxshadow{
 }
 
        /*  FIN - TITULARES DE ARTICULOS */ 
+
+       /* Background general*/
+       body{
+        background-image: url('../images/general-bg.webp');
+       }
+       
