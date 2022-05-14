@@ -91,29 +91,34 @@ h4{
 }
 
 .buttonContainer{
-    margin-left: 30%;
+    margin-left: 37%;
     width: 50%;
     margin-top: 7%;
     margin-bottom: 4%;
 }
 
 .buttonContainer button{
-    background-color: white;
-    width: 70%;
-    border-radius: 10px;
-    border: solid 3px #FE1F62;
-    color: black;
-    font-weight: bold;
-    padding: 5%;
+    background-color: #FE1F62;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 20px 10px 20px;
+    margin-bottom: 30px;
     box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.92);
     transition-duration: 0.5s;
-    margin-bottom: 4%;
 }
 
 .buttonContainer button:hover{
     box-shadow: 0px 0px 6px 3px black;
     font-weight: 500;
-    background-color: #FE1F62;
-    color: white;
-    transition-duration: 0.7ms;
+}
+
+@media (max-width: 460px) {
+
+    .form-container{
+        margin-left: 10%;
+        margin-right: 10%
+    }
 }

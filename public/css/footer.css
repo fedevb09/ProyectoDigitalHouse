@@ -29,7 +29,6 @@ footer ul{
     border-radius: 5px 5px 0px 0px ;
     box-shadow: 0px 2px 6px 2px black;
     padding-bottom: 10px;
-    margin-top: 50px;
 }
 .footer-link:link .footer-link:visited .footer-link:active {
     text-decoration:none;

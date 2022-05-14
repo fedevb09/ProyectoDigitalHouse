@@ -61,22 +61,37 @@ h2{
 }
 
 .loginButton button{
-    background-color: white;
-    width: 70%;
-    border-radius: 10px;
-    border: solid 3px #FE1F62;
-    color: black;
-    font-weight: bold;
-    padding: 5%;
+    background-color: #FE1F62;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 20px 10px 20px;
+    margin-bottom: 30px;
     box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.92);
     transition-duration: 0.5s;
-    margin-bottom: 4%;
 }
 
 .loginButton button:hover{
     box-shadow: 0px 0px 6px 3px black;
     font-weight: 500;
-    background-color: #FE1F62;
-    color: white;
-    transition-duration: 0.7ms;
+}
+
+@media (max-width: 460px) {
+
+    .loginContainer{
+        width: 90%;
+        margin-left: 2%;
+        margin-right: 2%;
+        padding-bottom: 3%;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .loginContainer{
+        width: 60%;
+        
+    }
 }

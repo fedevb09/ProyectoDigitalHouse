@@ -9,7 +9,6 @@ body{
 }
 
 header{
-    margin-top: 1px;
     background: rgb(255,255,255);
     background-image: linear-gradient(to right,black,black,rgb(107, 107, 107), grey);
     height: 100px;
@@ -18,7 +17,6 @@ header{
     width: 100%;
     z-index: 1000;
     color: white;
-    margin-bottom: 60px;
     position: relative;
     z-index: 1000;
 }
@@ -129,4 +127,11 @@ header a:link{
 }
 .header-nav-links{
     color: white;
+}
+
+@media (max-width: 460){
+
+    .nav-container{
+        display: none;
+    }
 }
