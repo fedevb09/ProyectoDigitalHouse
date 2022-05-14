@@ -48,3 +48,9 @@ Colores:
 
 Tablero Trello:
 https://trello.com/invite/b/k7jMeqRm/07b03a80f92f32c9b94cf7bad5500e9e/sprint-2
+
+Brakpoints:
+
+Mobile: 480px -;
+Tablet: 480px - 1024px;
+Desktop: 1024px +;
