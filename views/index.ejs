@@ -19,12 +19,12 @@
     <%- include ("./partials/header") %> 
 
 <main>
-    <div class="products">
-        <div class="featured">
-            <h2>Mas destacados</h2>
-        </div>
-        <div class="product">
-            <img src="images/kobe-leyenda.jpg" alt="">
+    <h2 class="featured">MAS DESTACADOS</h2>
+    <section class="products">
+        <article class="product">
+            <div class="image-container">
+                <img src="images/kobe-leyenda.jpg" alt="">
+            </div>
             <h3>BL4CK MAMBAS FOR EVER</h3>
             <div class="price-product">
                 <span class="usd">U$D</span>
@@ -33,22 +33,26 @@
             <div class="button-container">
                 <button class="buy-button" href="#">COMPRAR</button>
             </div>
-        </div>
+        </article>
             
-        <div class="product">
-            <img src="images/cerati.jpg" alt="">
-            <h3>GUSTAVO CERATI</h3>
+        <article class="product">
+            <div class="image-container">
+                <img src="images/lebron.jpg" alt="">
+            </div>
+            <h3>LEBRON</h3>
             <div class="price-product">
                 <span class="usd">U$D</span>
-                <span class="price-text">150.00</span>
+                <span class="price-text">239.00</span>
             </div>
             <div class="button-container">
                 <button class="buy-button" href="#">COMPRAR</button>
             </div>
-        </div>
+        </article>
 
-        <div class="product">
-            <img src="images/lennon.jpg" alt="">
+        <article class="product">
+            <div class="image-container">
+                <img src="images/cerati2.jpg" alt="">
+            </div>
             <h3>LENNON</h3>
             <div class="price-product">
                 <span class="usd">U$D</span>
@@ -57,8 +61,8 @@
             <div class="button-container">
                 <button class="buy-button" href="#">COMPRAR</button>
             </div> 
-        </div>
-    </div>
+        </article>
+    </section>
     
     <div class="">
         <div class="metods-container">
@@ -81,50 +85,53 @@
             </div>
         </div>
     </div>
-    
-    <div class="products-offers">
-        <div class="offers">
-            <h2>OFERTAS</h2>
-        </div>
-        <div class="product">
-            <img src="images/cerati2.jpg" alt="">
-            <h3>CERATI PSICODELICO</h3>
-            <div class="price-product">
-                <span class="usd">U$D</span>
-                <span class="price-text">90.00</span>
-                <span class="ofer">%30 OFF</span>
-            </div> 
-            <div class="button-container">
-                <button class="buy-button" href="#">COMPRAR</button>
-            </div>
-        </div>
-            
-        <div class="product">
-            <img src="images/talon.jpg" alt="">
-            <h3>TALON CUADRO EN PIEZAS</h3>
-            <div class="price-product">
-                <span class="usd">U$D</span>
-                <span class="price-text">200.00</span>
-                <span class="ofer">%15 OFF</span>
-            </div>
-            <div class="button-container">
-                <button class="buy-button" href="#">COMPRAR</button>
-            </div> 
-        </div>
 
-        <div class="product">
-            <img src="images/lebron.jpg" alt="">
-            <h3>THE KING</h3>
+    <div class="offers">
+        <h2 class="featured">OFERTAS</h2>
+    </div>
+    <section class="products">
+        <article class="product">
+            <div class="image-container">
+                <img src="images/kobe-leyenda.jpg" alt="">
+            </div>
+            <h3>BL4CK MAMBAS FOR EVER</h3>
             <div class="price-product">
                 <span class="usd">U$D</span>
-                <span class="price-text">250.00</span>
-                <span class="ofer">%10 OFF</span>
+                <span class="price-text">500.00</span>
+            </div> 
+            <div class="button-container">
+                <button class="buy-button" href="#">COMPRAR</button>
+            </div>
+        </article>
+            
+        <article class="product">
+            <div class="image-container">
+                <img src="images/cerati.jpg" alt="">
+            </div>
+            <h3>GUSTAVO CERATI</h3>
+            <div class="price-product">
+                <span class="usd">U$D</span>
+                <span class="price-text">150.00</span>
+            </div>
+            <div class="button-container">
+                <button class="buy-button" href="#">COMPRAR</button>
+            </div>
+        </article>
+
+        <article class="product">
+            <div class="image-container">
+                <img src="images/lennon.jpg" alt="">
+            </div>
+            <h3>LENNON</h3>
+            <div class="price-product">
+                <span class="usd">U$D</span>
+                <span class="price-text">100.00</span>
             </div>
             <div class="button-container">
                 <button class="buy-button" href="#">COMPRAR</button>
             </div> 
-        </div>
-    </div>
+        </article>
+    </section>
 </main>
 
 <%- include ("./partials/footer") %> 
