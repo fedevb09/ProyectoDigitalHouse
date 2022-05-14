@@ -130,7 +130,7 @@ header a:link{
     color: white;
 }
 
-@media (max-width: 460){
+@media (max-width: 480px){
 
     .nav-container{
         display: none;
