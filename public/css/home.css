@@ -31,6 +31,8 @@ main{
     box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.92);
     justify-content: start;
     margin-left: 10%;
+    align-items: center;
+    align-items: center;
 }
 
 .products-offers h2{
@@ -100,7 +102,7 @@ main{
 
 .product h3{
     text-align: center;
-    font-weight: 300;
+    font-weight: 100;
 }
 
 .price-product{
@@ -139,3 +141,52 @@ main{
     margin-bottom: 3%;
 }
 
+@media (max-width: 1200px){
+    .product h3{
+        font-size: 15px;
+    }
+    .buy-button{
+        display: none;
+    }
+    .metods-container h2{
+        font-size: 17px;
+    }
+    .metods-container p{
+        font-size: 12px;
+    }
+    .featured{
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px){
+    .products{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    .product{
+        width: 80%;
+        margin: 3% 0;
+    }
+.featured{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.metods-container{
+    flex-direction: column;
+    justify-content: space-evenly;
+    aspect-ratio: 1/1.1;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 5%;
+    border-radius: 3px;
+}
+.descriptions{
+    width: 90%;
+}
+}
