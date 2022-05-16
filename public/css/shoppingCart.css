@@ -5,7 +5,7 @@ colores{
     color: #6902DF;
 }
 
-main{
+.maincarrito{
     width: 100%;
     display: flex;
     justify-content: center;
