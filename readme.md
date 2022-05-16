@@ -46,8 +46,8 @@ Colores:
 1-Titulos: League Spartan
 2-Textos: Ubuntu
 
-Tablero Trello:
-https://trello.com/invite/b/k7jMeqRm/07b03a80f92f32c9b94cf7bad5500e9e/sprint-2
+Tablero Trello Versión 16/05/2022:
+https://trello.com/grupo2artplace
 
 Brakpoints:
 
