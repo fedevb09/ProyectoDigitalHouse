@@ -93,3 +93,55 @@ img{
     }
 }
 
+@media (max-width: 645px) {
+
+    .maincarrito{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        flex-direction: column;
+    }
+
+    .carrito{
+        padding-right: 0px;
+    }
+
+    .carrito table thead{
+        display:none
+    }
+
+    .carrito table, .carrito table tbody, .carrito table tr, .carrito table td{
+        display:block;
+        width: 100%;
+
+    }   
+
+    .carrito table tr{
+        margin-bottom: 15px;
+    }
+
+    .carrito table td{
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .carrito table td::before{
+        content: attr(data-label);
+        position: absolute;
+        left:0;
+        padding-left: 15px;
+        font-weight: bold;
+    }
+
+
+
+
+
+
+
+
+}
+
+
