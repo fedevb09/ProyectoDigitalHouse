@@ -134,10 +134,89 @@ header a:link{
 }
 
 @media (max-width: 480px){
-
-    .nav-container{
+    .nav-site{
         display: none;
     }
 
+    .nav-container nav{
+        width: 30%;
+    }
+    .hamburger-menu{
+        display: block;
+        font-size: 0.8em;
+        align-items:baseline;
+    }
+
+    header{
+        width: 100%;
+        aspect-ratio: 1/0.1;
+        display: flex;
+        height: 80px;
+    }
+    .header-searchbar-input{
+        width: 25vw;
+        
+    }
+ 
+
+}
+@media (max-width: 1200px){
+    .header-nav-links{
+        font-size: 15px;
+        justify-content:space-around;
+    }
+    .hamburger-menu{
+        display: none;
+    }
+    
 }
 
+@media (max-width: 760px){
+    .nav-site{
+        display: none;
+    }
+    .nav-container nav{
+        width: 30%;
+    }
+    .hamburger-menu{
+        display: block;
+        font-size: 0.8em;
+        align-items:baseline;
+    }
+
+    header{
+        width: 100%;
+        aspect-ratio: 1/0.1;
+        display: flex;
+        height: 80px;
+        align-items: center;
+    }
+    .form-header-searchbar{
+        position: absolute;
+        left: 110px;
+        width: 100%;
+    }
+    .nav-container nav{
+        width: 30%;
+    }
+
+    .nav-icons{
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+    .nav-site{
+        display: none;
+    }
+    .logo{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .logo img{
+        width: 35%;
+    }
+    main{
+        margin-top: 60px;
+    }
+}
