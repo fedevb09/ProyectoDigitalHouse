@@ -91,6 +91,11 @@ img{
     .carrito{
         padding-right: 0px;
     }
+
+    .resumen_pago div{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 645px) {
@@ -133,6 +138,11 @@ img{
         left:0;
         padding-left: 15px;
         font-weight: bold;
+    }
+
+    .resumen_pago div{
+        display: flex;
+        justify-content: center;
     }
 
 }
