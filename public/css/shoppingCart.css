@@ -77,3 +77,19 @@ img{
     display: flex;
     align-items: flex-end;
 }
+
+@media (max-width: 768px) {
+
+    .maincarrito{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        flex-direction: column;
+    }
+
+    .carrito{
+        padding-right: 0px;
+    }
+}
+
