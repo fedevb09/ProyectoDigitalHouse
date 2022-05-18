@@ -17,6 +17,9 @@ main a:link, a:visited, a:active {
     text-decoration:none;
     color: black;
 }
+main{
+    margin-bottom: 10%;
+}
 
 .product-title{
     margin-top:60px ;
@@ -214,8 +217,8 @@ align-items: center;
     transition-duration: 0.5s;
     display:flex;
     overflow: hidden;
-    height: 230px;
-    width: 230px;
+    width: 65%;
+    aspect-ratio: 1/1;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.92);
@@ -224,8 +227,8 @@ align-items: center;
     transition-duration: 0.5s;
     display:flex;
     overflow: hidden;
-    width: 160px;
-    height: 160px;
+    width: 85%;
+    aspect-ratio: 1/1;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.92);
@@ -266,4 +269,43 @@ align-items: center;
 
 .recomended-products-container{
     margin-left: 20px;
+}
+
+@media (max-width: 760px){
+    .main-product-container{
+        flex-direction: column;
+    }
+    .product-miniature{
+        flex-direction: row;
+        width: 70%;
+    }
+    .left-product-section{
+        width:100%;
+        justify-content: center;
+        border: none;
+        margin: 2% 0;
+    }
+    .miniature-img-box-overflow{
+        width: 20%;
+    }
+    .product-miniature p{
+        display: none;
+    }
+    .middle-product-section{
+        width: 100%;
+        border: none;
+    }
+    .right-product-section{
+        width: 90%;
+        border: none;
+    }
+    .seller-creator-titles {
+        justify-content: space-evenly;
+    }
+    .seller-creator-photo-name{
+        justify-content: space-evenly;
+    }
+    .product-info h3{
+        margin: 0 0 5% 0;
+    }
 }
