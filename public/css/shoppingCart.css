@@ -4,7 +4,9 @@ colores{
     color: #F2D66A;
     color: #6902DF;
 }
-
+body{
+    background-image: url('../images/general-bg.webp');
+}
 .maincarrito{
     width: 100%;
     display: flex;

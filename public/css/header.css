@@ -132,6 +132,17 @@ header a:link{
     font-weight: 200;
     font-size: 19px;
 }
+@media (max-width: 1200px){
+    .header-nav-links{
+        font-size: 15px;
+        justify-content:space-around;
+    }
+    .hamburger-menu{
+        display: none;
+        
+    }
+    
+}
 
 @media (max-width: 480px){
     .nav-site{
@@ -160,16 +171,7 @@ header a:link{
  
 
 }
-@media (max-width: 1200px){
-    .header-nav-links{
-        font-size: 15px;
-        justify-content:space-around;
-    }
-    .hamburger-menu{
-        display: none;
-    }
-    
-}
+
 
 @media (max-width: 760px){
     .nav-site{
