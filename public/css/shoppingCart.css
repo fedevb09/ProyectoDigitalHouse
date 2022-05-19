@@ -33,6 +33,11 @@ th,td{
     padding: 30px;
     background-color: #F2D66A;
     height: 50%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px black;
+}
+.radio-delivery-input{
+   margin: 2% 5% 2% 0 ;
 }
 
 form{
@@ -73,14 +78,48 @@ img{
 }
 
 .boton-pagar{
-    margin: 20px;
+    background-color: #FE1F62;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 20px 10px 20px;
+    margin: 6% 0;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.92);
+    transition-duration: 0.5s;
+}
+.boton-pagar:hover{
+    box-shadow: 0px 0px 6px 3px black;
+    font-weight: 500;
 }
 
 .bono{
     display: flex;
     align-items: flex-end;
 }
-
+.discount-code-input{
+    background-color: white;
+    font-size: 18px;
+    padding: 7.5px;
+    border-radius: 10px 0px 0px 10px;
+    border: none;
+    height: 40px;
+}
+.discount-code-apply-button{
+    background-color: white;
+    padding: 10px;
+    color: grey;
+    display: flex;
+    align-items: center;
+    border-radius: 0px 10px 10px 0px;
+    height: 40px;
+    border: none;
+    transition: all 450ms;
+}
+.discount-code-apply-button:hover{
+    color: black;
+}
 @media (max-width: 768px) {
 
     .maincarrito{
@@ -98,6 +137,12 @@ img{
     .resumen_pago div{
         display: flex;
         justify-content: center;
+    }
+    .modulo_pago{
+        align-items: center;
+        width: 70%;
+        align-self: center;
+        margin-bottom: 10%;
     }
 }
 
@@ -146,6 +191,9 @@ img{
     .resumen_pago div{
         display: flex;
         justify-content: center;
+    }
+    .modulo_pago{
+        width: 90%;
     }
 
 }
