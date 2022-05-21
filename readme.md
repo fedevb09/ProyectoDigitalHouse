@@ -54,3 +54,20 @@ Brakpoints:
 Mobile: 480px -;
 Tablet: 480px - 1024px;
 Desktop: 1024px +;
+
+Campos necesitamos del usuario:
+● Identificador: id
+● Nombre: firstName
+● Apellido: lastName
+● Email: email
+● Contraseña: password
+● Categoría: vendedor y creador 
+● Imagen: image de perfil 
+
+Campos necesitamos del producto:
+● Identificador: id
+● Descripción de producto: descripcion  
+● titulo 
+● precio 
+● nombre del creador 
+● maximo tres imágenes 
