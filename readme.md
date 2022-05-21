@@ -61,7 +61,7 @@ Campos necesitamos del usuario:
 ● Apellido: lastName
 ● Email: email
 ● Contraseña: password
-● Categoría: vendedor y creador 
+● Categoría: vendedor / admin
 ● Imagen: image de perfil 
 
 Campos necesitamos del producto:
