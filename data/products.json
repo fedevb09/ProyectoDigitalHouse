@@ -1,13 +1,23 @@
 [
-    {
-      "id": 1,
-      "productName": "Cuadro de boba fett",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ratione obcaecati...",
-      "price": 127.00,
-      "creatorName": "JJ. Abrams",
-      "img1": "/Cuadro-boba-render-1.png", 
-      "img2": "/Cuadro-boba-render-2.png",
-      "img3": "/Cuadro-bobba.png"
-    }
+  {
+    "id": 1,
+    "productName": "Cuadro de boba fett",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ratione obcaecati...",
+    "price": 127.0,
+    "creatorName": "JJ. Abrams",
+    "img1": "Cuadro-bobba.png",
+    "img2": "Cuadro-boba-render-2.png",
+    "img3": "Cuadro-boba-render-1.png"
+  },
+  {
+    "id": 2,
+    "productName": "BL4CK MAMBAS FOR EVER",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ratione obcaecati...",
+    "price": 500,
+    "creatorName": "JJ. Abrams",
+    "img1": "kobe-leyenda.jpg",
+    "img2": "kobe-leyenda.jpg",
+    "img3": "kobe-leyenda.jpg"
+  }
 ]
 

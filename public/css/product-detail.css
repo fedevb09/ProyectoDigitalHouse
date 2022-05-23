@@ -84,12 +84,13 @@ main{
 }
 .middle-product-section{
     border-right: black solid 2px;
-    margin: 10px;
     width: 60%;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
 }
 .product-image{
     width: 90%;
+    margin: auto;
 }
 .right-product-section{
     display: flex;
