@@ -3,7 +3,7 @@
     "id": 1,
     "productName": "Cuadro de boba fett",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ratione obcaecati...",
-    "price": 127.0,
+    "price": 127,
     "creatorName": "JJ. Abrams",
     "img1": "Cuadro-bobba.png",
     "img2": "Cuadro-boba-render-2.png",
@@ -18,6 +18,46 @@
     "img1": "kobe-leyenda.jpg",
     "img2": "kobe-leyenda.jpg",
     "img3": "kobe-leyenda.jpg"
+  },
+  {
+    "id": 3,
+    "productName": "Lebron",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ratione obcaecati...",
+    "price": 239,
+    "creatorName": "Bsk Guru",
+    "img1": "lebron.jpg",
+    "img2": "lebron.jpg",
+    "img3": "lebron.jpg"
+  },
+  {
+    "id": 4,
+    "productName": "Cerati",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut a porro laborum possimus blanditiis repellat at? Debitis expedita fugiat eos veritatis, modi rerum iste ad reiciendis a, enim corporis maiores!",
+    "price": 99,
+    "creatorName": "Ceratiart",
+    "img1": "cerati2.jpg",
+    "img2": "cerati2.jpg",
+    "img3": "cerati2.jpg"
+  },
+  {
+    "id": 5,
+    "productName": "Chewie",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ratione obcaecati...",
+    "price": 249,
+    "creatorName": "JJ. Abrams",
+    "img1": "chewie-paint.webp",
+    "img2": "chewie-paint.webp",
+    "img3": "chewie-paint.webp"
+  },
+  {
+    "id": 6,
+    "productName": "Pop Trooper",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut a porro laborum possimus blanditiis repellat at? Debitis expedita fugiat eos veritatis, modi rerum iste ad reiciendis a, enim corporis maiores!",
+    "price": 72,
+    "creatorName": "JJ. Abrams",
+    "img1": "pop-trooper.jpeg",
+    "img2": "pop-trooper.jpeg",
+    "img3": "pop-trooper.jpeg"
   }
 ]
 
