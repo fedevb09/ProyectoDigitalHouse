@@ -81,11 +81,9 @@
                     <article class="propularity-container">
                         <h4 class="description-titles">Popularidad:</h4>
                         <div class="popularity-level-stars">
-                            <i class="fa-solid fa-star star"></i>
-                            <i class="fa-solid fa-star star"></i>
-                            <i class="fa-solid fa-star star"></i>
-                            <i class="fa-solid fa-star star"></i>
-                            <i class="fa-solid fa-star star"></i>
+                            <% for( let i = 0; i < product.popularity; i++ ) { %>
+                               <i class="fa-solid fa-star star"></i>
+                            <% } %>
                         </div>
                     </article>
                     <article>
