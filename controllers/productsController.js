@@ -14,6 +14,9 @@ const productController = {
             }
         })
         res.render('productDetail', {product:product})
+    },
+    productsList: (req,res)=>{
+        res.render('productsList', {products:products})
     }
 }
 module.exports = productController;
