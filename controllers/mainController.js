@@ -26,10 +26,6 @@ const mainController = {
         res.render("logIn")
     },
 
-    productRegister: (req, res) => {
-        res.render("productRegister")
-    },
-
     productEdit: (req, res) => {
         res.render("productEdit")
     }

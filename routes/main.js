@@ -6,7 +6,7 @@ router.get("/", mainController.index);
 router.get("/cart", mainController.cart);
 router.get("/signUp", mainController.signUp);
 router.get("/logIn", mainController.logIn);
-router.get("/productRegister", mainController.productRegister)
+
 router.get("/productEdit", mainController.productEdit)
 
 module.exports = router

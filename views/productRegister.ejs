@@ -22,7 +22,7 @@
         <section style="background-image: url('../images/general-bg.webp')">
             <div class="form-container">
             <h2>Registra tu producto</h2>
-                <form action="/registro" method="post">
+                <form action="/products/create" method="POST" enctype="multipart/form-data">
                     <label for="productName">Nombre del producto</label>
                     <input type="text" name="productName" id="productName" required>
 
@@ -42,15 +42,15 @@
 
                     <div class="profilePicInput">
                         <label for="productImage">Foto principal</label>
-                        <input type="file" name="productImage1" accept=".jpg" id="productImage1">
+                        <input type="file" name="productImage1" accept="image/*" id="productImage1" required>
                     </div>
                     <div class="profilePicInput">
                         <label for="productImage">Foto de producto 2</label>
-                        <input type="file" name="productImage2" accept=".jpg" id="productImage2">
+                        <input type="file" name="productImage2" accept="image/*" id="productImage2">
                     </div>
                     <div class="profilePicInput">
                         <label for="productImage">Foto de producto 3</label>
-                        <input type="file" name="productImage3" accept=".jpg" id="productImage3">
+                        <input type="file" name="productImage3" accept="image/*" id="productImage3">
                     </div>
 
                     <div class="buttonContainer">
