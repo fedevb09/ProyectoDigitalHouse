@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const router = require("./routes/main")
+const productsRouter = require("./routes/productsRouter")
 
 app.use(express.static('./public'))
 
@@ -15,3 +16,4 @@ app.listen(port, ()=> {
 })
 
 app.use("/", router)
+app.use("/products", productsRouter)

@@ -22,32 +22,39 @@
         <section style="background-image: url('../images/general-bg.webp')">
             <div class="form-container">
             <h2>Registra tu producto</h2>
-                <form action="/registro" method="post">
+                <form action="/products/create" method="POST" enctype="multipart/form-data">
                     <label for="productName">Nombre del producto</label>
                     <input type="text" name="productName" id="productName" required>
+
+                    <label for="price">Precio</label>
+                    <input type="text" name="price" id="price">
+
+
+                    <label for="sizes">Tamaño</label>
+                    <input type="text" name="sizes" id="sizes">
+                    
 
                     <label for="description">Descripción</label>
                     <input type="text" name="description" id="description" required> 
 
-                    <label for="category">Categoría</label>
-                    <input type="text" name="category" id="category" required>
+                    <label for="description">Creador</label>
+                    <input type="text" name="creatorName" id="creatorName" required> 
 
                     <div class="profilePicInput">
-                        <label for="productImage">Foto de producto</label>
-                        <input type="file" name="productImage" accept=".jpg" id="productImage">
+                        <label for="productImage">Foto principal</label>
+                        <input type="file" name="productImage1" accept="image/*" id="productImage1" required>
+                    </div>
+                    <div class="profilePicInput">
+                        <label for="productImage">Foto de producto 2</label>
+                        <input type="file" name="productImage2" accept="image/*" id="productImage2">
+                    </div>
+                    <div class="profilePicInput">
+                        <label for="productImage">Foto de producto 3</label>
+                        <input type="file" name="productImage3" accept="image/*" id="productImage3">
                     </div>
 
-                        <label for="price">Precio</label>
-                        <input type="text" name="price" id="price">
-
-                        <label for="colours">Colores</label>
-                        <input type="text" name="colours" id="colours">
-
-                        <label for="sizes">Tamaño</label>
-                        <input type="text" name="sizes" id="sizes">
-                        
                     <div class="buttonContainer">
-                        <button type="submit">Enviar</button>
+                        <button type="submit">Crear producto</button>
                     </div>
                 </form>
             </div>

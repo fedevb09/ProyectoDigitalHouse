@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "first_name": "Frasier",
+    "last_name": "Haggar",
+    "email": "fhaggar0@disqus.com",
+    "password": "vSGut226",
+    "category ": "vendedor",
+    "img": "http://dummyimage.com/219x165.png/dddddd/000000"
+  },
+  {
+    "id": 2,
+    "first_name": "Jedidiah",
+    "last_name": "Maymand",
+    "email": "jmaymand1@nbcnews.com",
+    "password": "fGW2KicL",
+    "category ": "admin",
+    "img": "http://dummyimage.com/137x247.jpg/cc0000/ffffff"
+  },
+  {
+    "id": 3,
+    "first_name": "Jamie",
+    "last_name": "Baldack",
+    "email": "jbaldack2@webnode.com",
+    "password": "X8gkazI6",
+    "category ": "vendedor",
+    "img": "http://dummyimage.com/166x139.png/cc0000/ffffff"
+  },
+  {
+    "id": 4,
+    "first_name": "Harley",
+    "last_name": "Whyler",
+    "email": "hwhyler3@hexun.com",
+    "password": "jULLe4YXgBr",
+    "category ": "vendedor",
+    "img": "http://dummyimage.com/100x178.jpg/cc0000/ffffff"
+  },
+  {
+    "id": 5,
+    "first_name": "Jonell",
+    "last_name": "Kuschke",
+    "email": "jkuschke4@fastcompany.com",
+    "password": "KWMfW0",
+    "category ": "admin",
+    "img": "http://dummyimage.com/169x156.jpg/5fa2dd/ffffff"
+  }
+]

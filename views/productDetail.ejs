@@ -22,7 +22,7 @@
     <main>
         <section class="product-container">
             <div class="product-title-container">
-                <h2 class="product-title">Cuadro de boba fett</h2>
+                <h2 class="product-title"><%=product.productName%></h2>
             </div>
         </section>
 
@@ -33,21 +33,21 @@
             <section class="left-product-section">
                 <div class="product-miniature">
                     <div class="miniature-img-box-overflow">
-                        <img src="images/Cuadro-boba-render-1.png" alt="" class="minature-image">
+                        <img src="/images/<%=product.img1%>" alt="" class="minature-image">
                     </div>
                     <p class="miniature-numers">1</p>
                     <div class="miniature-img-box-overflow">
-                        <img src="images/Cuadro-boba-render-2.png" alt="" class="minature-image">
+                        <img src="/images/<%=product.img2%>" alt="" class="minature-image">
                     </div>
                     <p>2</p>
                     <div class="miniature-img-box-overflow">
-                        <img src="images/Cuadro-bobba.png" alt="" class="minature-image">
+                        <img src="/images/<%=product.img3%>" alt="" class="minature-image">
                     </div>
                     <p>3</p>
                 </div>
             </section>
             <section class="middle-product-section">
-                    <img src="images/Cuadro-bobba.png" alt="" class="product-image">
+                    <img src="/images/<%=product.img1%>" alt="" class="product-image">
             </section>
             <section class="right-product-section">
                 <div class="product-info">
@@ -55,43 +55,41 @@
                         <i class="fa-solid fa-link linkedicons"></i>
                         <i class="fa-solid fa-ellipsis linkedicons"></i>
                     </div>
-                    <h3>Cuadro de Bobba Fett</h3> 
+                    <h3><%=product.productName%></h3> 
                     <div class="seller-creator-titles">
                         <p class="seller-creator">Vendedor</p>
                         <p class="seller-creator">Creador</p>
                     </div> 
                     <div class="seller-creator-photo-name">
                         <div class="creator-seller-container">
-                            <img src="images/vendedor-1.png" alt="" class="seller-creator-image">
+                            <img src="/images/vendedor-1.png" alt="" class="seller-creator-image">
                             <p class="creator-seller-names">J. Jackson</p>
                         </div>
                         <div class="creator-seller-container">
-                            <img src="images/creador-1.png" alt="" class="seller-creator-image">
-                            <p class="creator-seller-names" >JJ. Abrams</p>
+                            <img src="/images/creador-1.png" alt="" class="seller-creator-image">
+                            <p class="creator-seller-names" ><%=product.creatorName%></p>
                         </div>
 
                     </div>
                     <article>
                         <div class="product-description">
                             <h4>Sobre la obra:</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ratione obcaecati...</p>
+                            <p><%=product.description%></p>
                         </div>
                         <i class="fa-solid fa-caret-down"></i>
                     </article>
                     <article class="propularity-container">
                         <h4 class="description-titles">Popularidad:</h4>
                         <div class="popularity-level-stars">
-                            <i class="fa-solid fa-star star"></i>
-                            <i class="fa-solid fa-star star"></i>
-                            <i class="fa-solid fa-star star"></i>
-                            <i class="fa-solid fa-star star"></i>
-                            <i class="fa-solid fa-star star"></i>
+                            <% for( let i = 0; i < product.popularity; i++ ) { %>
+                               <i class="fa-solid fa-star star"></i>
+                            <% } %>
                         </div>
                     </article>
                     <article>
                         <div class="product-detail-price-container">
                             <h4 class="usd">U$D</h4>
-                            <p class="price-text">127.00</p>
+                            <p class="price-text"><%=product.price%></p>
                         </div>
                         <div class="button-container">
                             <button class="buy-button" href="#">COMPRAR</button>
@@ -110,7 +108,7 @@
                     <a href="#">
                     <div class="recomended-image-title-container">
                         <div class="img-box-overflow">
-                            <img src="images/pencil-trooper.jpeg" alt="" class="recomended-product-img">
+                            <img src="/images/pencil-trooper.jpeg" alt="" class="recomended-product-img">
                         </div>
                         <h4 class="recomended-product-titles">Fett Alapiz</h4>
                     </div>
@@ -128,7 +126,7 @@
                     <a href="#" class="linked-recomended-item">
                             <div class="recomended-image-title-container">
                                 <div class="img-box-overflow">
-                                    <img src="images/chewie-paint.webp" alt="" class="recomended-product-img">
+                                    <img src="/images/chewie-paint.webp" alt="" class="recomended-product-img">
                                 </div>
                                 <h4 class="recomended-product-titles">Cuadro Chewie</h4>
                             </div>
@@ -147,7 +145,7 @@
                     <a href="#">
                     <div class="recomended-image-title-container">
                         <div class="img-box-overflow">
-                            <img src="images/pop-trooper.jpeg" alt="" class="recomended-product-img">
+                            <img src="/images/pop-trooper.jpeg" alt="" class="recomended-product-img">
                         </div>
                         <h4 class="recomended-product-titles">Pop Trooper</h4>
                     </div>
