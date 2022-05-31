@@ -104,6 +104,10 @@ const productController = {
         fs.writeFileSync(productsFilePath, JSON.stringify(productEdited))
 
 		res.redirect("/products")
+    },
+
+    productEditForm: (req, res) => {
+        res.render("productEdit")
     }
 
 }

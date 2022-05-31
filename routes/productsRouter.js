@@ -23,6 +23,7 @@ router.get('/', productController.productsList)
 router.get('/create', productController.productRegister)
 router.post('/create', upload.any(), productController.productCreate)
 router.get('/:id', productController.productDetail)
+router.get('/edit', productController.productEditForm)
 router.post('/edit/:id', upload.any(), productController.productEdit)
 
 

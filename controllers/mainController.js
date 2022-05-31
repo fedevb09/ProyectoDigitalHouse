@@ -10,10 +10,6 @@ const mainController = {
         res.render("index", {products:products})
     },
 
-    productDetail: (req, res) => {
-        res.render("productDetail")
-    },
-
     cart: (req, res) => {
         res.render("shoppingCart")
     },
@@ -25,10 +21,6 @@ const mainController = {
     logIn: (req, res) => {
         res.render("logIn")
     },
-
-    productEdit: (req, res) => {
-        res.render("productEdit")
-    }
 
 }
 
