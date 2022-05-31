@@ -106,8 +106,11 @@ const productController = {
 		res.redirect("/products")
     },
 
-    productEditForm: (req, res) => {
-        res.render("productEdit")
+    edit: (req, res) => {
+        const id = req.params.id;
+        let product = products.find(product => product.id == id);
+        
+        res.render("productEdit", {product})
     }
 
 }
