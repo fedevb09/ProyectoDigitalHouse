@@ -29,7 +29,7 @@ const productController = {
         let img2
         let img3
         if(req.files.length==3){
-           img1 = req.files[0].filename;
+            img1 = req.files[0].filename;
             img2 = req.files[1].filename;
             img3 = req.files[2].filename;
         }
@@ -57,16 +57,54 @@ const productController = {
         products.push(newProduct)
         fs.writeFileSync(productsPath, JSON.stringify(products));
         res.redirect('/')
-     },
+    },
 
-     edit: (req, res) =>{
-        let id = req.params.id;
+    productEdit: (req, res) => {
         
-        let product = products.find(product => product.id == id);
+        const id = req.params.id;
+        let productToEdit = products.find(product => product == id);
 
-        res.render('productEdit', {product})
+        let img1 
+        let img2
+        let img3
+        if(req.files.length==3){
+            img1 = req.files[0].filename;
+            img2 = req.files[1].filename;
+            img3 = req.files[2].filename;
+        }
+        else if (req.files.length == 2){
+            img1 = req.files[0].filename
+            img2 = req.files[1].filename
+            img3 = req.files[1].filename
+        }
+        else{
+            img1 = req.files[0].filename
+            img2 = req.files[0].filename
+            img3 = req.files[0].filename
+        }
 
-     }
+
+        productToEdit = {
+            id: req.body.id,
+            ...req.body,
+            img1: img1,
+            img2: img2,
+            img3: img3
+        }
+
+        let productEdited = products.map(product => {
+
+			if(product.id == productToEdit.id){
+				return product = {...productToEdit}
+			}
+
+			return product
+		})
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(productEdited))
+
+		res.redirect("/products")
+    }
 
 }
 module.exports = productController;
