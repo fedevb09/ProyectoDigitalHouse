@@ -57,6 +57,15 @@ const productController = {
         products.push(newProduct)
         fs.writeFileSync(productsPath, JSON.stringify(products));
         res.redirect('/')
+     },
+
+     edit: (req, res) =>{
+        let id = req.params.id;
+        
+        let product = products.find(product => product.id == id);
+
+        res.render('productEdit', {product})
+
      }
 
 }

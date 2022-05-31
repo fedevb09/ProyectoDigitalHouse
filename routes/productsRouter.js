@@ -22,6 +22,7 @@ router.get('/', productController.productsList)
 router.get('/create', productController.productRegister)
 router.post('/create', upload.any(), productController.productCreate)
 router.get('/:id', productController.productDetail)
+router.get('/edit/:id/', productController.edit)
 
 
 module.exports = router;
