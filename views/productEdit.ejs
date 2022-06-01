@@ -24,24 +24,41 @@
             <h2>Modifica tu producto</h2>
                 <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <label for="productName">Nombre del producto</label>
-                    <input type="text" name="productName" id="productName" required>
+                    <input type="text" name="productName" id="productName" value="<%=product.productName%>" required>
 
                     <label for="description">Descripción</label>
-                    <input type="text" name="description" id="description" required> 
-
-                    <label for="category">Categoría</label>
-                    <input type="text" name="category" id="category" required>
+                    <input type="text" name="description" id="description" value="<%=product.description%>" required> 
 
                     <div class="profilePicInput">
                         <label for="productImage">Foto de producto</label>
-                        <input type="file" name="productImage" accept=".jpg" id="productImage">
+                        <br>
+                        <img style="width:30%" src="/images/<%=product.img1%>" alt="">
+                        <br>
+                        <input type="file" name="productImage" accept="image/*"  id="productImage">
+                    </div>
+
+                    <div class="profilePicInput">
+                        <label for="productImage">Foto de producto 2</label>
+                        <br>
+                        <img style="width:30%" src="/images/<%=product.img2%>" alt="">
+                        <br>
+                        <input type="file" name="productImage2" accept="image/*" id="productImage2">
+                    </div>
+
+                    <div class="profilePicInput">
+                        <label for="productImage">Foto de producto 3</label>
+                        <br>
+                        <img style="width:30%" src="/images/<%=product.img3%>" alt="">
+                        <br>
+                        <input type="file" name="productImage3" accept="image/*" id="productImage3">
                     </div>
 
                         <label for="price">Precio</label>
-                        <input type="text" name="price" id="price">
+                        <input type="text" name="price" id="price" value="<%=product.price%>">
 
-                        <label for="colours">Colores</label>
-                        <input type="text" name="colours" id="colours">
+
+                        <label for="price">Creador</label>
+                        <input type="text" name="creatorName" id="creatorName" value="<%=product.creatorName%>">
 
                         <label for="sizes">Tamaño</label>
                         <input type="text" name="sizes" id="sizes">

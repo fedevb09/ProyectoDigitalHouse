@@ -62,11 +62,12 @@ const productController = {
     productEdit: (req, res) => {
         
         const id = req.params.id;
-        let productToEdit = products.find(product => product == id);
+        let productToEdit = products.find(product => product === +id);
 
         let img1 
         let img2
         let img3
+        
         if(req.files.length==3){
             img1 = req.files[0].filename;
             img2 = req.files[1].filename;
