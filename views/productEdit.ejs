@@ -22,7 +22,7 @@
         <section style="background-image: url('../images/general-bg.webp')">
             <div class="form-container">
             <h2>Modifica tu producto</h2>
-                <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <form action="/products/edit/<%= product.id %>" method="POST" enctype="multipart/form-data">
                     <label for="productName">Nombre del producto</label>
                     <input type="text" name="productName" id="productName" value="<%=product.productName%>" required>
 
@@ -34,7 +34,7 @@
                         <br>
                         <img style="width:30%" src="/images/<%=product.img1%>" alt="">
                         <br>
-                        <input type="file" name="productImage" accept="image/*"  id="productImage">
+                        <input type="file" name="img1" accept="image/*"  id="img1">
                     </div>
 
                     <div class="profilePicInput">
@@ -42,7 +42,7 @@
                         <br>
                         <img style="width:30%" src="/images/<%=product.img2%>" alt="">
                         <br>
-                        <input type="file" name="productImage2" accept="image/*" id="productImage2">
+                        <input type="file" name="img2" accept="image/*" id="img2">
                     </div>
 
                     <div class="profilePicInput">
@@ -50,7 +50,7 @@
                         <br>
                         <img style="width:30%" src="/images/<%=product.img3%>" alt="">
                         <br>
-                        <input type="file" name="productImage3" accept="image/*" id="productImage3">
+                        <input type="file" name="img3" accept="image/*" id="img3">
                     </div>
 
                         <label for="price">Precio</label>
