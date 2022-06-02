@@ -94,11 +94,13 @@
                         <div class="button-container">
                             <button class="buy-button" href="#">COMPRAR</button>
                         </div>
-                        <div class="button-container">
-                            <a href="/products/edit/<%=product.id%>"><button class="buy-button">EDITAR</button></a>
-                        </div>
-                        <div class="button-container">
-                            <a href="#"><button class="buy-button">ELIMINAR</button></a>
+                        <div class="editar-eliminar">
+                            <div class="button-container">
+                                <a href="/products/edit/<%=product.id%>"><button class="buy-button">EDITAR</button></a>
+                            </div>
+                            <div class="button-container">
+                                <a href="/products/delete/<%=product.id%>"><button class="buy-button">ELIMINAR</button></a>
+                            </div>
                         </div>
                     </article>
                 </div>

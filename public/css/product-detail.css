@@ -273,6 +273,11 @@ align-items: center;
     margin-left: 20px;
 }
 
+.editar-eliminar{
+    display: flex;
+    flex-direction: column;
+}
+
 @media (max-width: 760px){
     .main-product-container{
         flex-direction: column;

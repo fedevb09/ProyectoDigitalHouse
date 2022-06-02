@@ -25,6 +25,8 @@ router.post('/create', upload.any(), productController.productCreate)
 router.get('/edit/:id/', productController.edit)
 router.post('/edit/:id/', upload.any(), productController.productEdit)
 router.get('/:id/', productController.productDetail)
+router.get('/delete/:id/', productController.delete)
+router.post('/delete/:id', productController.destroy); 
 
 
 
