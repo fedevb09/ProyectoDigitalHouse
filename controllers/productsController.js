@@ -118,16 +118,7 @@ const productController = {
         let product = products.find(product => product.id == id);
 
         res.render("productEdit", { product })
-    },
-
-    delete: (req, res) => {
-        const id = req.params.id;
-        let product = products.find(product => product.id == id);
-
-        res.render("productDelete", { product })
-    },
-    
-    
+    }, 
     destroy : (req, res) => {
 		
 		let idproducto = req.params.id;
@@ -138,6 +129,5 @@ const productController = {
 		res.redirect('/');
 
 	}
-
 }
 module.exports = productController;
