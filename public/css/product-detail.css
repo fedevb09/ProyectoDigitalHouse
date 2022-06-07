@@ -21,6 +21,10 @@ main{
     margin-bottom: 10%;
 }
 
+.product-info{
+    width: 100%;
+}
+
 .product-title{
     margin-top:60px ;
     font-weight: 300;
