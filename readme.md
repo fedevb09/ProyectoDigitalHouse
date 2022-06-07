@@ -71,3 +71,6 @@ Campos necesitamos del producto:
 ● precio 
 ● nombre del creador 
 ● maximo tres imágenes 
+
+
+Ultimo cambio 06/jun 21:53
