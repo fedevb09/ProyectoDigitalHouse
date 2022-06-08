@@ -94,6 +94,18 @@
                         <div class="button-container">
                             <button class="buy-button" href="#">COMPRAR</button>
                         </div>
+                        <div class="editar-eliminar">
+                            <div class="button-container">
+                                <a href="/products/edit/<%=product.id%>"><button class="buy-button">EDITAR</button></a>
+                            </div>
+                            <div>
+                                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                                    <div class="button-container">
+                                        <button class="buy-button" type="submit">ELIMINAR</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </article>
                 </div>
             </section>

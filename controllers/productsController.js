@@ -118,7 +118,16 @@ const productController = {
         let product = products.find(product => product.id == id);
 
         res.render("productEdit", { product })
-    }
+    }, 
+    destroy : (req, res) => {
+		
+		let idproducto = req.params.id;
+		let newProducts=products.filter(product => product.id != idproducto);
+	
+		fs.writeFileSync(productsPath, JSON.stringify(newProducts))
 
+		res.redirect('/');
+
+	}
 }
 module.exports = productController;

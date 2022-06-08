@@ -21,6 +21,10 @@ main{
     margin-bottom: 10%;
 }
 
+.product-info{
+    width: 100%;
+}
+
 .product-title{
     margin-top:60px ;
     font-weight: 300;
@@ -271,6 +275,11 @@ align-items: center;
 
 .recomended-products-container{
     margin-left: 20px;
+}
+
+.editar-eliminar{
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 760px){
