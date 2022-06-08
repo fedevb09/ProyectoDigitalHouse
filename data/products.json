@@ -1,1 +1,101 @@
-[{"id":1,"productName":"Cuadro de boba fett","description":"a","price":"300","creatorName":"JJ. Abrams","sizes":"","img1":"Cuadro-bobba.png","img2":"Cuadro-boba-render-2.png","img3":"Cuadro-boba-render-1.png"},{"id":4,"productName":"Cerati","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut a porro laborum possimus blanditiis repellat at? Debitis expedita fugiat eos veritatis, modi rerum iste ad reiciendis a, enim corporis maiores!","price":99,"creatorName":"Ceratiart","img1":"cerati2.jpg","img2":"cerati2.jpg","img3":"cerati2.jpg","popularity":2},{"id":5,"productName":"Chewie","description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ratione obcaecati...","price":249,"creatorName":"JJ. Abrams","img1":"chewie-paint.webp","img2":"chewie-paint.webp","img3":"chewie-paint.webp","popularity":4},{"id":6,"productName":"Pop Trooper","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut a porro laborum possimus blanditiis repellat at? Debitis expedita fugiat eos veritatis, modi rerum iste ad reiciendis a, enim corporis maiores!","price":72,"creatorName":"JJ. Abrams","img1":"pop-trooper.jpeg","img2":"pop-trooper.jpeg","img3":"pop-trooper.jpeg","popularity":3},{"id":7,"productName":"Fett Alapiz","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut a porro laborum possimus blanditiis repellat at? Debitis expedita fugiat eos veritatis, modi rerum iste ad reiciendis a, enim corporis maiores!","price":89,"creatorName":"JJ. Abrams","img1":"pencil-trooper.jpeg","img2":"pencil-trooper.jpeg","img3":"pencil-trooper.jpeg","popularity":3},{"id":8,"productName":"Talon Art","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut a porro laborum possimus blanditiis repellat at? Debitis expedita fugiat eos veritatis, modi rerum iste ad reiciendis a, enim corporis maiores!","price":199,"creatorName":"Riot Art","img1":"talon.jpg","img2":"talon.jpg","img3":"talon.jpg","popularity":4},{"id":9,"productName":"Cerati Alapiz","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut a porro laborum possimus blanditiis repellat at? Debitis expedita fugiat eos veritatis, modi rerum iste ad reiciendis a, enim corporis maiores!","price":15,"creatorName":"Rock Art","img1":"cerati.jpg","img2":"cerati.jpg","img3":"cerati.jpg","popularity":2},{"id":10,"productName":"prueba 1","description":"asd","price":"2000","creatorName":"Keith Haring","sizes":"","img1":"productImage1-1654543716087-897045854.webp","img2":"productImage1-1654543716087-897045854.webp","img3":"productImage1-1654543716087-897045854.webp"},{"id":11,"productName":"prueba 2","description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ratione obcaecati...","price":"20","creatorName":"Keith Haring","sizes":"","img1":"productImage1-1654543872372-361840654.jpeg","img2":"productImage1-1654543872372-361840654.jpeg","img3":"productImage1-1654543872372-361840654.jpeg"}]
+[
+ {
+  "id": 1,
+  "productName": "Cuadro de boba fett",
+  "description": "a",
+  "price": "300",
+  "creatorName": "JJ. Abrams",
+  "sizes": "",
+  "img1": "Cuadro-bobba.png",
+  "img2": "Cuadro-boba-render-2.png",
+  "img3": "Cuadro-boba-render-1.png"
+ },
+ {
+  "id": 4,
+  "productName": "Cerati",
+  "description": "Cerati",
+  "price": "99",
+  "creatorName": "Ceratiart",
+  "sizes": "",
+  "img1": "cerati2.jpg",
+  "img2": "cerati2.jpg",
+  "img3": "cerati2.jpg"
+ },
+ {
+  "id": 5,
+  "productName": "Chewie",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ratione obcaecati...",
+  "price": 249,
+  "creatorName": "JJ. Abrams",
+  "img1": "chewie-paint.webp",
+  "img2": "chewie-paint.webp",
+  "img3": "chewie-paint.webp",
+  "popularity": 4
+ },
+ {
+  "id": 6,
+  "productName": "Pop Trooper",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut a porro laborum possimus blanditiis repellat at? Debitis expedita fugiat eos veritatis, modi rerum iste ad reiciendis a, enim corporis maiores!",
+  "price": 72,
+  "creatorName": "JJ. Abrams",
+  "img1": "pop-trooper.jpeg",
+  "img2": "pop-trooper.jpeg",
+  "img3": "pop-trooper.jpeg",
+  "popularity": 3
+ },
+ {
+  "id": 7,
+  "productName": "Fett Alapiz",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut a porro laborum possimus blanditiis repellat at? Debitis expedita fugiat eos veritatis, modi rerum iste ad reiciendis a, enim corporis maiores!",
+  "price": 89,
+  "creatorName": "JJ. Abrams",
+  "img1": "pencil-trooper.jpeg",
+  "img2": "pencil-trooper.jpeg",
+  "img3": "pencil-trooper.jpeg",
+  "popularity": 3
+ },
+ {
+  "id": 8,
+  "productName": "Talon Art",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut a porro laborum possimus blanditiis repellat at? Debitis expedita fugiat eos veritatis, modi rerum iste ad reiciendis a, enim corporis maiores!",
+  "price": 199,
+  "creatorName": "Riot Art",
+  "img1": "talon.jpg",
+  "img2": "talon.jpg",
+  "img3": "talon.jpg",
+  "popularity": 4
+ },
+ {
+  "id": 9,
+  "productName": "Cerati Alapiz",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut a porro laborum possimus blanditiis repellat at? Debitis expedita fugiat eos veritatis, modi rerum iste ad reiciendis a, enim corporis maiores!",
+  "price": 15,
+  "creatorName": "Rock Art",
+  "img1": "cerati.jpg",
+  "img2": "cerati.jpg",
+  "img3": "cerati.jpg",
+  "popularity": 2
+ },
+ {
+  "id": 10,
+  "productName": "prueba 1",
+  "description": "tremendo discaso",
+  "price": "2000",
+  "creatorName": "Keith Haring",
+  "sizes": "",
+  "img1": "productImage1-1654543716087-897045854.webp",
+  "img2": "productImage1-1654543716087-897045854.webp",
+  "img3": "productImage1-1654543716087-897045854.webp"
+ },
+ {
+  "id": 11,
+  "productName": "prueba 2",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ratione obcaecati...",
+  "price": "20",
+  "creatorName": "Keith Haring",
+  "sizes": "",
+  "img1": "productImage1-1654543872372-361840654.jpeg",
+  "img2": "productImage1-1654543872372-361840654.jpeg",
+  "img3": "productImage1-1654543872372-361840654.jpeg"
+ }
+]
