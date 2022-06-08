@@ -72,5 +72,3 @@ Campos necesitamos del producto:
 ● nombre del creador 
 ● maximo tres imágenes 
 
-
-Ultimo cambio 06/jun 21:53
