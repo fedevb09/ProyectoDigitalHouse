@@ -4,8 +4,5 @@ const mainController = require("../controllers/mainController");
 
 router.get("/", mainController.index);
 router.get("/cart", mainController.cart);
-router.get("/signUp", mainController.signUp);
-router.get("/logIn", mainController.logIn);
-
 
 module.exports = router

@@ -1,47 +1,86 @@
 [
-  {
-    "id": 1,
-    "first_name": "Frasier",
-    "last_name": "Haggar",
-    "email": "fhaggar0@disqus.com",
-    "password": "vSGut226",
-    "category ": "vendedor",
-    "img": "http://dummyimage.com/219x165.png/dddddd/000000"
-  },
-  {
-    "id": 2,
-    "first_name": "Jedidiah",
-    "last_name": "Maymand",
-    "email": "jmaymand1@nbcnews.com",
-    "password": "fGW2KicL",
-    "category ": "admin",
-    "img": "http://dummyimage.com/137x247.jpg/cc0000/ffffff"
-  },
-  {
-    "id": 3,
-    "first_name": "Jamie",
-    "last_name": "Baldack",
-    "email": "jbaldack2@webnode.com",
-    "password": "X8gkazI6",
-    "category ": "vendedor",
-    "img": "http://dummyimage.com/166x139.png/cc0000/ffffff"
-  },
-  {
-    "id": 4,
-    "first_name": "Harley",
-    "last_name": "Whyler",
-    "email": "hwhyler3@hexun.com",
-    "password": "jULLe4YXgBr",
-    "category ": "vendedor",
-    "img": "http://dummyimage.com/100x178.jpg/cc0000/ffffff"
-  },
-  {
-    "id": 5,
-    "first_name": "Jonell",
-    "last_name": "Kuschke",
-    "email": "jkuschke4@fastcompany.com",
-    "password": "KWMfW0",
-    "category ": "admin",
-    "img": "http://dummyimage.com/169x156.jpg/5fa2dd/ffffff"
-  }
+ {
+  "id": 1,
+  "fullName": "Frasier",
+  "email": "fhaggar0@disqus.com",
+  "password": "vSGut226",
+  "category": "regular",
+  "birthDate": "",
+  "profileImage": "http://dummyimage.com/219x165.png/dddddd/000000"
+ },
+ {
+  "id": 2,
+  "fullName": "Jedidiah",
+  "email": "jmaymand1@nbcnews.com",
+  "password": "fGW2KicL",
+  "category": "regular",
+  "profileImage": "http://dummyimage.com/137x247.jpg/cc0000/ffffff"
+ },
+ {
+  "id": 3,
+  "fullName": "Jamie",
+  "email": "jbaldack2@webnode.com",
+  "password": "X8gkazI6",
+  "category": "regular",
+  "profileImage": "http://dummyimage.com/166x139.png/cc0000/ffffff"
+ },
+ {
+  "id": 4,
+  "fullName": "Harley",
+  "email": "hwhyler3@hexun.com",
+  "password": "jULLe4YXgBr",
+  "category": "regular",
+  "profileImage": "http://dummyimage.com/100x178.jpg/cc0000/ffffff"
+ },
+ {
+  "id": 5,
+  "fullName": "Jonell",
+  "email": "jkuschke4@fastcompany.com",
+  "password": "KWMfW0",
+  "category": "admin",
+  "profileImage": "http://dummyimage.com/169x156.jpg/5fa2dd/ffffff"
+ },
+ {
+  "id": 6,
+  "fullName": "nacho",
+  "email": "nachoalquati@gmail.com",
+  "password": "asdasdasda",
+  "birthDate": "2022-06-30",
+  "profileImage": "profileImage-1655328258674-888493351.jpeg",
+  "category": "regular"
+ },
+ {
+  "id": 7,
+  "fullName": "nacho",
+  "email": "nachoalquati@gmail.com",
+  "password": "asdasdasdasd",
+  "birthDate": "2022-06-30",
+  "profileImage": "profileImage-1655328292166-965965058.jpeg",
+  "category": "regular"
+ },
+ {
+  "id": 8,
+  "fullName": "nacho",
+  "email": "nachoalquati@gmail.com",
+  "password": "asdasdasdasd",
+  "birthDate": "2022-07-01",
+  "category": "regular"
+ },
+ {
+  "id": 9,
+  "fullName": "nacho",
+  "email": "asdasdasd@dasdjhaskjdas.com",
+  "password": "asdasdasdasd",
+  "birthDate": "2022-06-23",
+  "category": "regular"
+ },
+ {
+  "id": 10,
+  "fullName": "nacho",
+  "email": "asdasdasd@dasdjhaskjdas.com",
+  "password": "asdasdasdsad",
+  "birthDate": "2022-06-23",
+  "profileImage": "/images/users/dafaultProfile.png",
+  "category": "regular"
+ }
 ]

@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const router = require("./routes/main")
 const productsRouter = require("./routes/productsRouter")
+const usersRouter = require("./routes/usersRouter")
 const methodOverride = require('method-override')
 app.use(methodOverride('_method'))
 
@@ -19,3 +20,4 @@ app.listen(port, ()=> {
 
 app.use("/", router)
 app.use("/products", productsRouter)
+app.use("/users", usersRouter)

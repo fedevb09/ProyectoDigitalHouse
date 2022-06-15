@@ -12,16 +12,7 @@ const mainController = {
 
     cart: (req, res) => {
         res.render("shoppingCart")
-    },
-
-    signUp: (req, res) => {
-        res.render("signUp")
-    },
-
-    logIn: (req, res) => {
-        res.render("logIn")
-    },
-
+    }
 }
 
 module.exports = mainController

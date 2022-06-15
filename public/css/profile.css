@@ -1,0 +1,80 @@
+colores{
+    color: #29C6C1;
+    color: #FE1F62;
+    color: #F2D66A;
+    color: #6902DF;
+    color: #46CA48;
+}
+
+body{
+    font-family: 'League Spartan', sans-serif;
+    text-decoration: none;
+    height: 100vw;
+    width:100vw;
+    background-image: url('../images/general-bg.webp');
+}
+main a:link, a:visited, a:active {
+    text-decoration:none;
+    color: black;
+}
+main{
+    margin: 10% 0;
+}
+h2{
+    font-size: 35px;
+    font-weight: 300;
+}
+.sec{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+.hi-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #F2D66A;
+    padding: 10px 0;
+    width: 80%;
+    border-radius: 10px;
+}
+
+img{
+    width: 30%;
+}
+.nombreEmail{
+    margin-left: 3%;
+}
+.nombreEmail p{
+    margin: 5% 0;
+}
+.imgNameEmailContainer{
+    display: flex;
+    margin: 4% 7% ;
+}
+
+.buttonContainer{
+    margin-left: 37%;
+    width: 50%;
+    margin-top: 7%;
+    margin-bottom: 4%;
+}
+
+.buttonContainer button{
+    margin-top: 20%;
+    background-color: #FE1F62;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 20px 10px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.92);
+    transition-duration: 0.5s;
+}
+
+.buttonContainer button:hover{
+    box-shadow: 0px 0px 6px 3px black;
+    font-weight: 500;
+}

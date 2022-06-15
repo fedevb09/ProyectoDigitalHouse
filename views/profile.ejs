@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    
+        <script src="https://kit.fontawesome.com/5309449a51.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>artplace</title>
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/profile.css">
+        
+    </head>
+<body>
+    <%- include ("./partials/header") %> 
+    <main>
+        <section class="sec">
+            <div>
+
+                <div class="hi-container">
+                    <h2 class="hitext" >Hola usuario</h2>
+                    <p>¡Tenemos nuevas obras de arte para ti!</p>
+                </div>
+                
+                <div class="imgNameEmailContainer">
+                    
+                    <img src="/images/users/dafaultProfile.png" class="minature-image">
+                    <div class="nombreEmail">
+                        <h2>nombre</h2>
+                        <p>correo electrónico</p>
+                        <p>12/12/2122 (Fecha de nacimiento)</p>
+                        <div  class="buttonContainer"><a href="/profileEdit">
+                            <button type="submit">Editar</button>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+
+    
+                   
+                </form>
+            </div>
+        </section>
+    </main>
+    <%- include ("./partials/footer") %> 
+</body>
+</html>
