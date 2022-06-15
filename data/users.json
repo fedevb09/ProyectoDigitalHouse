@@ -82,5 +82,13 @@
   "birthDate": "2022-06-23",
   "profileImage": "/images/users/dafaultProfile.png",
   "category": "regular"
+ },
+ {
+  "id": 11,
+  "fullName": "nacho",
+  "email": "nachoalquati@gmail.com",
+  "password": "asdasdasdasd",
+  "birthDate": "2022-07-01",
+  "category": "regular"
  }
 ]
