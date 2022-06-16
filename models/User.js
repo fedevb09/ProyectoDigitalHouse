@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const bcrypt = require('bcryptjs')
 
 const User = {
 
@@ -28,7 +29,7 @@ const User = {
     create: function(userData,file){
 
     let allUsers = this.findAll()
-
+    let encryptedPass = bcrypt.hashSync(userData.password, 10);
     let image;
 
         if(file.length>0){
@@ -41,6 +42,7 @@ const User = {
         const newUser = {
             id : this.generateId(),
             ...userData,
+            password: encryptedPass,
             profileImage: image,
             category: "regular"
         }
@@ -64,4 +66,4 @@ module.exports= User;
 
 //console.log(User.create({fullName:"Nacho", email:"nacho@nacho.com"}));
 //console.log(User.generateId());
-console.log(User.delete(6));
+// console.log(User.delete(6));

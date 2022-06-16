@@ -48,5 +48,23 @@
   "birthDate": "2022-06-18",
   "profileImage": "/images/users/dafaultProfile.png",
   "category": "regular"
+ },
+ {
+  "id": 8,
+  "password": "aasdasdasdasd",
+  "fullName": "nacho",
+  "email": "nachoalquati@gmail.com",
+  "birthDate": "2022-06-17",
+  "profileImage": "/images/users/dafaultProfile.png",
+  "category": "regular"
+ },
+ {
+  "id": 9,
+  "fullName": "nacho",
+  "email": "nachoalquati@gmail.com",
+  "password": "$2a$10$isvR5s3/j6cyc0P.kxv6d.m3vgEeImwcyMrFNk2RmzkWiO3axQOo6",
+  "birthDate": "2022-06-17",
+  "profileImage": "/images/users/dafaultProfile.png",
+  "category": "regular"
  }
 ]
