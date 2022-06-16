@@ -55,7 +55,7 @@ const User = {
         let finalUsers = allUsers.filter(user => user.id !== id)
         fs.writeFileSync(this.filename, JSON.stringify(finalUsers, null, " "));
         console.log("User deleted:")
-        return "Email: "+ userDeleted.email + "| Id: " + userDeleted.id
+        return {"email" :userDeleted.email,"id: " : userDeleted.id}
     }
 
 }
@@ -64,4 +64,4 @@ module.exports= User;
 
 //console.log(User.create({fullName:"Nacho", email:"nacho@nacho.com"}));
 //console.log(User.generateId());
-//console.log(User.delete(6));
+console.log(User.delete(6));

@@ -41,15 +41,6 @@
   "profileImage": "http://dummyimage.com/169x156.jpg/5fa2dd/ffffff"
  },
  {
-  "id": 6,
-  "fullName": "nacho",
-  "email": "nachoalquati@gmail.com",
-  "password": "asdasdasdadasd",
-  "birthDate": "2022-06-17",
-  "profileImage": "profileImage-1655417164720-97195496.jpeg",
-  "category": "regular"
- },
- {
   "id": 7,
   "fullName": "Nachoio",
   "email": "nachoalquati@gmail.com",
