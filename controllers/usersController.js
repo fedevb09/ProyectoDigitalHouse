@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator')
+const User = require('../models/User')
 
 const usersPath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
@@ -14,28 +16,18 @@ const usersController = {
         res.render('signUp')
     },
     storeUser: (req,res)=>{
-        const newUserId = (users[users.length - 1].id) + 1
-        let image;
-console.log(req.files);
-
-        if(req.files.length>0){
-            image = req.files.filename
-        }
-        else{
-            image = "/images/users/dafaultProfile.png"
-        }
-
-        const newUser = {
-            id : newUserId,
-            ...req.body,
-            profileImage: image,
-            category: "regular"
+        const validations = validationResult(req);
+        
+        let oldData = {...req.body}
+        console.log(oldData.fullName);
+        if(validations.errors.length > 0){
+            return res.render('signUp' ,{
+                errors:validations.mapped(),
+                old:oldData
+            })
         }
 
-        users.push(newUser)
-
-        fs.writeFileSync(usersPath, JSON.stringify(users, null , " "));
-
+        User.create(req.body, req.files)
         res.redirect('profile')
     },
 

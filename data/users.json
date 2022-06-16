@@ -44,51 +44,18 @@
   "id": 6,
   "fullName": "nacho",
   "email": "nachoalquati@gmail.com",
-  "password": "asdasdasda",
-  "birthDate": "2022-06-30",
-  "profileImage": "profileImage-1655328258674-888493351.jpeg",
+  "password": "asdasdasdadasd",
+  "birthDate": "2022-06-17",
+  "profileImage": "profileImage-1655417164720-97195496.jpeg",
   "category": "regular"
  },
  {
   "id": 7,
-  "fullName": "nacho",
+  "fullName": "Nachoio",
   "email": "nachoalquati@gmail.com",
-  "password": "asdasdasdasd",
-  "birthDate": "2022-06-30",
-  "profileImage": "profileImage-1655328292166-965965058.jpeg",
-  "category": "regular"
- },
- {
-  "id": 8,
-  "fullName": "nacho",
-  "email": "nachoalquati@gmail.com",
-  "password": "asdasdasdasd",
-  "birthDate": "2022-07-01",
-  "category": "regular"
- },
- {
-  "id": 9,
-  "fullName": "nacho",
-  "email": "asdasdasd@dasdjhaskjdas.com",
-  "password": "asdasdasdasd",
-  "birthDate": "2022-06-23",
-  "category": "regular"
- },
- {
-  "id": 10,
-  "fullName": "nacho",
-  "email": "asdasdasd@dasdjhaskjdas.com",
-  "password": "asdasdasdsad",
-  "birthDate": "2022-06-23",
+  "password": "asdasdasdasdasdasd",
+  "birthDate": "2022-06-18",
   "profileImage": "/images/users/dafaultProfile.png",
-  "category": "regular"
- },
- {
-  "id": 11,
-  "fullName": "nacho",
-  "email": "nachoalquati@gmail.com",
-  "password": "asdasdasdasd",
-  "birthDate": "2022-07-01",
   "category": "regular"
  }
 ]
