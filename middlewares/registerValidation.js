@@ -1,5 +1,5 @@
 const { check } =require ('express-validator');
-
+// Validaciones básicas, no valida las imágenes //
 const errors =[
     check('fullName').notEmpty().withMessage('Tienes que ingresar tu nombre'),
     check('email')

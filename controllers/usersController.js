@@ -16,17 +16,21 @@ const usersController = {
         res.render('signUp')
     },
     storeUser: (req,res)=>{
+        // Validaciones de formulario de registro //
         const validations = validationResult(req);
         
         let oldData = {...req.body}
-        console.log(oldData.fullName);
+
         if(validations.errors.length > 0){
             return res.render('signUp' ,{
                 errors:validations.mapped(),
                 old:oldData
             })
         }
+        // -------------------------------- //
 
+        
+        // Hago uso de la función crear del modelo Users.js//
         User.create(req.body, req.files)
         res.redirect('profile')
     },
