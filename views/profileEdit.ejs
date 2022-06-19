@@ -24,20 +24,23 @@
 
                 <div class="hi-container">
                     <h2 class="hitext" >Hola usuario</h2>
-                    <p>¡Tenemos nuevas obras de arte para ti!</p>
+                    <p>¡Edita tu cuenta!</p>
                 </div>
                 
                 <div class="imgNameEmailContainer">
                     
                     <img src="/images/users/dafaultProfile.png" class="minature-image">
                     <div class="nombreEmail">
-                        <h2>nombre</h2>
-                        <p>correo electrónico</p>
+                        <form action="/users/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+                        <input type="text" name="fullName" id="fullName" value="nombre completo">
+                        <input type="text" name="email" id="fullName" value="email@email.com">
                         <p>12/12/2122 (Fecha de nacimiento)</p>
-                        <div  class="buttonContainer">
-                            <a href="/profileEdit">
-                                <button type="submit">Editar</button>
-                            </a>
+                        <label for="password">Nueva contraseña:</label>
+                        <input type="password" name="password" id="password" value="">
+                        <div  class="buttonContainer"><a href="/profileEdit">
+                            <button type="submit">Confirmar</button>
+                        </a>
+                    </form>
                         </div>
                     </div>
                 </div>

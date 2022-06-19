@@ -12,7 +12,7 @@ router.get('/login', usersController.login)
 router.get('/register', usersController.register)
 router.post('/register', upload.any(), validations, usersController.storeUser)
 router.get('/profile', usersController.profile)
-// router.get('/edit/:id/', usersController.edit)
+router.get('/edit/', usersController.edit)
 // router.put('/edit/:id/', upload.any(), usersController.userEdit) 
 // router.delete('/delete/:id', usersController.destroy); 
 
