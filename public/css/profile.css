@@ -41,13 +41,20 @@ h2{
 }
 
 img{
-    width: 30%;
+    width: 35%;
+    aspect-ratio:1/1 ;
+    border-radius: 10px;
 }
 .nombreEmail{
+    display: flex;
     margin-left: 3%;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5%;
 }
 .nombreEmail p{
     margin: 5% 0;
+    margin-bottom: 10%;
 }
 .imgNameEmailContainer{
     display: flex;
@@ -55,14 +62,15 @@ img{
 }
 
 .buttonContainer{
-    margin-left: 37%;
-    width: 50%;
-    margin-top: 7%;
-    margin-bottom: 4%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .buttonContainer button{
-    margin-top: 20%;
+
     background-color: #FE1F62;
     color: white;
     border: none;
