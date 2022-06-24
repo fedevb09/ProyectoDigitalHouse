@@ -54,6 +54,8 @@ h4{
     padding-left: 1%;
     margin-left: 5%;
     border: solid 2px #FE1F62;
+    padding: 3px;
+    padding-top: 5px;
 }
 
 .form-container label{
