@@ -21,9 +21,9 @@ const usersController = {
         if(userToLogin && check){
 
             delete userToLogin.password
-            req.session.userLogger = userToLogin
+            req.session.userLogged = userToLogin
 
-            return res.render("profile")
+            return res.redirect("profile")
             
         }else{
 
@@ -64,13 +64,13 @@ const usersController = {
     },
 
     profile: (req,res)=>{
-        res.render('profile')
+        res.render('profile', {user: req.session.userLogged})
     },
     edit: (req,res)=>{
-        res.render('profileEdit')
+        res.render('profileEdit', {user: req.session.userLogged})
     },
     editPassword: (req,res)=>{
-        res.render('editpassword')
+        res.render('editpassword', {user: req.session.userLogged})
     }
 };
 

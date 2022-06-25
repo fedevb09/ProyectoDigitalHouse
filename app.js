@@ -11,7 +11,12 @@ const cookieParser = require("cookie-parser");
 
 app.use(express.static('./public'));
 app.use(methodOverride('_method'));
-app.use(session( {secret: "secreto"}));
+app.use(session({
+    secret: "secreto",
+    resave: false,
+    saveUninitialized: false
+
+}));
 app.use(urlencoded({extended:false}));
 app.use(express.json());
 app.use(cookieParser());
