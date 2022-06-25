@@ -40,6 +40,9 @@ const usersController = {
     },
     edit: (req,res)=>{
         res.render('profileEdit')
+    },
+    editPassword: (req,res)=>{
+        res.render('editpassword')
     }
 };
 
