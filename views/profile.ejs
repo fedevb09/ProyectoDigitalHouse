@@ -23,17 +23,17 @@
             <div>
 
                 <div class="hi-container">
-                    <h2 class="hitext" >Hola usuario</h2>
+                    <h2 class="hitext" >¡Hola <%user.fullName%>!</h2>
                     <p>¡Tenemos nuevas obras de arte para ti!</p>
                 </div>
                 
                 <div class="imgNameEmailContainer">
                     
-                    <img src="/images/users/dafaultProfile.png" class="minature-image">
+                    <img src="<%user.profileImage%>" class="minature-image">
                     <div class="nombreEmail">
-                        <h2>nombre</h2>
-                        <p>correo electrónico</p>
-                        <p>12/12/2122 (Fecha de nacimiento)</p>
+                        <h2><%user.fullName%></h2>
+                        <p><%user.email%></p>
+                        <p><%user.birthDate%></p>
                         <div  class="buttonContainer">
                             <a href="/users/edit">
                                 <button type="submit">Editar</button>
