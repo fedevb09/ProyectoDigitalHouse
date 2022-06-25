@@ -75,5 +75,14 @@
   "birthDate": "2022-06-18",
   "profileImage": "/images/users/dafaultProfile.png",
   "category": "regular"
+ },
+ {
+  "id": 11,
+  "fullName": "Iván Perciante",
+  "email": "ivan@email.com",
+  "password": "$2a$10$AHBEBHaj4e7RIDUXZAUCCuDHa2.a79utbfFKcZd1vaNHtNFjA3QNW",
+  "birthDate": "2022-06-22",
+  "profileImage": "/images/users/dafaultProfile.png",
+  "category": "regular"
  }
 ]
