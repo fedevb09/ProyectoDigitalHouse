@@ -78,3 +78,5 @@ module.exports= User;
 //console.log(User.create({fullName:"Nacho", email:"nacho@nacho.com"}));
 //console.log(User.generateId());
 // console.log(User.delete(6));
+
+//console.log(User.findByField("email", "ivan@email.com"))
