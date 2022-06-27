@@ -21,6 +21,12 @@ const usersController = {
         if(userToLogin && check){
 
             delete userToLogin.password
+
+            // Aqui se está creando la cookie con la información del usuario. Dura 2 min //
+            if(req.body.recuerdame != undefined){
+                res.cookie('recuerdame',req.body.email,{ maxAge: 60000*2})
+            }
+
             req.session.userLogged = userToLogin
 
             return res.redirect("profile")
@@ -36,7 +42,7 @@ const usersController = {
                         msg: "Las credenciales son inválidas"
                 }
             })
-           }
+        }
         
     },
 
