@@ -5,7 +5,7 @@ function cookieRecuerdame(req, res, next){
 
     if(req.cookies.recuerdame != undefined && req.session.userLogged == undefined ){
         
-        let userToLogin = User.findByField("email", req.cookies.recuerdame);
+        let userToLogin = User.findByField("id", req.cookies.recuerdame);
 
         req.session.userLogged = userToLogin
     }

@@ -31,15 +31,18 @@
                     
                     <img src="/images/users/<%=user.profileImage%>" class="minature-image">
                     <div class="nombreEmail">
-                        <form action="/users/edit?_method=PUT" method="POST" enctype="multipart/form-data">
-                        <input type="text" name="fullName" id="fullName" value="<%=user.fullName%>">
-                        <input type="text" name="email" id="fullName" value="<%=user.email%>"">
-                        <p><%=user.birthDate%></p>
-                        <div  class="buttonContainer"><a href="/profileEdit">
-                            <button type="submit">Confirmar</button>
-                        </a>
-                    </form>
-                        </div>
+                        <form action="/users/edit/<%=user.id%>?_method=PUT" method="POST">
+
+                            <input type="text" name="fullName" id="fullName" value="<%=user.fullName%>">
+                            <input type="text" name="email" id="email" value="<%=user.email%>"">
+
+                            <p><%=user.birthDate%></p>
+
+                            <div  class="buttonContainer">
+                                <button type="submit">Confirmar</button>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
 
