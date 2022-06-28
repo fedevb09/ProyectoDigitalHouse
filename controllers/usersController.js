@@ -22,6 +22,12 @@ const usersController = {
         if(userToLogin && check){
 
             delete userToLogin.password
+
+            // Aqui se está creando la cookie con la información del usuario. Dura 2 min //
+            if(req.body.recuerdame != undefined){
+                res.cookie('recuerdame',userToLogin.id,{ maxAge: 60000*2})
+            }
+
             req.session.userLogged = userToLogin
 
             return res.redirect("profile")
@@ -37,7 +43,7 @@ const usersController = {
                         msg: "Las credenciales son inválidas"
                 }
             })
-           }
+        }
         
     },
 
@@ -69,6 +75,17 @@ const usersController = {
     },
     edit: (req,res)=>{
         res.render('profileEdit', {user: req.session.userLogged})
+    },
+    storeEdition: (req,res)=>{
+        let body = req.body
+
+       let userEdited = User.edit(req.params.id, req.body)
+        console.log("usuario ", userEdited);
+        // No podemos lograr que la cookie siga en pie, al cambiar el usuario nos deslogea.
+        //res.cookie('recuerdame',userEdited.id,{ maxAge: 60000*2})
+
+        res.redirect('/users/profile')
+
     },
     editPassword: (req,res)=>{
         res.render('editpassword', {user: req.session.userLogged})

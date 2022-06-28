@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
+const req = require('express/lib/request');
+const { body } = require('express-validator');
+const Logger = require('nodemon/lib/utils/log');
 
 const User = {
     // Declaración ruta relativa de la DB //
@@ -69,7 +72,30 @@ const User = {
         fs.writeFileSync(this.filename, JSON.stringify(finalUsers, null, " "));
         console.log("User deleted:")
         return {"email" :userDeleted.email,"id: " : userDeleted.id}
-    }
+    },
+    edit: function(id,bodyUser){
+        let userToEdit = this.findByPk(+id)
+        let allUsers = this.findAll()
+
+        const editedUser = {
+            ...userToEdit,
+            fullName: bodyUser.fullName,
+            email: bodyUser.email
+        }
+        console.log(editedUser);
+
+        let usersEdited = allUsers.map(user => {
+
+            if (user.id == editedUser.id) {
+                return user = { ...editedUser }
+            }
+
+            return user
+        })
+        
+        fs.writeFileSync(this.filename, JSON.stringify(usersEdited, null, " "));
+        return editedUser
+        }
 
 }
 

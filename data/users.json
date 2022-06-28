@@ -87,11 +87,20 @@
  },
  {
   "id": 12,
-  "fullName": "Nacho Alquati",
+  "fullName": "Nacho Alquati12",
   "email": "nacho@admin.com",
   "password": "$2a$10$Az4xdsJ8UWWQlOH64D3aXe9mkHZ0nGHrnQVEurtT9KB/bDnQcvbgi",
   "birthDate": "2023-03-03",
   "profileImage": "profileImage-1656197018648-209279181.png",
+  "category": "regular"
+ },
+ {
+  "id": 13,
+  "fullName": "omar",
+  "email": "ofernandomm@gmail.com",
+  "password": "$2a$10$ALv4TPzPHROQy/AdvWCtXehoodjx.mVR21jQBU.4aNiDRb7ch.PKa",
+  "birthDate": "2021-11-03",
+  "profileImage": "/images/users/dafaultProfile.png",
   "category": "regular"
  }
 ]

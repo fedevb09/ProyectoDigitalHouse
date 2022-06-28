@@ -8,6 +8,7 @@ const methodOverride = require('method-override');
 const session = require("express-session");
 const { urlencoded } = require('express');
 const cookieParser = require("cookie-parser");
+const cookieRecuerdame = require('./middlewares/cookieRecuerdame');
 
 app.use(express.static('./public'));
 app.use(methodOverride('_method'));
@@ -20,6 +21,7 @@ app.use(session({
 app.use(urlencoded({extended:false}));
 app.use(express.json());
 app.use(cookieParser());
+app.use(cookieRecuerdame);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
