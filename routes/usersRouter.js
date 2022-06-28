@@ -5,13 +5,12 @@ const upload = require('../middlewares/usersMulterMiddleware')
 const path = require('path');
 const { productEdit } = require("../controllers/usersController");
 const validations = require('../middlewares/registerValidation')
-
-
+const usersValidations = require ('../middlewares/usersValidations')
 
 router.get('/login', usersController.login)
-router.post('/log', usersController.loginProcess)
+router.post('/log',  usersController.loginProcess)
 router.get('/register', usersController.register)
-router.post('/register', upload.any(), validations, usersController.storeUser)
+router.post('/register', upload.any(), usersValidations.isAccess ,validations, usersController.storeUser)
 router.get('/profile', usersController.profile)
 router.get('/edit/', usersController.edit)
 router.get('/edit/password', usersController.editPassword)
