@@ -11,7 +11,7 @@ const loginValidations = require('../middlewares/loginValidation')
 router.get('/login', usersController.login)
 router.post('/log',loginValidations,  usersController.loginProcess)
 router.get('/register', usersController.register)
-router.post('/register', upload.any(), usersValidations.isAccess ,validations, usersController.storeUser)
+router.post('/register', upload.any(),validations, usersController.storeUser)
 router.get('/profile', usersController.profile)
 
 router.get('/edit/', usersController.edit)

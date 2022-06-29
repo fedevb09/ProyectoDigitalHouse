@@ -67,7 +67,13 @@ const usersController = {
 
         
         // Hago uso de la función crear del modelo Users.js//
-        User.create(req.body, req.files)
+        let newUser =  User.create(req.body, req.files)
+        
+
+        delete newUser.password
+        console.log("este es el nuevo usuario",newUser);
+        req.session.userLogged = newUser
+       
         res.redirect('profile')
     },
 

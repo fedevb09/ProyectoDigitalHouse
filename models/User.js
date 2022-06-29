@@ -43,6 +43,8 @@ const User = {
     let allUsers = this.findAll()
     let encryptedPass = bcrypt.hashSync(userData.password, 10);
     let image;
+    
+    console.log(userData);
 
         if(file.length>0){
             image = file[0].filename
@@ -58,6 +60,7 @@ const User = {
             profileImage: image,
             category: "regular"
         }
+
 
     allUsers.push(newUser);
     fs.writeFileSync(this.filename, JSON.stringify(allUsers, null, " "));

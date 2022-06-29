@@ -89,7 +89,7 @@
   "id": 12,
   "fullName": "Nacho Alquati",
   "email": "nacho@admin.com",
-  "password": "$2a$10$t2hct4NyWfgorwaOostI7OzhnWczB.mG4SxBV1wEmu6MpEbjQ/U2.",
+  "password": "$2a$10$DIf7moxqp5js84oxV.IG4eOUI4IsUWvG9vq7qt/rrqhS8CeXLWN8e",
   "birthDate": "2023-03-03",
   "profileImage": "profileImage-1656197018648-209279181.png",
   "category": "regular"
@@ -100,6 +100,15 @@
   "email": "ofernandomm@gmail.com",
   "password": "$2a$10$ALv4TPzPHROQy/AdvWCtXehoodjx.mVR21jQBU.4aNiDRb7ch.PKa",
   "birthDate": "2021-11-03",
+  "profileImage": "/images/users/dafaultProfile.png",
+  "category": "regular"
+ },
+ {
+  "id": 14,
+  "fullName": "Carolina Emilia",
+  "email": "caro@admin.com",
+  "password": "$2a$10$mBXmJBbdOZvtEOL6yEW2auNSIG6G72Px3MPEtLQiaSf8sH0fdS56C",
+  "birthDate": "2022-06-29",
   "profileImage": "/images/users/dafaultProfile.png",
   "category": "regular"
  }
