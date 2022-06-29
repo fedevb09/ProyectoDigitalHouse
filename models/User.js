@@ -95,7 +95,32 @@ const User = {
         
         fs.writeFileSync(this.filename, JSON.stringify(usersEdited, null, " "));
         return editedUser
-        }
+        },
+        editPassword: function(id,bodyUser){
+
+            let userToEdit = this.findByPk(+id)
+            let allUsers = this.findAll()
+
+            let encryptedPass = bcrypt.hashSync(bodyUser.newPassword, 10);
+            
+            const editedUser = {
+                ...userToEdit,
+                password: encryptedPass
+            }
+            console.log(editedUser);
+    
+            let usersEdited = allUsers.map(user => {
+    
+                if (user.id == editedUser.id) {
+                    return user = { ...editedUser }
+                }
+    
+                return user
+            })
+            
+            fs.writeFileSync(this.filename, JSON.stringify(usersEdited, null, " "));
+            return editedUser
+            }
 
 }
 

@@ -34,15 +34,16 @@ const usersController = {
             
         }else{
 
-            return res.render("login", {
-                errors: {
-                    email: {
-                        msg: "Las credenciales son inválidas"
+            let errors =  {
+                email: {
+                    msg: "Las credenciales son inválidas"
+                },
+                password: {
+                    msg: "Las credenciales son inválidas"
                     }
-                },  password: {
-                        msg: "Las credenciales son inválidas"
-                }
-            })
+            }
+
+            return res.render("login", {errors:errors})
         }
         
     },
@@ -89,6 +90,26 @@ const usersController = {
     },
     editPassword: (req,res)=>{
         res.render('editpassword', {user: req.session.userLogged})
+    },
+    newPasswordProcess: (req,res)=>{
+
+        let userId = +req.params.id
+        let userToEdit = User.findByPk(userId)
+
+        let check = bcrypt.compareSync(req.body.password, userToEdit.password)
+
+        if(check === true){
+
+            User.editPassword(userId, req.body)
+            return res.redirect('/users/login')
+        }
+        let errors = {password: {
+            msg: "Las credenciales son inválidas"
+        }}
+        return res.render('editpassword',{errors:errors, user: req.session.userLogged})
+
+
+
     }
 };
 
