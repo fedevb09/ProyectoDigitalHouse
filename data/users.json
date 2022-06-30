@@ -111,5 +111,14 @@
   "birthDate": "2022-06-29",
   "profileImage": "/images/users/dafaultProfile.png",
   "category": "regular"
+ },
+ {
+  "id": 15,
+  "fullName": "federico",
+  "email": "federico_vazquez_barbera@hotmail.com",
+  "password": "$2a$10$2jEWoYQSUyI01wh.bmL9sepuESUe9J1lxp/U4DMyb6xKClhclMKIq",
+  "birthDate": "2000-10-09",
+  "profileImage": "profileImage-1656624565296-878700958.jpg",
+  "category": "regular"
  }
 ]
