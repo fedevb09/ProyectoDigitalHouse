@@ -9,7 +9,7 @@ const session = require("express-session");
 const { urlencoded } = require('express');
 const cookieParser = require("cookie-parser");
 const cookieRecuerdame = require('./middlewares/cookieRecuerdame');
-const userLoggedMiddleware = require('../grupo2Artplace/middlewares/userLoggedMiddleware');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 app.use(express.static('./public'));
 app.use(methodOverride('_method'));
