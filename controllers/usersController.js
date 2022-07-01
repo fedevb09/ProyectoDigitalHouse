@@ -28,7 +28,7 @@ const usersController = {
             }
 
             req.session.userLogged = userToLogin
-
+            res.locals.user = req.session.userLogged
             return res.redirect("profile")
             
         }else{
@@ -86,20 +86,17 @@ const usersController = {
         let body = req.body
         // new Promise(User.edit(req.params.id, req.body))
        let userEdited = User.edit(req.params.id, req.body)
-       
+       console.log(userEdited);
         // No podemos lograr que la cookie siga en pie, al cambiar el usuario nos deslogea.
         //res.cookie('recuerdame',userEdited.id,{ maxAge: 60000*2})
       
 
                
+                    req.session.userLogged = userEdited;
+                    console.log(req.session.userLogged);
 
-                setTimeout(function(){
-                    
-                    let userToLogin = User.findByField("id", req.cookies.recuerdame);
-                    req.session.userLogged = userToLogin
-                    
                     res.redirect('/users/profile')
-                }, 120)
+
                 // res.redirect('/users/profile')
  
 
