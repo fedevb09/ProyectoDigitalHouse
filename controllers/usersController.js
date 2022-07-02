@@ -2,7 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator')
 const User = require('../models/User')
-const bcrypt = require("bcryptjs")
+const bcrypt = require("bcryptjs");
+const session = require('express-session');
 
 const usersPath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
@@ -82,17 +83,16 @@ const usersController = {
     edit: (req,res)=>{
         res.render('profileEdit', {user: req.session.userLogged})
     },
-    storeEdition: (req,res)=>{
+    storeEdition: async (req,res)=>{
         let body = req.body
         // new Promise(User.edit(req.params.id, req.body))
-       let userEdited = User.edit(req.params.id, req.body)
+       let userEdited = await User.edit(req.params.id, req.body)
        console.log(userEdited);
         // No podemos lograr que la cookie siga en pie, al cambiar el usuario nos deslogea.
         //res.cookie('recuerdame',userEdited.id,{ maxAge: 60000*2})
-      
 
                
-                    req.session.userLogged = userEdited;
+                    session.userLogged = userEdited;
                     console.log(req.session.userLogged);
 
                     res.redirect('/users/profile')

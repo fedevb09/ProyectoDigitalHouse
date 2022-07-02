@@ -16,7 +16,9 @@ app.use(methodOverride('_method'));
 app.use(session({
     secret: "secreto",
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: true,
+    cookie: {maxAge: 1000 * 60 * 60 * 24},
+
 
 }));
 app.use(urlencoded({extended:false}));

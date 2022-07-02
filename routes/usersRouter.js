@@ -7,13 +7,13 @@ const { productEdit } = require("../controllers/usersController");
 const validations = require('../middlewares/registerValidation');
 const loginValidations = require('../middlewares/loginValidation');
 const guestMiddleware = require('../middlewares/guestMiddleware');
-const authtMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 router.get('/login', guestMiddleware, usersController.login)
 router.post('/log', loginValidations,  usersController.loginProcess)
 router.get('/register', guestMiddleware, usersController.register)
 router.post('/register', upload.any(),validations, usersController.storeUser)
-router.get('/profile', authtMiddleware, usersController.profile)
+router.get('/profile', authMiddleware, usersController.profile)
 
 router.get('/edit/', usersController.edit)
 router.put('/edit/:id/', usersController.storeEdition) 
