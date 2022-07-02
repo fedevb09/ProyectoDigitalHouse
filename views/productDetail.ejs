@@ -91,10 +91,10 @@
                             <h4 class="usd">U$D</h4>
                             <p class="price-text"><%=product.price%></p>
                         </div>
-                    <% if (locals.userLogged) { %>
                         <div class="button-container">
                             <button class="buy-button" href="#">COMPRAR</button>
                         </div>
+                        <% if (locals.userLogged) { %>
                         <div class="editar-eliminar">
                             <div class="button-container">
                                 <a href="/products/edit/<%=product.id%>"><button class="buy-button">EDITAR</button></a>
