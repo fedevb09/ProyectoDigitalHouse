@@ -40,17 +40,38 @@ aspect-ratio:initial
 .miniature-img-box-overflow{
     display:flex;
     overflow: hidden;
-    width: 30px;
+    width: 50px;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.27);
+    box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.472);
     aspect-ratio: 1;
+    border: solid 2px white;
 
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .cerrar-sesion{
+    
+    padding: 10px;
+    position: relative;
+    background: black;
+    float:inline-end;
     font-size: 1rem;
+    border-radius: 5px;
+    visibility: hidden;
+    width: 110px;
+}
+
+nav ul:hover .cerrar-sesion{
+    display: flow-root;
+    z-index: 1001;
+    visibility:visible
 }
 
 .logo img{
@@ -126,8 +147,9 @@ header a:link{
     display: flex;
     flex-direction: row;
     justify-content:space-between;
-    align-items: center;
+    align-items: initial;
     flex-grow: 2;
+    margin-top: 5px;
 }
 
 .nav-user{
@@ -143,10 +165,11 @@ header a:link{
     margin: 0 5%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items:initial;
     justify-content: space-evenly;
     flex-grow: 1;
     color:white;
+    margin-top: 5px;
 }
 .header-nav-links{
     color: white;
@@ -211,9 +234,9 @@ header a:link{
         font-size: 0.8em;
         align-items:baseline;
     }
-    .header-profile-image img{
-        width: 30px;
-        border: none;
+    .miniature-img-box-overflow{
+    
+    width: 30px;
     }
 
     .cerrar-sesion{

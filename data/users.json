@@ -91,7 +91,7 @@
   "email": "nacho@admin.com",
   "password": "$2a$10$ZiqG/ehvf5V2i46QwiZvE.nkV8sQoYC.0dNgH3Zb/TtJTSVkbolrS",
   "birthDate": "2023-03-03",
-  "profileImage": "perfil-nacho.webp",
+  "profileImage": "/images/users/obiwan.jpeg",
   "category": "regular"
  },
  {

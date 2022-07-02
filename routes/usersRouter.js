@@ -14,6 +14,7 @@ router.post('/log', loginValidations,  usersController.loginProcess)
 router.get('/register', guestMiddleware, usersController.register)
 router.post('/register', upload.any(),validations, usersController.storeUser)
 router.get('/profile', authMiddleware, usersController.profile)
+router.get('/logout', usersController.logout)
 
 router.get('/edit/', usersController.edit)
 router.put('/edit/:id/', usersController.storeEdition) 
