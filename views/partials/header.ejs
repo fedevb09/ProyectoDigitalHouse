@@ -28,8 +28,14 @@
                     <li><a href="/cart" class="header-nav-links"> <i class="fa-solid fa-cart-shopping"></i></a></li>
                     <li><a href="#" class="hamburger-menu"><i class="fa-solid fa-bars"></i></a></li>
                     <li class="cerrar-sesion"><a href="/logout"></a>Salir</li>
-                    <li><a href="/users/profile" class="header-profile-image"><img src="/images/users/<%=locals.user.profileImage%>" alt=""></a></li>
-                </ul>
+                    <li>
+                        <a href="/users/profile" class="header-profile-image">
+                            <div class="miniature-img-box-overflow">
+                            <img src="<%=locals.user.profileImage%>" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    </ul>
             </nav>
     
         </div>
