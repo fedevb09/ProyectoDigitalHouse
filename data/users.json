@@ -129,5 +129,14 @@
   "birthDate": "2022-07-12",
   "profileImage": "/images/users/dafaultProfile.png",
   "category": "regular"
+ },
+ {
+  "id": 17,
+  "fullName": "federico vazquez",
+  "email": "federico@hotmail.com",
+  "password": "$2a$10$smeEoHmzlpBiB/AFUiM6e.n2ZS1yRNlPBmwhOx9uNTyZS4dDThWim",
+  "birthDate": "2000-10-09",
+  "profileImage": "profileImage-1656978243397-826239323.jpg",
+  "category": "regular"
  }
 ]
