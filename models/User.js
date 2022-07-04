@@ -50,7 +50,7 @@ const User = {
             image = file[0].filename
         }
         else{
-            image = "/images/users/dafaultProfile.png"
+            image = "dafaultProfile.png"
         }
 
         const newUser = {
