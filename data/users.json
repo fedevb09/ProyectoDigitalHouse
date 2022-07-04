@@ -118,7 +118,16 @@
   "email": "federico_vazquez_barbera@hotmail.com",
   "password": "$2a$10$2jEWoYQSUyI01wh.bmL9sepuESUe9J1lxp/U4DMyb6xKClhclMKIq",
   "birthDate": "2000-10-09",
-  "profileImage": "profileImage-1656624565296-878700958.jpg",
+  "profileImage": "/images/users/improfileImage-1656624565296-878700958.jpg",
+  "category": "regular"
+ },
+ {
+  "id": 16,
+  "fullName": "Nacho Alquati2",
+  "email": "nacho12@admin.com",
+  "password": "$2a$10$0g/MOkHXXbSPrOd6/L2mxORq0vfajdX0iblwIfThHQE8e.FyVT6EC",
+  "birthDate": "2022-07-12",
+  "profileImage": "/images/users/dafaultProfile.png",
   "category": "regular"
  }
 ]
