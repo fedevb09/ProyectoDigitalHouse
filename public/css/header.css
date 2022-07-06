@@ -58,7 +58,9 @@ aspect-ratio:initial
     position: relative;
     top: -10%;
 }
-
+.responsive-login{
+    display: none;
+}
 
 .cerrar-sesion{
     
@@ -206,6 +208,71 @@ header a:link{
     }
 }
 
+
+
+@media (max-width: 760px){
+    .nav-site{
+        display: none;
+    }
+    .nav-container nav{
+        width: 30%;
+    }
+    .hamburger-menu{
+        display: block;
+        font-size: 0.8em;
+        align-items:baseline;
+    }
+    .miniature-img-box-overflow{
+        
+        width: 30px;
+    }
+    
+    .cerrar-sesion{
+        display: none;
+    }
+    
+    header{
+        width: 100%;
+        aspect-ratio: 1/0.1;
+        display: flex;
+        height: 80px;
+        align-items: center;
+    }
+    .form-header-searchbar{
+        position: absolute;
+        left: 110px;
+        width: 100%;
+    }
+    .nav-container nav{
+        width: 30%;
+    }
+    
+    .nav-icons{
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+    .nav-site{
+        display: none;
+    }
+    .logo{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .logo img{
+        width: 35%;
+    }
+    main{
+        margin-top: 60px;
+    }
+    .isesion{
+        font-size: 0.45em;
+        margin-top: -20%;
+        justify-content: center;
+    }
+}
+
 @media (max-width: 480px){
     .nav-site{
         display: none;
@@ -230,65 +297,25 @@ header a:link{
         width: 25vw;
         
     }
- 
-
-}
-
-
-@media (max-width: 760px){
-    .nav-site{
-        display: none;
+    .nav-container nav {
+        width: 40%;
+        z-index: 1001;
     }
-    .nav-container nav{
-        width: 30%;
-    }
-    .hamburger-menu{
+    .responsive-login{
         display: block;
         font-size: 0.8em;
-        align-items:baseline;
     }
-    .miniature-img-box-overflow{
-    
-    width: 30px;
+    .isesion{
+       display: none;
     }
-
     .cerrar-sesion{
-        display: none;
+     display: none;
+    }
+    nav ul:hover .cerrar-sesion{
+        display: none
+    }
+    .fa-bars{
+        font-size: 1.15em;
     }
 
-    header{
-        width: 100%;
-        aspect-ratio: 1/0.1;
-        display: flex;
-        height: 80px;
-        align-items: center;
-    }
-    .form-header-searchbar{
-        position: absolute;
-        left: 110px;
-        width: 100%;
-    }
-    .nav-container nav{
-        width: 30%;
-    }
-
-    .nav-icons{
-        display: flex;
-        justify-content: space-evenly;
-        
-    }
-    .nav-site{
-        display: none;
-    }
-    .logo{
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
-    .logo img{
-        width: 35%;
-    }
-    main{
-        margin-top: 60px;
-    }
 }

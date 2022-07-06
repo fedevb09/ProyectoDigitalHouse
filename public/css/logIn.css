@@ -16,6 +16,9 @@ section{
 header{
     margin-bottom: 0;
 }
+.register-link{
+    text-decoration: none;
+}
 
 .loginContainer{
     background-color: white;
