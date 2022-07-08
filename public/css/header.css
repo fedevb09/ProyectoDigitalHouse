@@ -38,7 +38,7 @@ height: 100%;
 aspect-ratio:initial
 
 }
-.miniature-img-box-overflow{
+.miniature-img-box-overflowH{
     display:flex;
     overflow: hidden;
     width: 50px;
@@ -222,7 +222,7 @@ header a:link{
         font-size: 0.8em;
         align-items:baseline;
     }
-    .miniature-img-box-overflow{
+    .miniature-img-box-overflowH{
         
         width: 30px;
     }
