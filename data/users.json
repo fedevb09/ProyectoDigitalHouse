@@ -165,5 +165,14 @@
   "birthDate": "2022-07-15",
   "profileImage": "profileImage-1656978700351-342316548.webp",
   "category": "regular"
+ },
+ {
+  "id": 21,
+  "fullName": "mariano",
+  "email": "mariano@hotmail.com",
+  "password": "$2a$10$3lQj6iej/G93e5FCiTQLfu1yvSweVXAau09TAO996eES3uE8euSja",
+  "birthDate": "1992-05-25",
+  "profileImage": "dafaultProfile.png",
+  "category": "regular"
  }
 ]
