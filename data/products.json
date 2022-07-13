@@ -36,12 +36,12 @@
   "id": 6,
   "productName": "Pop Trooper",
   "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut a porro laborum possimus blanditiis repellat at? Debitis expedita fugiat eos veritatis, modi rerum iste ad reiciendis a, enim corporis maiores!",
-  "price": 72,
+  "price": "72",
   "creatorName": "JJ. Abrams",
+  "sizes": "",
   "img1": "pop-trooper.jpeg",
-  "img2": "pop-trooper.jpeg",
-  "img3": "pop-trooper.jpeg",
-  "popularity": 3
+  "img2": "img2-1657745987634-2588157.jpeg",
+  "img3": "pop-trooper.jpeg"
  },
  {
   "id": 7,
