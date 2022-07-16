@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
 
         profileImage: DataTypes.STRING(200),
 
-        address: DataTypes.STRING(200),
+        adress: DataTypes.STRING(200),
 
         postalCode: DataTypes.STRING(100),
 

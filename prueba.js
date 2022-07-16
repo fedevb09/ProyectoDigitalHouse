@@ -1,4 +1,8 @@
 let db = require('./src/database/models')
 
-console.log(db.Country.findAll().then(function(generos){return generos})
-);          
+let result = db.User.findByPk(1)
+    .then((result)=>{
+        console.log(result);
+    })  
+
+console.log(result);
