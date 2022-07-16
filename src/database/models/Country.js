@@ -3,7 +3,7 @@ const { sequelize } = require(".");
 
 module.exports = (sequelize, DataTypes) => {
 
-    let alias = "Category"
+    let alias = "Country"
 
     let cols = {
 
@@ -23,27 +23,27 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
 
         },
-
     }
 
     let config = {
 
         timestamps: false,
         underscored: false,
-        tableName: "categories"
+        tableName: "countries"
     }
 
-    const Category = sequelize.define(alias, cols, config)
+    const Country = sequelize.define(alias, cols, config)
 
-    Category.associate = function (models){
+    Country.associate = function (models){
 
-        Category.hasMany(models.Product, {
-            as: 'products',
-            foreignKey: 'categoryId'
-        })
-    
-        }
+    Country.hasMany(models.User, {
+        as: 'usuarios',
+        foreignKey: 'countryId'
+    })
 
-    return Category
+    }
+
+    return Country
 
 }
+

@@ -1,3 +1,7 @@
+const { DataTypes } = require("sequelize");
+const { sequelize, Sequelize } = require(".");
+
+
 module.exports = (sequelize, DataTypes) => {
 
     let alias = "User"
@@ -58,6 +62,20 @@ module.exports = (sequelize, DataTypes) => {
 
 
     const User = sequelize.define(alias, cols, config)
+
+    User.associate = function (models){
+
+        User.belongsTo(models.Country, {
+            as: 'pais',
+            foreignKey: 'countryId'
+        })
+
+        User.hasMany(models.Order, {
+            as: 'orders',
+            foreignKey: 'userId'
+        })
+    
+        }
 
     return User
 

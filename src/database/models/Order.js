@@ -1,4 +1,4 @@
-const { DataTypes } = require("sequelize/types");
+const { DataTypes } = require("sequelize");
 const { sequelize } = require(".");
 
 module.exports = (sequelize, DataTypes) => {
@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
         id: {
 
             type: DataTypes.INTEGER(10),
+            primaryKey: true,
             allowNull: false,
             autoIncrement: true,
             unique: true
@@ -45,6 +46,26 @@ module.exports = (sequelize, DataTypes) => {
 
     const Order = sequelize.define(alias, cols, config)
 
+    Order.associate = function (models){
+
+        Order.belongsTo(models.User, {
+            as: 'user',
+            foreignKey: 'userId'
+        })
+
+ 
+        Order.belongsToMany(models.Product,{
+            as: 'products',
+            through: 'ordersProducts',
+            foreignKey: 'orderId',
+            otherKey: 'productId',
+            timestamps: false
+        })
+    
+        }
+
+
     return Order
     
 }
+
