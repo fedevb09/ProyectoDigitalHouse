@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
     let config = {
 
         tableName: "orders",
-        timestamps: true,
+        timestamps: false,
         underscored: false
     }
 
@@ -55,7 +55,7 @@ module.exports = (sequelize, DataTypes) => {
 
  
         Order.belongsToMany(models.Product,{
-            as: 'products',
+            as: 'hasproducts',
             through: 'ordersProducts',
             foreignKey: 'orderId',
             otherKey: 'productId',
