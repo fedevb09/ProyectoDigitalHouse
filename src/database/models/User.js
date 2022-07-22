@@ -1,7 +1,3 @@
-const { DataTypes } = require("sequelize");
-const { sequelize, Sequelize } = require(".");
-
-
 module.exports = (sequelize, DataTypes) => {
 
     let alias = "User"
@@ -28,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
 
         password: {
 
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING(200),
             allowNull: false,
             uniqueKey: true
 
@@ -50,7 +46,9 @@ module.exports = (sequelize, DataTypes) => {
 
         createdAt: DataTypes.DATE,
 
-        updatedAt: DataTypes.DATE
+        updatedAt: DataTypes.DATE,
+
+        countryId: DataTypes.TINYINT(4)
     }
 
     let config = {

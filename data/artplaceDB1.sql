@@ -175,7 +175,7 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(45) NOT NULL,
   `countryId` int(11) NOT NULL,
-  `password` varchar(30) DEFAULT NULL,
+  `password` varchar(200) DEFAULT NULL,
   `birthDate` date DEFAULT NULL,
   `fullName` varchar(200) DEFAULT NULL,
   `admin` tinyint(4) DEFAULT NULL,

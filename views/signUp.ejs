@@ -41,6 +41,15 @@
                     <input type="date" name="birthDate"  value="<%=(locals.old && old.birthDate? old.birthDate : null)%>"> 
                     <p style="color:red"> <%= (locals.errors && errors.birthDate? errors.birthDate.msg : null) %> </p>
 
+                    <label for="adress">Dirección</label>
+                    <input type="text" name="adress" id="adress" value="">
+
+                    <label for="postalCode">Código postal</label>
+                    <input type="text" name="postalCode" id="postalCode" value="">
+
+                    <label for="phone">Télefono de contacto</label>
+                    <input type="text" name="phone" id="phone" value="">
+
                     <div class="profilePicInput">
                         <label for="porfileImage">Imagen de perfil</label>
                         <input type="file" name="profileImage" accept="image/*" id="profileImage">

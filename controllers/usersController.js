@@ -1,12 +1,12 @@
-const fs = require('fs');
 const path = require('path');
-const { validationResult } = require('express-validator')
-const User = require('../models/User')
+const { validationResult } = require('express-validator');
+const db = require('../src/database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 const bcrypt = require("bcryptjs");
 const session = require('express-session');
 
-const usersPath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+const Users = db.User;
 
 const usersController = {
 
@@ -67,14 +67,30 @@ const usersController = {
 
         
         // Hago uso de la función crear del modelo Users.js//
-        let newUser =  User.create(req.body, req.files)
+        let userData =  req.body;
+        let file = req.files; 
+        let encryptedPass = bcrypt.hashSync(userData.password, 10);
+        let image
         
+        console.log({userData,file,encryptedPass});
 
-        delete newUser.password
-        console.log("este es el nuevo usuario",newUser);
-        req.session.userLogged = newUser
-       
-        res.redirect('profile')
+        if(file.length>0){
+            image = file[0].filename
+        }
+        else{
+            image = "dafaultProfile.png"
+        }
+
+        Users.create({
+            ...userData,
+            password: encryptedPass,
+            profileImage: image,
+            admin: 0,
+            countryId:1
+        })
+        //.then((user)=>{req.session.userLogged = newUser})
+        .then((user)=>{res.redirect('profile')})
+        //.then((user)=>{console.log("este es el nuevo usuario",newUser)})
     },
 
     profile: (req,res)=>{
