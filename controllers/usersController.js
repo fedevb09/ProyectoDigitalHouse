@@ -81,16 +81,18 @@ const usersController = {
             image = "dafaultProfile.png"
         }
 
-        Users.create({
+        let newUser={
             ...userData,
             password: encryptedPass,
             profileImage: image,
             admin: 0,
             countryId:1
-        })
-        //.then((user)=>{req.session.userLogged = newUser})
+        }
+
+        Users.create(newUser)
+        .then((user)=>{req.session.userLogged = newUser})
         .then((user)=>{res.redirect('profile')})
-        //.then((user)=>{console.log("este es el nuevo usuario",newUser)})
+        .then((user)=>{console.log("este es el nuevo usuario",newUser)})
     },
 
     profile: (req,res)=>{
