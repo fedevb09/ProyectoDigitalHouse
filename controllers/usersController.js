@@ -1,8 +1,6 @@
 const path = require('path');
 const { validationResult } = require('express-validator');
 const db = require('../src/database/models');
-const sequelize = db.sequelize;
-const { Op } = require("sequelize");
 const bcrypt = require("bcryptjs");
 const session = require('express-session');
 
