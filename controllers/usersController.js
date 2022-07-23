@@ -3,6 +3,7 @@ const { validationResult } = require('express-validator');
 const db = require('../src/database/models');
 const bcrypt = require("bcryptjs");
 const session = require('express-session');
+const { log } = require('console');
 
 const Users = db.User;
 
@@ -21,6 +22,17 @@ const usersController = {
             }
          // 2. hace todo el proceso de login //
         }).then((user)=>{
+            if(user === null){
+                let errors =  {
+                    email: {
+                        msg: "El correo ingresado es incorrecto"
+                    }
+                }
+
+                return res.render("login", {errors:errors})
+            }
+                
+           
             userToLogin=user.dataValues
 
             let check = bcrypt.compareSync(req.body.password, userToLogin.password)
@@ -101,7 +113,10 @@ const usersController = {
         Users.create(newUser)
 
         // 3. redirección una vez queda guardado en DB //
-        .then((user)=>{req.session.userLogged = newUser})
+        .then((user)=>{
+            delete newUser.password
+            req.session.userLogged = newUser
+        })
         .then((user)=>{res.redirect('profile')})
         .then((user)=>{console.log("este es el nuevo usuario",newUser)})
     },
@@ -127,29 +142,59 @@ const usersController = {
         .then(()=>{
             req.session.destroy();
             return res.redirect('/');
-        });
+        })
     },
     editPassword: (req,res)=>{
         res.render('editpassword', {user: req.session.userLogged})
     },
     newPasswordProcess: (req,res)=>{
 
+
+       
+        const validations = validationResult(req);
+
+      
+
+        // Encuentra el id que viene en el parametro de la URL
         let userId = req.params.id
-        let userToEdit = User.findByPk(userId)
+        // Busca al usuario y lo almacena en una variable
+        Users.findByPk(userId)
+        .then((user)=>{
 
-        userToLogin=user.dataValues
+            let userToEdit = user.dataValues
 
-        let check = bcrypt.compareSync(req.body.password, userToEdit.password)
+            let check = bcrypt.compareSync(req.body.password, userToEdit.password)
+    
+            if(check === true){
 
-        if(check === true){
+                // Valida que la contraseña tenga al menos 6 caractères, esta
+                // en este momento, ya que primero hay que validar que la pass
+                //  sea correcta.
+                if(validations.errors.length > 0){
+                    return res.render('editpassword' ,{
+                        errors:validations.mapped(),
+                    })
+                }
 
-            User.editPassword(userId, req.body)
-            return res.redirect('/users/login')
-        }
-        let errors = {password: {
-            msg: "Las credenciales son inválidas"
-        }}
-        return res.render('editpassword',{errors:errors, user: req.session.userLogged})
+    
+                Users.update({
+                    password: bcrypt.hashSync(req.body.newPassword, 10)
+                  },
+                  {
+                      where:{id:userId}
+                  })
+
+                return res.redirect('/')
+            }
+            else{
+
+                let errors = {password: {
+                    msg: "Las credenciales son inválidas"
+                }}
+                return res.render('editpassword',{errors:errors, user: req.session.userLogged})
+            }
+
+        })    
 
 
 

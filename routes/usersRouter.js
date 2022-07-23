@@ -8,6 +8,7 @@ const validations = require('../middlewares/registerValidation');
 const loginValidations = require('../middlewares/loginValidation');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
+const editPasswordValidation = require('../middlewares/editPasswordValidation')
 
 router.get('/login', guestMiddleware, usersController.login)
 router.post('/log', loginValidations,  usersController.loginProcess)
@@ -20,7 +21,7 @@ router.get('/edit/', usersController.edit)
 router.put('/edit/:id/', usersController.storeEdition) 
 
 router.get('/edit/password', usersController.editPassword)
-router.put('/edit/password/:id', usersController.newPasswordProcess)
+router.put('/edit/password/:id', editPasswordValidation, usersController.newPasswordProcess)
 
 // router.delete('/delete/:id', usersController.destroy); 
 
