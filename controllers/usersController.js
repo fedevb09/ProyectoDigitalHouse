@@ -112,31 +112,32 @@ const usersController = {
     edit: (req,res)=>{
         res.render('profileEdit', {user: req.session.userLogged})
     },
-    storeEdition: async (req,res)=>{
-        let body = req.body
-        // new Promise(User.edit(req.params.id, req.body))
-       let userEdited = await User.edit(req.params.id, req.body)
-       console.log(userEdited);
-        // No podemos lograr que la cookie siga en pie, al cambiar el usuario nos deslogea.
-        //res.cookie('recuerdame',userEdited.id,{ maxAge: 60000*2})
+    storeEdition: (req,res)=>{
 
-               
-                    session.userLogged = userEdited;
-                    console.log(req.session.userLogged);
-
-                    res.redirect('/users/profile')
-
-                // res.redirect('/users/profile')
- 
-
+       // 1. busca al usuario que esta logeado // 
+        let userId = req.params.id
+        // 2. lo actualiza según lo que viene en el formulario // 
+        Users.update({
+          ...req.body
+        },
+        {
+            where:{id:userId}
+        })
+        // 3. cierra la sesión // 
+        .then(()=>{
+            req.session.destroy();
+            return res.redirect('/');
+        });
     },
     editPassword: (req,res)=>{
         res.render('editpassword', {user: req.session.userLogged})
     },
     newPasswordProcess: (req,res)=>{
 
-        let userId = +req.params.id
+        let userId = req.params.id
         let userToEdit = User.findByPk(userId)
+
+        userToLogin=user.dataValues
 
         let check = bcrypt.compareSync(req.body.password, userToEdit.password)
 
