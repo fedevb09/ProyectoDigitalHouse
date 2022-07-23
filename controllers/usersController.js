@@ -14,35 +14,45 @@ const usersController = {
 
     loginProcess: (req, res) => {
 
-        let userToLogin = User.findByField("email", req.body.email)
-        let check = bcrypt.compareSync(req.body.password, userToLogin.password)
+         // 1. busca el usuario //
+        let userToLogin = Users.findOne({
+            where:{
+                email: req.body.email
+            }
+         // 2. hace todo el proceso de login //
+        }).then((user)=>{
+            userToLogin=user.dataValues
 
-        if(userToLogin && check){
+            let check = bcrypt.compareSync(req.body.password, userToLogin.password)
 
-            delete userToLogin.password
+            if(check){
 
-            // Aqui se está creando la cookie con la información del usuario. Dura 2 min //
-            if(req.body.recuerdame != undefined){
-                res.cookie('recuerdame',userToLogin.id,{ maxAge: 60000*2})
+                delete userToLogin.password
+
+                // Aqui se está creando la cookie con la información del usuario. Dura 2 min //
+                if(req.body.recuerdame != undefined){
+                    res.cookie('recuerdame',userToLogin.id,{ maxAge: 60000*2})
+                }
+
+                req.session.userLogged = userToLogin
+                res.locals.user = req.session.userLogged
+                return res.redirect("profile")
+                
+            }else{
+
+                let errors =  {
+                    email: {
+                        msg: "Las credenciales son inválidas"
+                    },
+                    password: {
+                        msg: "Las credenciales son inválidas"
+                        }
+                }
+
+                return res.render("login", {errors:errors})
             }
 
-            req.session.userLogged = userToLogin
-            res.locals.user = req.session.userLogged
-            return res.redirect("profile")
-            
-        }else{
-
-            let errors =  {
-                email: {
-                    msg: "Las credenciales son inválidas"
-                },
-                password: {
-                    msg: "Las credenciales son inválidas"
-                    }
-            }
-
-            return res.render("login", {errors:errors})
-        }
+        })
         
     },
 
@@ -50,7 +60,9 @@ const usersController = {
         res.render('signUp')
     },
     storeUser: (req,res)=>{
-        // Validaciones de formulario de registro //
+
+
+        // 1. Validaciones de formulario de registro //
         const validations = validationResult(req);
         
         let oldData = {...req.body}
@@ -61,10 +73,9 @@ const usersController = {
                 old:oldData
             })
         }
-        // -------------------------------- //
 
-        
-        // Hago uso de la función crear del modelo Users.js//
+        // 2. Ejecución del registro //
+
         let userData =  req.body;
         let file = req.files; 
         let encryptedPass = bcrypt.hashSync(userData.password, 10);
@@ -88,6 +99,8 @@ const usersController = {
         }
 
         Users.create(newUser)
+
+        // 3. redirección una vez queda guardado en DB //
         .then((user)=>{req.session.userLogged = newUser})
         .then((user)=>{res.redirect('profile')})
         .then((user)=>{console.log("este es el nuevo usuario",newUser)})
