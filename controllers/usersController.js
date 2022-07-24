@@ -148,12 +148,8 @@ const usersController = {
         res.render('editpassword', {user: req.session.userLogged})
     },
     newPasswordProcess: (req,res)=>{
-
-
        
         const validations = validationResult(req);
-
-      
 
         // Encuentra el id que viene en el parametro de la URL
         let userId = req.params.id
