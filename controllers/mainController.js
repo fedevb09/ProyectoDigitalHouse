@@ -1,13 +1,12 @@
-const fs = require('fs');
 const path = require ('path')
+const db = require('../src/database/models');
 
-
-const productsPath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'))
+const Products = db.Product;
 
 const mainController = {
     index: (req, res) => {
-        res.render("index", {products:products})
+        Products.findAll()
+        .then(products=>(res.render("index", {products})))
     },
 
     cart: (req, res) => {
