@@ -14,6 +14,8 @@ module.exports = (sequelize, DataTypes) => {
 
         },
 
+        productName: DataTypes.TEXT,
+
         description: DataTypes.TEXT,
 
         price: {

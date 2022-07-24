@@ -136,6 +136,7 @@ DROP TABLE IF EXISTS `products`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `productName` text,
   `categoryId` int(11) DEFAULT NULL,
   `description` text,
   `price` int(11) NOT NULL,
@@ -160,7 +161,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,1,'descripcion',100,'img/img','img/img','img/img','10x10','van goh',1,NULL,NULL);
+INSERT INTO `products` VALUES (1,'cuadro 1', 1,'descripcion',100,'img/img','img/img','img/img','10x10','van goh',1,NULL,NULL);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
