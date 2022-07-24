@@ -5,17 +5,24 @@ const Products = db.Product;
 
 const productController = {
     productDetail: (req, res) => {
-        let id = req.params.id;
+        let productId = req.params.id;
 
-        const product = products.find(product => {
+        Products.findByPk(productId)
+        .then((product)=>{
+            res.render('productDetail',{product})
+        })
+        
+        /*(product => {
             if (product.id === +id) {
                 return product
             }
         })
-        res.render('productDetail', { product: product })
+        res.render('productDetail', { product: product })  diferencia entre: { products: products } y {products} */ 
     },
     productsList: (req, res) => {
-        res.render('productsList', { products: products })
+        Products.findAll()
+        .then(products=>(res.render('productsList', {products})))
+        //res.render('productsList', { products: products }) // diferencia entre: { products: products } y {products}
     },
 
     productRegister: (req, res) => {
