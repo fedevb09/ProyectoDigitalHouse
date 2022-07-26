@@ -48,6 +48,15 @@ h4{
     text-shadow: 2px 0 0 rgb(0, 0, 0), -2px 0 0 rgb(0,0,0), 0 2px 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
     text-align: center;
 }
+.form-container select{
+    border-radius: 10px;
+    padding-left: 1%;
+    margin-left: 5%;
+    border: solid 2px #FE1F62;
+    padding: 3px;
+    padding-top: 5px;
+    width: 80%;
+}
 
 .form-container input{
     border-radius: 10px;
@@ -56,6 +65,7 @@ h4{
     border: solid 2px #FE1F62;
     padding: 3px;
     padding-top: 5px;
+    width: 80%;
 }
 
 .form-container label{

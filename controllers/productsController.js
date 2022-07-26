@@ -2,6 +2,7 @@ const path = require('path')
 const db = require('../src/database/models');
 
 const Products = db.Product;
+const Category = db.Category;
 
 const productController = {
     productDetail: (req, res) => {
@@ -26,11 +27,14 @@ const productController = {
     },
 
     productRegister: (req, res) => {
-        res.render('productRegister')
+
+        Category.findAll()
+        .then((categories)=>{
+
+            res.render('productRegister', {categories:categories})
+        })
     },
     productCreate: (req, res) => {
-        console.log(req.files);
-        const newId = (products[products.length - 1].id) + 1;
         let img1
         let img2
         let img3
@@ -52,17 +56,16 @@ const productController = {
 
 
         const newProduct = {
-            id: newId,
             ...req.body,
             img1: img1,
             img2: img2,
             img3: img3,
-            popularity: 3
         }
 
-        products.push(newProduct)
-        fs.writeFileSync(productsPath, JSON.stringify(products, null , " "));
-        res.redirect('/')
+        Products.create(newProduct)
+        .then(()=>{
+            res.redirect('/products')
+        })
     },
 
     productEdit: (req, res) => {
