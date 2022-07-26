@@ -10,20 +10,12 @@ const productController = {
 
         Products.findByPk(productId)
         .then((product)=>{
-            res.render('productDetail',{product})
+            res.render('productDetail',{ product: product })
         })
-        
-        /*(product => {
-            if (product.id === +id) {
-                return product
-            }
-        })
-        res.render('productDetail', { product: product })  diferencia entre: { products: products } y {products} */ 
     },
     productsList: (req, res) => {
         Products.findAll()
-        .then(products=>(res.render('productsList', {products})))
-        //res.render('productsList', { products: products }) // diferencia entre: { products: products } y {products}
+        .then(products=>(res.render('productsList', { products: products })))
     },
 
     productRegister: (req, res) => {
