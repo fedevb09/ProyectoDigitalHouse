@@ -63,36 +63,41 @@ const productController = {
     productEdit: (req, res) => {
 
         const id = req.params.id;
-        let productToEdit = products.find(product => {
-            if (product.id === +id) {
-                return product
-            }
-        })
+        // let productToEdit = products.find(product => {
+        //     if (product.id === +id) {
+        //         return product
+        //     }
+        // })
 
 
-        //else{
+        // //else{
 
-        // Usar el "name" del imput de la vista para encontrar o identificar la imagen que el usuario desea cambiar.
-        productToEdit = {
-            id: productToEdit.id,
-            ...req.body,
-            img1: productToEdit.img1,
-            img2: productToEdit.img2,
-            img3: productToEdit.img3
-        }
+        // // Usar el "name" del imput de la vista para encontrar o identificar la imagen que el usuario desea cambiar.
+        // productToEdit = {
+        //     id: productToEdit.id,
+        //     ...req.body,
+        //     img1: productToEdit.img1,
+        //     img2: productToEdit.img2,
+        //     img3: productToEdit.img3
+        // }
+        let img1;
+
+        let img2;
+
+        let img3;
 
         if (req.files.length) {
             req.files.forEach(file => {
                 let { fieldname } = file
                 switch (fieldname) {
                     case "img1":
-                        productToEdit.img1 = file.filename
+                        img1 = file.filename
                         break;
                     case "img2":
-                        productToEdit.img2 = file.filename
+                        img2 = file.filename
                         break;
                     case "img3":
-                        productToEdit.img3 = file.filename
+                        img3 = file.filename
                         break;
                     default:
                         break;
@@ -100,34 +105,62 @@ const productController = {
             })
         }
 
-        let productEdited = products.map(product => {
-
-            if (product.id == productToEdit.id) {
-                return product = { ...productToEdit }
+        Products.update({
+            ...req.body
+        },{
+            where:{
+                id: id
             }
+        })
+        
+        .then(()=>{
 
-            return product
+            res.redirect("/products")
+
         })
 
-        fs.writeFileSync(productsPath, JSON.stringify(productEdited, null , " "))
+        // let productEdited = products.map(product => {
 
-        res.redirect("/products")
+        //     if (product.id == productToEdit.id) {
+        //         return product = { ...productToEdit }
+        //     }
+
+        //     return product
+        // })
+
+        // fs.writeFileSync(productsPath, JSON.stringify(productEdited, null , " "))
+
     },
 
     edit: (req, res) => {
         const id = req.params.id;
-        let product = products.find(product => product.id == id);
+        //Category.findAll()
+        Products.findByPk(id)
+        .then((product)=>{
 
-        res.render("productEdit", { product })
+            res.render("productEdit", { product: product })
+        })
+
     }, 
     destroy : (req, res) => {
 		
 		let idproducto = req.params.id;
-		let newProducts=products.filter(product => product.id != idproducto);
+		//let newProducts=products.filter(product => product.id != idproducto);
 	
-		fs.writeFileSync(productsPath, JSON.stringify(newProducts, null , " "))
+		//fs.writeFileSync(productsPath, JSON.stringify(newProducts, null , " "))
 
-		res.redirect('/');
+        Products.destroy({
+            where:{
+                id:idproducto
+            }
+        })
+        
+        .then(()=>{
+
+            res.redirect('/');
+            
+        })
+
 
 	}
 }
