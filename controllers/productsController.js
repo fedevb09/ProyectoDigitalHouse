@@ -162,6 +162,15 @@ const productController = {
         })
 
 
-	}
+	},
+    promotions: (req,res) =>{
+        Products.findAll({
+            order:[['price', 'ASC']],
+            limit:6
+        })
+        .then((products)=>{
+            res.render('promotion', {products:products})
+        })
+    }
 }
 module.exports = productController;
