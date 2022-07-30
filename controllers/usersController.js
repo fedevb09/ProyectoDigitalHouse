@@ -93,7 +93,6 @@ const usersController = {
         let encryptedPass = bcrypt.hashSync(userData.password, 10);
         let image
         
-        console.log({userData,file,encryptedPass});
 
         if(file.length>0){
             image = file[0].filename
@@ -118,7 +117,7 @@ const usersController = {
             req.session.userLogged = newUser
         })
         .then((user)=>{res.redirect('profile')})
-        .then((user)=>{console.log("este es el nuevo usuario",newUser)})
+        .then((user)=>{})
     },
 
     profile: (req,res)=>{
