@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const router = require("./routes/main");
 const productsRouter = require("./routes/productsRouter");
+const apiRouter = require('./routes/apiRouter')
 const usersRouter = require("./routes/usersRouter");
 const methodOverride = require('method-override');
 const session = require("express-session");
@@ -36,6 +37,8 @@ app.listen(port, ()=> {
     console.log('Servidor corriendo en puerto ' + port)
 })
 
+
 app.use("/", router)
 app.use("/products", productsRouter)
 app.use("/users", usersRouter)
+app.use("/api", apiRouter)
