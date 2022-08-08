@@ -9,14 +9,15 @@
                     <img src="/images/logo.png" alt="">
                 </a>
             </div>
-            <div class="form-header-searchbar" action="#" method="GET">
-                <input type="text" class="header-searchbar-input" placeholder="Buscar musica, pinturas, artistas..."></input>
-                <div class="submit-header-searchbar"><i class="fa fa-search"></i></div>
+            <form  class="form-header-searchbar" action="/products/search" method="POST">
+                <input autocomplete="off" type="text" class="header-searchbar-input" placeholder="Buscar musica, pinturas, artistas..." name="searchForm"></input>
+                <button class="submit-header-searchbar" type="submit"><i class="fa fa-search"></i></button>
                 <div id="search-bar">
                     <li id='lis'>
                         <a id='slinks' href=""></a>
                     </li>
                 </div>
+            </form>
 
             </div>
     
@@ -67,8 +68,8 @@
                     <img src="/images/logo.png" alt="">
                 </a>
             </div>
-            <form  class="form-header-searchbar" action="/search" method="POST">
-                <input type="text" class="header-searchbar-input" placeholder="Buscar musica, pinturas, artistas..."></input>
+            <form  class="form-header-searchbar" action="/products/search" method="POST">
+                <input autocomplete="off" type="text" class="header-searchbar-input" placeholder="Buscar musica, pinturas, artistas..." name="searchForm"></input>
                 <button class="submit-header-searchbar" type="submit"><i class="fa fa-search"></i></button>
                 <div id="search-bar">
                     <li id='lis'>

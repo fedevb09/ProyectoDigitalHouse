@@ -1,5 +1,7 @@
 const path = require('path')
 const db = require('../src/database/models');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 const Products = db.Product;
 const Category = db.Category;
@@ -171,6 +173,18 @@ const productController = {
         .then((products)=>{
             res.render('promotion', {products:products})
         })
+    },
+    search: (req,res) =>{
+        let inputToSearch = req.body.searchForm
+        Products.findAll({
+            where:{
+                productName: {
+                    [Op.like]: `%${inputToSearch}%`
+                }
+            }})
+            .then((products)=>{
+                res.render('searchResults', {products:products})
+            })
     }
 }
 module.exports = productController;
