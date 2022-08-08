@@ -21,6 +21,7 @@
 <main>
     <h2 class="featured">Esto es lo que encontramos...</h2>
     <section class="products">
+        <% if(products.length>0){%> 
         <% products.forEach(product => { %>
          
         
@@ -38,6 +39,14 @@
             </a>
         </article>
         <% }) %>
+        <% }else{ %> 
+            <div class="not-found">
+                <p>No pudimos encontrar lo que buscas...</p>
+                <div class="buttons-container">
+                    <button class="buy-button" ><a href="/"> Volver al Inicio </a></button>
+                </div>
+            </div>
+        <% } %> 
     </section>
 </main>
 
