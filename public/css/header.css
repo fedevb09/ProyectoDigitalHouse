@@ -106,6 +106,7 @@ nav ul:hover .cerrar-sesion{
     align-items: center;
     border-radius: 0px 10px 10px 0px;
     height: 40px;
+    border: none;
 }
 
 

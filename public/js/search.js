@@ -1,9 +1,9 @@
 window.onload = function () {
 
-    let searchInput = document.querySelector('.header-searchbar-input')
-    let resultsDiv = document.querySelector('#search-bar')
-    let main = document.querySelector('main')
-    let lis = document.querySelector('#lis')
+    let searchInput = document.querySelector('.header-searchbar-input');
+    let resultsDiv = document.querySelector('#search-bar');
+    let main = document.querySelector('main');
+    let lis = document.querySelectorAll('#lis');
     
     
     main.addEventListener('click', function(){
@@ -15,51 +15,71 @@ window.onload = function () {
         .then(response => response.json())
         .then(products => {
             let allProducts = products.data
-            const search = ()=> {
+            const search = (e)=> {
 
 
+                if(e.key != 'ArrowDown' && e.key != 'ArrowUp' ){
 
-                resultsDiv.classList.add('search-results')
-                resultsDiv.innerHTML = '';
-                let inputText = searchInput.value.toLowerCase();
-                allProducts.forEach(product => {
-
+                    resultsDiv.classList.add('search-results')
+                    resultsDiv.innerHTML = '';
+                    let inputText = searchInput.value.toLowerCase();
+                    allProducts.forEach(product => {
+    
+                          
+    
+                        let lowerCaseProduct = product.productName.toLowerCase();
+                        if (lowerCaseProduct.indexOf(inputText) !== -1) {
+                            resultsDiv.innerHTML += `
+        
+                        <li id='lis'><a id='slinks' href='http://localhost:8000/products/${product.id}'><nombre id='#productname'>${product.productName}</nombre><p>${product.creatorName}</p></a></li>
+        
+                        `
+                        
+                    }
+                    
+                    
                       
-
-                    let lowerCaseProduct = product.productName.toLowerCase();
-                    if (lowerCaseProduct.indexOf(inputText) !== -1) {
+    
+                    });
+                    
+                    if(resultsDiv.innerHTML === ''){
                         resultsDiv.innerHTML += `
-    
-                    <li id='lis'><a id='slinks' href='http://localhost:8000/products/${product.id}'>${product.productName}<p>${product.creatorName}</p></a></li>
-    
-                    `
-                    
-                }
-                
-                
-                  
-
-                });
-                
-                if(resultsDiv.innerHTML === ''){
-                    resultsDiv.innerHTML += `
-                    
-                    <li>No encontramos ese producto...</li>
-                    
-                    `
+                        
+                        <li>No encontramos ese producto...</li>
+                        
+                        `
+                    }
                 }
                 
             }
+            let contador = 0;
+            searchInput.addEventListener('keyup', search);
+            searchInput.addEventListener('keydown', function(e){
+
+                // Setea el contenido de la barra de búsqueda al elemento del array 'productNames'
+                // haciendo uso de un contador (El contador es utilizado para encontrar el indice del elemento)
+                if(e.key === 'ArrowDown'){
+                    let productNames = document.querySelectorAll('#slinks nombre')
+                    searchInput.value = productNames[contador].innerText
+                    if(contador < productNames.length-1 && contador >= 0){
+                        contador++
+                    }
+                }
+                
+                if(e.key === 'ArrowUp'){
+                    let productNames = document.querySelectorAll('#slinks nombre')
+                    if(contador < productNames.length && contador > 0){
+                        contador--
+                    }
+                    searchInput.value = productNames[contador].innerText
+                }
+                // Resetea el contador a cero cuando el usuario borra algún caracter.
+                if(e.key === 'Backspace'){
+                    contador= 0;
+                }
+            });
             
-            searchInput.addEventListener('keyup', search)
-            resultsDiv.addEventListener('focus', function(){
-                searchInput.innerHTML += 'asd'
-                console.log('asfrasf');
-            })
-            
-            lis.addEventListener('click', function(){
-                console.log('a');
-            })
+
             
         })
 }
