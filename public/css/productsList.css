@@ -173,6 +173,8 @@ main{
 .not-found p{
 font-size: 35px;
 color: #FE1F62;
+padding-left: 20px;
+padding-right: 20px;
 }
 
 .buy-button a {
@@ -184,9 +186,6 @@ color: #FE1F62;
 @media (max-width: 1200px){
     .product h3{
         font-size: 15px;
-    }
-    .buy-button{
-        display: none;
     }
     .metods-container h2{
         font-size: 17px;
@@ -209,6 +208,9 @@ color: #FE1F62;
     }
     .metods-container{
         margin-bottom: 25px;
+    }
+    .not-found p{
+        font-size: 28px;
     }
     }
 
@@ -242,6 +244,9 @@ color: #FE1F62;
 }
 .descriptions{
     width: 90%;
+}
+.not-found p{
+    font-size: 20px;
 }
 }
 
