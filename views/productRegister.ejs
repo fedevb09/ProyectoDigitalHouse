@@ -29,14 +29,14 @@
 
                     <label for="price">Precio</label>
                     <input type="text" name="price" id="price">
-
+                    <span id="message-error3"></span>
 
                     <label for="sizes">Tamaño</label>
                     <input type="text" name="sizes" id="sizes">
                     
-
                     <label for="description">Descripción</label>
-                    <input type="text" name="description" id="description" required> 
+                    <input type="text" name="description" id="description"> 
+                    <span id="message-error2"></span>
 
                     <label for="description">Creador</label>
                     <input type="text" name="creatorName" id="creatorName" required> 
@@ -75,5 +75,6 @@
     </main>
     <%- include ("./partials/footer") %> 
     <script src="/js/creacionProductoValidacion.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
