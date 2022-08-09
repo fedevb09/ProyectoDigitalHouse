@@ -126,6 +126,17 @@ h4{
     box-shadow: 0px 0px 6px 3px black;
     font-weight: 500;
 }
+form p{
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+form .input-correct-data{
+border: solid 2px rgb(168, 221, 128);
+}
+form .input-wrong-data{
+    border: solid 2px #FE1F62;
+    }
 
 @media (max-width: 460px) {
 
