@@ -22,9 +22,10 @@
         <section style="background-image: url('../images/general-bg.webp')">
             <div class="form-container">
             <h2>Registra tu producto</h2>
-                <form action="/products/create" method="POST" enctype="multipart/form-data">
+                <form class='form' action="/products/create" method="POST" enctype="multipart/form-data">
                     <label for="productName">Nombre del producto</label>
-                    <input type="text" name="productName" id="productName" required>
+                    <input type="text" name="productName" id="productName">
+                    <span id="message-error"></span>
 
                     <label for="price">Precio</label>
                     <input type="text" name="price" id="price">
@@ -73,5 +74,6 @@
         </section>
     </main>
     <%- include ("./partials/footer") %> 
+    <script src="/js/creacionProductoValidacion.js"></script>
 </body>
 </html>
