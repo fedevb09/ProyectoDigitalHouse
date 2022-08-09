@@ -31,7 +31,7 @@ window.onload = function () {
                         if (lowerCaseProduct.indexOf(inputText) !== -1) {
                             resultsDiv.innerHTML += `
         
-                        <li id='lis'><a id='slinks' href='http://localhost:8000/products/${product.id}'><nombre id='#productname'>${product.productName}</nombre><p>${product.creatorName}</p></a></li>
+                        <li id='lis' class='' ><a id='slinks' href='http://localhost:8000/products/${product.id}'><nombre id='#productname'>${product.productName}</nombre><p>${product.creatorName}</p></a></li>
         
                         `
                         
@@ -58,9 +58,20 @@ window.onload = function () {
 
                 // Setea el contenido de la barra de búsqueda al elemento del array 'productNames'
                 // haciendo uso de un contador (El contador es utilizado para encontrar el indice del elemento)
+                let lis = document.querySelectorAll('#lis')
                 if(e.key === 'ArrowDown'){
                     let productNames = document.querySelectorAll('#slinks nombre')
                     searchInput.value = productNames[contador].innerText
+                    lis.forEach(e => {
+                        e.classList.remove('search-results-hover')
+                    });
+                    lis[contador].classList.toggle('search-results-hover')
+                    
+                    // if(contador>0){
+
+                    //     lis[(contador)].classList.toggle('search-results-hover');
+
+                    // }
                     if(contador < productNames.length-1 && contador >= 0){
                         contador++
                     }
@@ -68,12 +79,23 @@ window.onload = function () {
                 
                 if(e.key === 'ArrowUp'){
                     let productNames = document.querySelectorAll('#slinks nombre')
+                    lis[contador].classList.toggle('search-results-hover')
+                    lis.forEach(e => {
+                        e.classList.remove('search-results-hover')
+                    });
                     if(contador < productNames.length && contador > 0){
                         contador--
+                        searchInput.value = productNames[contador].innerText
                     }
-                    searchInput.value = productNames[contador].innerText
+                  
+                    if(contador>0){
+    
+                        lis[(contador)].classList.toggle('search-results-hover');
+                        
+                    }
                 }
                 // Resetea el contador a cero cuando el usuario borra algún caracter.
+
                 if(e.key === 'Backspace'){
                     contador= 0;
                 }
