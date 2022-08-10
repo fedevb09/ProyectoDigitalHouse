@@ -29,6 +29,18 @@ const productController = {
         })
     },
     productCreate: (req, res) => {
+
+        // let fileOriginalName = req.files[0].originalname
+
+
+        // if(fileOriginalName.includes('jpg' || 'png' || 'jpeg' || 'gif' )){
+        //     return res.render('/products/create', {errors:{
+        //         image: {
+        //             msg: "La imagen debe ser JPG, PNG, JPEG o GIF"
+        //         }
+        //     }})
+        // }
+
         let img1
         let img2
         let img3
