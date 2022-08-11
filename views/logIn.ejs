@@ -24,7 +24,7 @@
                 <form action="/users/log" method="POST">
 
                     <label for="userName">Correo electrónico</label>
-                    <input type="text" name="email"  required>
+                    <input type="text" name="email" id="email"  required>
                     <br>
                     <p style="color:red"> <%= (locals.errors && errors.email? errors.email.msg : null) %> </p>
 
