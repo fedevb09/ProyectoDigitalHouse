@@ -195,6 +195,7 @@ header a:link{
     align-items: center;
 }
 
+
 .search-results{
 color: black !important;
 background-color: white;
@@ -250,7 +251,72 @@ header .search-results li a p{
    font-weight: 200;
    font-size: 13px ;
     }
+.dark-ligth-mode{
+    transition: all 0.3s;
+    width: 60px;
+    height: 30px;
+    background: black;
+    color: white;
+    z-index: 1900;
+    position: absolute;
+    right: 50px;
+    top: 120px;
+    padding: 5px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 2px black;
+}
+.ligth-mode{
+     transition: all 0.3s;
+    width: 60px;
+    height: 30px;
+    background: white;
+    color: black;
+    z-index: 1900;
+    position: absolute;
+    right: 50px;
+    top: 120px;
+    padding: 5px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 2px white;
+}
+.darkBody{
 
+    background: rgb(77,77,77);
+    background: linear-gradient(288deg, rgba(77,77,77,1) 0%, rgba(9,9,9,1) 48%, rgba(71,71,71,1) 100%);
+
+}
+body .darkCard{
+
+    background: rgb(255 255 255 / 70%);
+    color: white !important;
+}
+
+.darkTitles{
+    margin: 3% 0 3% 0;
+    width: 100%;
+    background-color: #585858;
+    color: white;
+    font-weight: 400;
+    display: flex;
+    padding: 14px 25px;
+    box-shadow: 0px 0px 6px 1px rgb(0 0 0 / 92%);
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    
+}
+.inner-border{
+    width: 99%;
+    height: 99%;
+    border: whitesmoke 2px solid;
+    border-radius: 10px;
+}
 
 @media (max-width: 1200px){
     .header-nav-links{

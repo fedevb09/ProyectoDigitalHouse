@@ -56,6 +56,7 @@
                     <div class="profilePicInput">
                         <label for="productImage">Foto principal</label>
                         <input type="file" name="productImage1" accept="image/*" id="productImage1" required>
+                        <p style="color:red" id="fullNameError"> <%= (locals.errors && errors.image ? errors.image.msg : null) %> </p>
                     </div>
                     <div class="profilePicInput">
                         <label for="productImage">Foto de producto 2</label>
