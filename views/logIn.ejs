@@ -24,14 +24,14 @@
                 <form action="/users/log" method="POST">
 
                     <label for="userName">Correo electrónico</label>
-                    <input type="text" name="email" id="email"  required>
+                    <input type="text" name="email" id="emailLogin"  required>
                     <br>
-                    <p style="color:red"> <%= (locals.errors && errors.email? errors.email.msg : null) %> </p>
+                    <p style="color:red" id="emailError"> <%= (locals.errors && errors.email? errors.email.msg : null) %> </p>
 
                     <label for="password">Contraseña</label>
                     <input type="password" name="password" id="password" required>
                     <br>
-                    <p style="color:red"> <%= (locals.errors && errors.password? errors.password.msg : null) %> </p>
+                    <p style="color:red" id="passwordError"> <%= (locals.errors && errors.password? errors.password.msg : null) %> </p>
 
                     <label for="">Recuerdame</label>
                     <input type="checkbox" name="recuerdame">
@@ -48,5 +48,6 @@
         </section>
     </main>
     <%- include ("./partials/footer") %> 
+    <script src="/js/userLogin.js"></script>
 </body>
 </html>
