@@ -42,7 +42,8 @@
                     <input type="text" name="creatorName" id="creatorName" >
 
                     <label for="description">Cantidad</label>
-                    <input type="text" name="stock" id="stock" placeholder="Cantidad de unidades a vender." required>
+                    <input type="text" name="stock" id="stock" placeholder="Cantidad de unidades a vender.">
+                    <div class="errores"><p id="message-error4"></p></div>
 
                     <label for="description">Categoría</label>
                     <select name="categoryId" id="categoryId">
@@ -58,14 +59,17 @@
                         <input type="file" name="productImage1" accept="image/*" id="productImage1">
                         <p style="color:red" id="fullNameError"> <%= (locals.errors && errors.image ? errors.image.msg : null) %> </p>
                     </div>
+                    <div class="errores"><p id="message-error5"></p></div>
                     <div class="profilePicInput">
                         <label for="productImage">Foto de producto 2</label>
                         <input type="file" name="productImage2" accept="image/*" id="productImage2">
                     </div>
+                    <div class="errores"><p id="message-error6"></p></div>
                     <div class="profilePicInput">
                         <label for="productImage">Foto de producto 3</label>
                         <input type="file" name="productImage3" accept="image/*" id="productImage3">
                     </div>
+                    <div class="errores"><p id="message-error7"></p></div>
 
                     <div class="buttonContainer">
                         <button type="submit">Crear producto</button>
@@ -74,7 +78,7 @@
             </div>
         </section>
     </main>
-    <%- include ("./partials/footer") %> 
+    <%- include ("./partials/footer") %>
     <script src="/js/creacionProductoValidacion.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>

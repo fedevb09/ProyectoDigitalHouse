@@ -32,6 +32,45 @@ window.onload = function(){
         }else{
             document.querySelector('#message-error2').innerText = '';
         }
+        if(stock.value == '' || isNaN(stock.value)==true ){
+            errors.push('Debe ser un número')
+            document.querySelector('#message-error4').innerText = 'Debe ser un número';
+        }else{
+            document.querySelector('#message-error4').innerText = '';
+        }
+
+        let archivoValidos = ['jpg', 'jpeg', 'png', 'gif']
+
+        let fileName1=img1.value
+        let extension1 = String(fileName1.substr(fileName1.lastIndexOf('.')+1));
+        let verificar1 = archivoValidos.find(file => file == extension1)
+        if(verificar1 == 'undefined' || verificar1 == undefined){
+            errors.push('Solo se permiten archivos jpg, jpeg, png o gif')
+            document.querySelector('#message-error5').innerText = 'Solo se permiten archivos jpg, jpeg, png o gif';
+        }else{
+            document.querySelector('#message-error5').innerText = '';
+        }
+
+        let fileName2=img2.value
+        let extension2 = String(fileName2.substr(fileName2.lastIndexOf('.')+1));
+        let verificar2 = archivoValidos.find(file => file == extension2)
+        if(verificar2 == 'undefined' || verificar2 == undefined){
+            errors.push('Solo se permiten archivos jpg, jpeg, png o gif')
+            document.querySelector('#message-error6').innerText = 'Solo se permiten archivos jpg, jpeg, png o gif';
+        }else{
+            document.querySelector('#message-error6').innerText = '';
+        }
+
+        let fileName3=img3.value
+        let extension3 = String(fileName3.substr(fileName3.lastIndexOf('.')+1));
+        let verificar3 = archivoValidos.find(file => file == extension3)
+        if(verificar3 == 'undefined' || verificar3 == undefined){
+            errors.push('Solo se permiten archivos jpg, jpeg, png o gif')
+            document.querySelector('#message-error7').innerText = 'Solo se permiten archivos jpg, jpeg, png o gif';
+        }else{
+            document.querySelector('#message-error7').innerText = '';
+        }
+
 
         if(errors.length>0){
             e.preventDefault()
