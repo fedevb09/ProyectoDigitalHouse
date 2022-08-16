@@ -72,4 +72,14 @@ Campos necesitamos del producto:
 ● nombre del creador 
 ● maximo tres imágenes 
 
-A
+Si usas Mac debes incluir en el config de la base de datos lo siguiente: 
+"development": {
+    "username": "root",
+    "password": 'root',
+    "database": "movies_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "socketPath": "/Applications/MAMP/tmp/mysql/mysql.sock"
+      }
+  }
