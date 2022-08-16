@@ -9,6 +9,7 @@ window.onload = function(){
         let name = form.productName
         let description = form.description
         let price = form.price
+        let stock=form.stock
         let img1 = form.productImage1
         let img2 = form.productImage2
         let img3 = form.productImage3
