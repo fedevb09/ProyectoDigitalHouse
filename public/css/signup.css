@@ -138,6 +138,15 @@ form .input-wrong-data{
     border: solid 2px #FE1F62;
     }
 
+.errores{
+    text-align: center;
+    width: 80%;
+}
+
+.errores p{
+    color: #FE1F62;
+}
+
 @media (max-width: 460px) {
 
     .form-container{

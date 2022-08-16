@@ -25,24 +25,24 @@
                 <form class='form' action="/products/create" method="POST" enctype="multipart/form-data">
                     <label for="productName">Nombre del producto</label>
                     <input type="text" name="productName" id="productName">
-                    <span id="message-error"></span>
+                    <div class="errores"><p id="message-error"></p></div>
 
                     <label for="price">Precio</label>
                     <input type="text" name="price" id="price">
-                    <span id="message-error3"></span>
+                    <div class="errores"><p id="message-error3"></p></div>
 
                     <label for="sizes">Tamaño</label>
                     <input type="text" name="sizes" id="sizes">
                     
                     <label for="description">Descripción</label>
-                    <input type="text" name="description" id="description"> 
-                    <span id="message-error2"></span>
+                    <input type="text" name="description" id="description">
+                    <div class="errores"><p id="message-error2"></p></div>
 
                     <label for="description">Creador</label>
-                    <input type="text" name="creatorName" id="creatorName" required> 
+                    <input type="text" name="creatorName" id="creatorName" >
 
                     <label for="description">Cantidad</label>
-                    <input type="text" name="stock" id="stock" placeholder="Cantidad de unidades a vender."> 
+                    <input type="text" name="stock" id="stock" placeholder="Cantidad de unidades a vender.">
 
                     <label for="description">Categoría</label>
                     <select name="categoryId" id="categoryId">
@@ -55,7 +55,7 @@
 
                     <div class="profilePicInput">
                         <label for="productImage">Foto principal</label>
-                        <input type="file" name="productImage1" accept="image/*" id="productImage1" required>
+                        <input type="file" name="productImage1" accept="image/*" id="productImage1">
                         <p style="color:red" id="fullNameError"> <%= (locals.errors && errors.image ? errors.image.msg : null) %> </p>
                     </div>
                     <div class="profilePicInput">
