@@ -74,7 +74,6 @@ window.onload = function(){
                 document.querySelector('#message-error7').innerText = '';
         }}
 
-
         if(errors.length>0){
             e.preventDefault()
             swal({

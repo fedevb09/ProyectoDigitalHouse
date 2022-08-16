@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    
+
         <script src="https://kit.fontawesome.com/5309449a51.js" crossorigin="anonymous"></script>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,10 +14,10 @@
         <link rel="stylesheet" href="/css/header.css">
         <link rel="stylesheet" href="/css/footer.css">
         <link rel="stylesheet" href="/css/signUp.css">
-        
+
     </head>
 <body>
-    <%- include ("./partials/header") %> 
+    <%- include ("./partials/header") %>
     <main>
         <section style="background-image: url('../images/general-bg.webp')">
             <div class="form-container">
@@ -33,7 +33,7 @@
 
                     <label for="sizes">Tamaño</label>
                     <input type="text" name="sizes" id="sizes">
-                    
+
                     <label for="description">Descripción</label>
                     <input type="text" name="description" id="description">
                     <div class="errores"><p id="message-error2"></p></div>
@@ -79,7 +79,7 @@
         </section>
     </main>
     <%- include ("./partials/footer") %>
-    <script src="/js/creacionProductoValidacion.js"></script>
+    <script src="/js/productRegisterValidation.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
