@@ -24,9 +24,10 @@ header{
     background-color: white;
     display: flex;
     flex-direction: column;
-    border: solid 3px #FE1F62;
+    border: solid 3px #4f4f4f;
     border-radius: 10px;
     margin: 70px 0px;
+    width: 60%;
 }
 
 form{
@@ -38,21 +39,21 @@ form{
 
 h2{
     color:white;
-    text-shadow: 2px 0 0 rgb(0, 0, 0), -2px 0 0 rgb(0,0,0), 0 2px 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
+    text-shadow: 0 0 0 rgb(0, 0, 0), 0 0 0 rgb(0,0,0), 0 0 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
     text-align: center;
     margin-top: 3%;
 }
 
 h4{
     color:white;
-    text-shadow: 2px 0 0 rgb(0, 0, 0), -2px 0 0 rgb(0,0,0), 0 2px 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
+    text-shadow: 0 0 0 rgb(0, 0, 0), -0 0 0 rgb(0,0,0), 0 0 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
     text-align: center;
 }
 .form-container select{
     border-radius: 10px;
     padding-left: 1%;
     margin-left: 5%;
-    border: solid 2px #FE1F62;
+    border: solid 2px #4f4f4f;
     padding: 3px;
     padding-top: 5px;
     width: 80%;
@@ -62,7 +63,7 @@ h4{
     border-radius: 10px;
     padding-left: 1%;
     margin-left: 5%;
-    border: solid 2px #FE1F62;
+    border: solid 2px #4f4f4f;
     padding: 3px;
     padding-top: 5px;
     width: 80%;
@@ -70,12 +71,12 @@ h4{
 
 .form-container label{
     font-weight: bold;
-    margin-top: 4%;
+    margin-top: 2%;
     margin-left: 5%;
 }
 
 .radio-container{
-    margin-top: 4%;
+    margin-top: 2%;
     margin-left: 5%;
     display: flex;
     flex-direction: row;
@@ -93,7 +94,7 @@ h4{
 }
 
 .profilePicInput{
-    margin-top: 4%;
+    margin-top: 2%;
 }
 
 .profilePicInput input{
