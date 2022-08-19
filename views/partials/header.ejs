@@ -3,6 +3,7 @@
  
 
     <header>
+        <div class="deployed-hamburger"></div>
         <div class="top-header">
             <div class="logo">
                 <a href="/">
@@ -33,7 +34,7 @@
                 </ul>
                 <ul class="nav-icons">
                     <li><a href="/cart" class="header-nav-links"> <i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li><a href="#" class="hamburger-menu"><i class="fa-solid fa-bars"></i></a></li>
+                    <li><a id="hamburger" href="#" class="hamburger-menu"><i class="fa-solid fa-bars"></i></a></li>
                     
                     <li class="profile" id="desplegable">
                         <a href="/users/profile" class="header-profile-image">
@@ -60,18 +61,22 @@
         </div>
 
             <script src="/js/search.js"></script>
+            <div class="dark-ligth-mode" id="activeDarkMode">
+        
+                    <i class="fa-solid fa-moon"></i>
+        
+            </div>
     </header>
-    <div class="dark-ligth-mode" id="activeDarkMode">
-
-            <i class="fa-solid fa-moon"></i>
-
-    </div>
+    
     <script src="/js/search.js"></script>
     <script src="/js/darkMode.js"></script>
+    <script src="/js/hamburger.js"></script>
+
     <% } else{  %>
 
  
     <header>
+        <div class="deployed-hamburger"></div>
         <div class="top-header">
             <div class="logo">
                 <a href="/">
@@ -103,7 +108,7 @@
                         <a href="/cart" class="header-nav-links"> <i class="fa-solid fa-cart-shopping"></i></a>
                     </li>
                     <li>
-                        <a href="#" class="hamburger-menu"><i class="fa-solid fa-bars"></i></a>
+                        <a href="#" id="hamburger" class="hamburger-menu"><i class="fa-solid fa-bars"></i></a>
                     </li>
                     <li class="sesion-links">
                         <a href="/users/login" class="isesion">Iniciar sesión</a>
@@ -114,12 +119,14 @@
             </nav>
             
         </div>
+        <div class="dark-ligth-mode" id="activeDarkMode">
+    
+                <i class="fa-solid fa-moon"></i>
+    
+        </div>
     </header>
-    <div class="dark-ligth-mode" id="activeDarkMode">
-
-            <i class="fa-solid fa-moon"></i>
-
-    </div>
+    
     <script src="/js/search.js"></script>
     <script src="/js/darkMode.js"></script>
+    <script src="/js/hamburger.js"></script>
  <% }%>

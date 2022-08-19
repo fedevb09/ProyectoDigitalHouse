@@ -9,9 +9,9 @@ const apiController = {
         Products.findAll()
         .then(products=>(
             res.status(200).json({
-                total: products.length,
-                data: products,
-                status: 200
+                count: products.length,
+                status: 200,
+                data: products
             })))
     },
 
