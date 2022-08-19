@@ -55,6 +55,7 @@
                         <i class="fa-solid fa-link linkedicons"></i>
                         <i class="fa-solid fa-ellipsis linkedicons"></i>
                     </div>
+                    <h3 class="productId"><%=product.id%></h3> 
                     <h3><%=product.productName%></h3> 
                     <div class="seller-creator-titles">
                         <p class="seller-creator">Vendedor</p>
@@ -97,12 +98,12 @@
                         <% if (locals && locals.user) { %>
                         <div class="editar-eliminar">
                             <div class="button-container">
-                                <a href="/products/edit/<%=product.id%>"><button class="buy-button">EDITAR</button></a>
+                                <a href="/products/edit/<%=product.id%>"><button class="edition-button">EDITAR</button></a>
                             </div>
                             <div>
                                 <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
                                     <div class="button-container">
-                                        <button class="buy-button" type="submit">ELIMINAR</button>
+                                        <button class="delete-button" type="submit">ELIMINAR</button>
                                     </div>
                                 </form>
                             </div>
@@ -177,5 +178,6 @@
         </section>
     </main>
     <%- include ("./partials/footer") %> 
+    <script src="/js/cart.js"></script>
 </body>
 </html>

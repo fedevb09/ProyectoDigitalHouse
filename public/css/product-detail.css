@@ -173,7 +173,7 @@ align-items: center;
     margin-top:10px;
 }
 
-.buy-button{
+.buy-button, .edition-button, .delete-button{
     background-color: #FE1F62;
     color: white;
     border: none;
