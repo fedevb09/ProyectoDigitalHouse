@@ -47,25 +47,8 @@ window.addEventListener('load', function(){
     let carrito=JSON.parse(localStorage.getItem('carrito'))
     console.log(carrito)
 
-    //muestra los valores únicos del carrito
-    const unique = (value, index, self) => {
-        return self.indexOf(value) === index
-      }
-    const uniqueProducts = carrito.filter(unique)
-    console.log(uniqueProducts)
-
-
-    //cuenta los valores únicos del carrito
-    const countUnique = arr => {
-        const counts = {};
-        for (let i = 0; i < arr.length; i++) {
-           counts[arr[i]] = 1 + (counts[arr[i]] || 0);
-        };
-        return counts;
-     };
-
      //se genera la tabla del carrito
-     uniqueProducts.forEach(function(element){
+     carrito.forEach(function(element){
         let producto=new Product(element.id,element.name, element.quantity)
         let ui = new UI()
         ui.addProduct(producto)
