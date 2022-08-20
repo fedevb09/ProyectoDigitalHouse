@@ -2,6 +2,7 @@ const path = require ('path')
 const db = require('../src/database/models');
 
 const Products = db.Product;
+const Users = db.User
 
 const apiController = {
 
@@ -46,6 +47,25 @@ const apiController = {
             status: 200,
             data: productId
         })})
+    },
+
+    users: (req, res) => {
+        Users.findAll()
+        .then(users => {
+            res.status(200).json({
+                count: users.length,
+                data: users
+            })
+        })
+    },
+
+    usersDetail: (req, res) => {
+        Users.findByPk()
+        .then(user => {
+            res.status(200).json({
+                data: user
+            })
+        })
     }
 
 }

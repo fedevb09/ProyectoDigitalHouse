@@ -9,7 +9,7 @@ const errors =[
         .isEmail().withMessage('Tienes que ingresar un correo válido'),
     check('password')
         .notEmpty().withMessage('Ingresa una contraseña').bail()
-        .isLength({min:8}).withMessage('La contraseña debe tener al menos 6 caractéres'),
+        .isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caractéres'),
     check('birthDate').notEmpty().withMessage('Seleccionan tu fecha de nacimiento')
 ]
 
