@@ -2,25 +2,38 @@ window.addEventListener('load', function(){
 
     //en esta parte se crean las clases que se van a usar
     class Product {
-        constructor(id,name){
+        constructor(id,name,quantity){
             this.id=id;
             this.name=name;
+            this.quantity=quantity;
         }
      }
      class UI{
         addProduct(producto1){
-            const productList = document.getElementById('product-list')
-            const element = document.createElement('div')
-            element.innerHTML = `
-            <div class='card text-center mb-4'>
-                <div class='card-body'>
-                    <strong>id:</strong>${producto1.id}
-                    <strong>Nombre:</strong>${producto1.name}
-                    <a href='#' class='btn btn-danger' name='delete'>Delete</a>
-                </div>
-            </div>`
 
-            productList.appendChild(element)
+
+            fetch(`http://localhost:8000/api/product/${producto1.id}`)
+                .then(response => response.json())
+                .then(product => {
+                    console.log(product);
+                    const productList = document.getElementById('product-list')
+                    const element = document.createElement('div')
+                    element.innerHTML = `
+                    <div class='card text-center mb-4'>
+                        <div class='card-body'>
+                            <strong><img src="/images/${product.data.img1}"></strong>
+                            <strong>${product.data.productName}</strong>
+                            <strong>$${product.data.price}</strong>
+                            <strong>${producto1.quantity}</strong>
+                            <strong>$${product.data.price*producto1.quantity}</strong>
+
+                            <a href='#' class='btn btn-danger' name='delete'>Delete</a>
+                        </div>
+                    </div>`
+        
+                    productList.appendChild(element)
+                })
+
 
         }
 
@@ -53,7 +66,7 @@ window.addEventListener('load', function(){
 
      //se genera la tabla del carrito
      uniqueProducts.forEach(function(element){
-        let producto=new Product(element.id,element.name)
+        let producto=new Product(element.id,element.name, element.quantity)
         let ui = new UI()
         ui.addProduct(producto)
      })
