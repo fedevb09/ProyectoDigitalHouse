@@ -21,8 +21,10 @@ window.addEventListener('load', function(){
     btn.addEventListener('click', function() {
 
         carrito=JSON.parse(localStorage.getItem('carrito'))
-        console.log('boton agregado')
-        let productFind=carrito.find((producto => producto.id))
+
+        let productFind=carrito.find((producto => producto.id === id))
+
+        console.log('Product Find:', productFind);
 
         if(productFind == undefined ){
             let producto={
@@ -46,12 +48,13 @@ window.addEventListener('load', function(){
         }
 
         if(productFind != undefined){
+            
             let nuevoCarrito=carrito.map((producto) => {
-                console.log('este es el id guardado',producto.id)
-                console.log('este es el id por click',id)
                 if(producto.id==id){
                     console.log('entro al if',producto.id)
-                    return producto={... quantity=producto.quantity+1}
+                    return {...producto,
+                         quantity:producto.quantity+1
+                        }
                 }
                 return producto
             })
