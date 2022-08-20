@@ -1,6 +1,7 @@
 window.addEventListener('load', function(){
     let btn=document.querySelector('.buy-button');
     let id=document.querySelector('.productId').innerHTML;
+    let name=document.querySelector('.productName').innerHTML;
     let carrito=JSON.parse(localStorage.getItem('carrito'))
 
     if(carrito == null){
@@ -16,14 +17,19 @@ window.addEventListener('load', function(){
 
     btn.addEventListener('click', function() {
 
+        let producto={
+            id:id,
+            name:name
+        }
+
         if(carrito != null){
             let nuevoCarrito = JSON.parse(localStorage.getItem('carrito'))
-            nuevoCarrito.push(id)
+            nuevoCarrito.push(producto)
             localStorage.setItem('carrito', JSON.stringify(nuevoCarrito))
             console.log('se guardo en carrito')
 
         }else{
-            carrito.push(id)
+            carrito.push(producto)
             localStorage.setItem('carrito', JSON.stringify(carrito))
             console.log('se guardo en carrito')
         }
