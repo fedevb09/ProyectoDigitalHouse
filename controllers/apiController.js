@@ -35,6 +35,17 @@ const apiController = {
             data: dataProducts
         })})
 
+    },
+
+    product:(req, res) => {
+        let productId = req.params.id;
+
+        Products.findByPk(productId)
+        .then((productId)=>{
+            res.status(200).json({
+            status: 200,
+            data: productId
+        })})
     }
 
 }
