@@ -15,6 +15,28 @@ const apiController = {
             })))
     },
 
+    products:(req, res) => {
+
+        async function asignacion () {
+            let prueba1= await Products.count({
+                attributes: ["categoryId"],
+                group: "categoryId" })
+            let prueba2 = await Products.findAll()
+
+            countByCategory=prueba1
+            dataProducts=prueba2
+        }
+
+        asignacion()
+        .then(()=>{res.status(200).json({
+            status: 200,
+            count: dataProducts.length,
+            countByCategory:countByCategory,
+            data: dataProducts
+        })})
+
+    }
+
 }
 
 module.exports = apiController
