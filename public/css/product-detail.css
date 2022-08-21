@@ -281,6 +281,9 @@ align-items: center;
     display: flex;
     flex-direction: column;
 }
+.productId{
+    opacity: 0;
+}
 
 @media (max-width: 760px){
     .main-product-container{

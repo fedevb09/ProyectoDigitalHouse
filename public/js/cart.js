@@ -1,61 +1,81 @@
 window.addEventListener('load', function(){
 
+    let carrito=JSON.parse(localStorage.getItem('carrito'))
+    const productList = document.getElementById('product-list')
+
     //en esta parte se crean las clases que se van a usar
     class Product {
-        constructor(id,name){
+        constructor(id,name,quantity){
             this.id=id;
             this.name=name;
+            this.quantity=quantity;
         }
      }
      class UI{
         addProduct(producto1){
-            const productList = document.getElementById('product-list')
-            const element = document.createElement('div')
-            element.innerHTML = `
-            <div class='card text-center mb-4'>
-                <div class='card-body'>
-                    <strong>id:</strong>${producto1.id}
-                    <strong>Nombre:</strong>${producto1.name}
-                    <a href='#' class='btn btn-danger' name='delete'>Delete</a>
-                </div>
-            </div>`
 
-            productList.appendChild(element)
+
+            fetch(`http://localhost:8000/api/product/${producto1.id}`)
+                .then(response => response.json())
+                .then(product => {
+                    console.log(product);
+                    const productList = document.getElementById('product-list')
+                    const element = document.createElement('div')
+                    element.classList.add(`id${producto1.id}`)
+                    element.innerHTML = `
+                    <div class='card text-center mb-4'>
+                        <div class='card-body'>
+                            <strong><img src="/images/${product.data.img1}"></strong>
+                            <strong>${product.data.productName}</strong>
+                            <strong>$${product.data.price}</strong>
+                            <strong><input type='number' value='${producto1.quantity}'> </strong>
+                            <strong id='totalPrice'>$${product.data.price*producto1.quantity}</strong>
+
+                            <a href='#' class='btn btn-danger' id='${producto1.id}' name='delete'>Delete</a>
+                        </div>
+                    </div>`
+        
+                    productList.appendChild(element)
+                })
+
 
         }
 
-        deleteProduct(){
+            deleteProduct(element){
 
-        }
+                let idToDelete = element.getAttribute('id')
+                console.log('Id to delete',idToDelete);
+      
+                   let newCart = carrito.filter(product =>product.id !== idToDelete)
+
+                   if(element.name === 'delete'){
+                   element.parentElement.parentElement.parentElement.remove();
+                   }
+
+                   localStorage.setItem('carrito', JSON.stringify(newCart))
+
+            }
      }
 
 
     //aqui se llama al carrito que trae el usuario
-    let carrito=JSON.parse(localStorage.getItem('carrito'))
+   
     console.log(carrito)
 
-    //muestra los valores únicos del carrito
-    const unique = (value, index, self) => {
-        return self.indexOf(value) === index
-      }
-    const uniqueProducts = carrito.filter(unique)
-    console.log(uniqueProducts)
-
-
-    //cuenta los valores únicos del carrito
-    const countUnique = arr => {
-        const counts = {};
-        for (let i = 0; i < arr.length; i++) {
-           counts[arr[i]] = 1 + (counts[arr[i]] || 0);
-        };
-        return counts;
-     };
-
      //se genera la tabla del carrito
-     uniqueProducts.forEach(function(element){
-        let producto=new Product(element.id,element.name)
+     carrito.forEach(function(element){
+        let producto=new Product(element.id,element.name, element.quantity)
         let ui = new UI()
         ui.addProduct(producto)
      })
+
+
+
+
+     productList.addEventListener('click', function(e){
+        let ui = new UI();
+        ui.deleteProduct(e.target);
+     })
+     
 
 })
