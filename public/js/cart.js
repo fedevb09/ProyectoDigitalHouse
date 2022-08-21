@@ -1,5 +1,8 @@
 window.addEventListener('load', function(){
 
+    let carrito=JSON.parse(localStorage.getItem('carrito'))
+    const productList = document.getElementById('product-list')
+
     //en esta parte se crean las clases que se van a usar
     class Product {
         constructor(id,name,quantity){
@@ -18,16 +21,17 @@ window.addEventListener('load', function(){
                     console.log(product);
                     const productList = document.getElementById('product-list')
                     const element = document.createElement('div')
+                    element.classList.add(`id${producto1.id}`)
                     element.innerHTML = `
                     <div class='card text-center mb-4'>
                         <div class='card-body'>
                             <strong><img src="/images/${product.data.img1}"></strong>
                             <strong>${product.data.productName}</strong>
                             <strong>$${product.data.price}</strong>
-                            <strong>${producto1.quantity}</strong>
-                            <strong>$${product.data.price*producto1.quantity}</strong>
+                            <strong><input type='number' value='${producto1.quantity}'> </strong>
+                            <strong id='totalPrice'>$${product.data.price*producto1.quantity}</strong>
 
-                            <a href='#' class='btn btn-danger' name='delete'>Delete</a>
+                            <a href='#' class='btn btn-danger' id='${producto1.id}' name='delete'>Delete</a>
                         </div>
                     </div>`
         
@@ -37,14 +41,25 @@ window.addEventListener('load', function(){
 
         }
 
-        deleteProduct(){
+            deleteProduct(element){
 
-        }
+                let idToDelete = element.getAttribute('id')
+                console.log('Id to delete',idToDelete);
+      
+                   let newCart = carrito.filter(product =>product.id !== idToDelete)
+
+                   if(element.name === 'delete'){
+                   element.parentElement.parentElement.parentElement.remove();
+                   }
+
+                   localStorage.setItem('carrito', JSON.stringify(newCart))
+
+            }
      }
 
 
     //aqui se llama al carrito que trae el usuario
-    let carrito=JSON.parse(localStorage.getItem('carrito'))
+   
     console.log(carrito)
 
      //se genera la tabla del carrito
@@ -53,5 +68,14 @@ window.addEventListener('load', function(){
         let ui = new UI()
         ui.addProduct(producto)
      })
+
+
+
+
+     productList.addEventListener('click', function(e){
+        let ui = new UI();
+        ui.deleteProduct(e.target);
+     })
+     
 
 })
