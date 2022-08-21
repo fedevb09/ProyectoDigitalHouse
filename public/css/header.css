@@ -376,6 +376,27 @@ body .darkCard{
     display: flex;
     justify-content: right;
 }
+
+.cart-total-amount{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    color:white;
+    left: 24px;
+    border-radius: 50%;
+    top: -37px;
+    font-size: 0.8rem;
+    display: flex;
+
+}
+
+.cart-amout-number{
+    font-weight: 800;
+margin: 5px 5.5px;
+}
+
+
 @media (max-width: 1200px){
     .header-nav-links{
         font-size: 0.8em;

@@ -1,5 +1,7 @@
 window.addEventListener('load', function(){
 
+
+
     let carrito=JSON.parse(localStorage.getItem('carrito'))
     const productList = document.getElementById('product-list')
 
@@ -18,7 +20,7 @@ window.addEventListener('load', function(){
             fetch(`http://localhost:8000/api/product/${producto1.id}`)
                 .then(response => response.json())
                 .then(product => {
-                    console.log(product);
+
                     const productList = document.getElementById('product-list')
                     const element = document.createElement('div')
                     element.classList.add(`id${producto1.id}`)
@@ -34,7 +36,6 @@ window.addEventListener('load', function(){
                             <a href='#' class='btn btn-danger' id='${producto1.id}' name='delete'>Delete</a>
                         </div>
                     </div>`
-        
                     productList.appendChild(element)
                 })
 
@@ -44,7 +45,7 @@ window.addEventListener('load', function(){
             deleteProduct(element){
 
                 let idToDelete = element.getAttribute('id')
-                console.log('Id to delete',idToDelete);
+     
       
                    let newCart = carrito.filter(product =>product.id !== idToDelete)
 
@@ -60,7 +61,7 @@ window.addEventListener('load', function(){
 
     //aqui se llama al carrito que trae el usuario
    
-    console.log(carrito)
+
 
      //se genera la tabla del carrito
      carrito.forEach(function(element){
@@ -75,7 +76,25 @@ window.addEventListener('load', function(){
      productList.addEventListener('click', function(e){
         let ui = new UI();
         ui.deleteProduct(e.target);
+
+        carrito=JSON.parse(localStorage.getItem('carrito'))
+
+        let cartTotalAmount = document.querySelector('.cart-total-amount')
+
+        let total = 0;
+
+        carrito.forEach(element => {
+            
+            total = total+element.quantity
+        });
+
+        cartTotalAmount.innerHTML= `<p class='cart-amout-number'>${total}</p>`;
+        
      })
      
+
+     
+
+  
 
 })

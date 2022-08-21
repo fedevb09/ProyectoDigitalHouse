@@ -33,8 +33,18 @@
                     <li><a href="#" class="header-nav-links">Más buscados</a></li>
                 </ul>
                 <ul class="nav-icons">
-                    <li><a href="/cart" class="header-nav-links"> <i class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li><a id="hamburger" href="#" class="hamburger-menu"><i class="fa-solid fa-bars"></i></a></li>
+                    <li>
+                        <a href="/cart" class="header-nav-links"> 
+                            <i class="fa-solid fa-cart-shopping">
+                                <div class="cart-total-amount" id="cart-total-amount"></div>
+                            </i> 
+                        </a>
+                    </li>
+                    <li>
+                        <a id="hamburger" href="#" class="hamburger-menu">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+                    </li>
                     
                     <li class="profile" id="desplegable">
                         <a href="/users/profile" class="header-profile-image">
@@ -71,7 +81,7 @@
     <script src="/js/search.js"></script>
     <script src="/js/darkMode.js"></script>
     <script src="/js/hamburger.js"></script>
-
+    <script src="/js/cartAmount.js"></script>
     <% } else{  %>
 
  
@@ -105,7 +115,11 @@
                 </ul>
                 <ul class="nav-icons">
                     <li>
-                        <a href="/cart" class="header-nav-links"> <i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="/cart" class="header-nav-links"> 
+                            <i class="fa-solid fa-cart-shopping">
+                                <div class="cart-total-amount" id="cart-total-amount"></div>
+                            </i> 
+                        </a>
                     </li>
                     <li>
                         <a href="#" id="hamburger" class="hamburger-menu"><i class="fa-solid fa-bars"></i></a>
@@ -129,4 +143,5 @@
     <script src="/js/search.js"></script>
     <script src="/js/darkMode.js"></script>
     <script src="/js/hamburger.js"></script>
+    <script src="/js/cartAmount.js"></script>
  <% }%>
