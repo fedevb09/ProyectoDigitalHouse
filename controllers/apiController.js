@@ -52,18 +52,31 @@ const apiController = {
     users: (req, res) => {
         Users.findAll()
         .then(users => {
+            let apiResponse = users.map(user => {
+                return {
+                    email: user.dataValues.email,
+                    fullName: user.dataValues.fullName,
+                    id: user.dataValues.id,
+                    detail: `/users/profile/${user.dataValues.id}`
+                }
+            })
             res.status(200).json({
                 count: users.length,
-                data: users
+                data: apiResponse
             })
         })
     },
 
     usersDetail: (req, res) => {
-        Users.findByPk()
+        Users.findByPk(req.params.id)
         .then(user => {
+            delete user.dataValues.password
+            delete user.dataValues.adress
+            delete user.dataValues.phone
+            delete user.dataValues.admin
+            user.dataValues.profileImage = `http://localhost:8000/images/users/${user.dataValues.profileImage}`
             res.status(200).json({
-                data: user
+                data: user 
             })
         })
     }
