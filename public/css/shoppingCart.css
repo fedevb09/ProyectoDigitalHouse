@@ -10,7 +10,7 @@ body{
 .maincarrito{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-top: 50px;
 }
 
@@ -144,6 +144,35 @@ img{
         align-self: center;
         margin-bottom: 10%;
     }
+}
+.quantity-input{
+    width: 40px;
+    border-radius: 10px;
+    padding: 2px 6px
+}
+.card-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.card-body strong{
+   
+    width: 15%;
+}
+.cardit{
+    margin: 30px;
+}
+.cart-image-container{
+    width: 100px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.cart-image-container img{
+width: 100%;
 }
 
 @media (max-width: 645px) {

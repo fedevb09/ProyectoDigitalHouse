@@ -5,6 +5,7 @@ window.addEventListener('load', function(){
     let carrito=JSON.parse(localStorage.getItem('carrito'))
     const productList = document.getElementById('product-list')
     let subTotal = document.querySelector('#sub-total-span');
+    let total = document.querySelector('#total-span');
 
     let cartTotalPrice = 0;
 
@@ -27,14 +28,15 @@ window.addEventListener('load', function(){
                     const productList = document.getElementById('product-list')
                     const element = document.createElement('div')
                     element.classList.add(`id${producto1.id}`)
+                    element.classList.add(`cardit`)
                     element.innerHTML = `
-                    <div class='card text-center mb-4'>
+                    <div class='card text-center mb-6'>
                         <div class='card-body'>
-                            <strong><img src="/images/${product.data.img1}"></strong>
+                            <strong class='cart-image-container'><img src="/images/${product.data.img1}"></strong>
                             <strong>${product.data.productName}</strong>
                             <strong>$${product.data.price}</strong>
-                            <strong><input type='number' value='${producto1.quantity}'> </strong>
-                            <strong id='totalPrice'>${product.data.price*producto1.quantity}</strong>
+                            <strong><input class='quantity-input' type='number' value='${producto1.quantity}'> </strong>
+                            <strong id='totalPrice'>$${product.data.price*producto1.quantity}</strong>
 
                             <a href='#' class='btn btn-danger' id='${producto1.id}' name='delete'>Delete</a>
                         </div>
@@ -44,6 +46,7 @@ window.addEventListener('load', function(){
                     cartTotalPrice = cartTotalPrice+(product.data.price*producto1.quantity);
                     
                     subTotal.innerText = `$${cartTotalPrice}`
+                    total.innerText = `$${cartTotalPrice+200}`
 
                 })
 
@@ -61,6 +64,7 @@ window.addEventListener('load', function(){
                     let restPrice = element.parentElement.childNodes[9].innerText
                     cartTotalPrice = cartTotalPrice - restPrice;
                     subTotal.innerText = cartTotalPrice;
+                    total.innerHTML = cartTotalPrice+200
                    element.parentElement.parentElement.parentElement.remove();
                    }
 
