@@ -34,36 +34,29 @@
                     </label>
                     <button class="discount-code-apply-button"> Aplicar </button>
                 </div>
+                    <div class="resumen_pago">
+                        <h2>Resumen de compra</h2>
+                        <div>
+                            <p>Subtotal:</p>
+                            <span id="sub-total-span">1.000</span>
+                        </div>
+                        <div>
+                            <p>Costo de envio:</p>
+                            <span>$200</span>
+                        </div>
+                        <div>
+                            <p>Total:</p>
+                            <span id="total-span">$1.200</span>
+                        </div>
+                        <button class="boton-pagar"> Ir a Pagar </button>
                 
                 
-                <label for="envio" class="envios">Selecciona tipo de envio:
-                    <Label><input type="radio" class="radio-delivery-input" name="envio" value="Dia siguiente">Dia siguiente</Label>
-                    <Label><input type="radio" class="radio-delivery-input" name="envio" value="4 dias">4 dias</Label>
-                    <Label><input type="radio" class="radio-delivery-input" name="envio" value="10 dias">10 dias</Label>
-                </label>
 
             </form>
             
-            <div class="resumen_pago">
-                <h2>Resumen de compra</h2>
-                <div>
-                    <p>Subtotal:</p>
-                    <span>1.000</span>
-                </div>
-                <div>
-                    <p>Costo de envio:</p>
-                    <span>200</span>
-                </div>
-                <div>
-                    <p>Impuestos:</p>
-                    <span>50</span>
-                </div>
-                <div>
-                    <p>Total:</p>
-                    <span>1.300</span>
-                </div>
+
             </div>
-            <button class="boton-pagar"> Ir a Pagar </button>
+            
         </div>
         <div id="product-list" class="col-md-2"></div>
     </main>

@@ -4,6 +4,9 @@ window.addEventListener('load', function(){
 
     let carrito=JSON.parse(localStorage.getItem('carrito'))
     const productList = document.getElementById('product-list')
+    let subTotal = document.querySelector('#sub-total-span');
+
+    let cartTotalPrice = 0;
 
     //en esta parte se crean las clases que se van a usar
     class Product {
@@ -31,12 +34,17 @@ window.addEventListener('load', function(){
                             <strong>${product.data.productName}</strong>
                             <strong>$${product.data.price}</strong>
                             <strong><input type='number' value='${producto1.quantity}'> </strong>
-                            <strong id='totalPrice'>$${product.data.price*producto1.quantity}</strong>
+                            <strong id='totalPrice'>${product.data.price*producto1.quantity}</strong>
 
                             <a href='#' class='btn btn-danger' id='${producto1.id}' name='delete'>Delete</a>
                         </div>
                     </div>`
                     productList.appendChild(element)
+
+                    cartTotalPrice = cartTotalPrice+(product.data.price*producto1.quantity);
+                    
+                    subTotal.innerText = `$${cartTotalPrice}`
+
                 })
 
 
@@ -50,6 +58,9 @@ window.addEventListener('load', function(){
                    let newCart = carrito.filter(product =>product.id !== idToDelete)
 
                    if(element.name === 'delete'){
+                    let restPrice = element.parentElement.childNodes[9].innerText
+                    cartTotalPrice = cartTotalPrice - restPrice;
+                    subTotal.innerText = cartTotalPrice;
                    element.parentElement.parentElement.parentElement.remove();
                    }
 
@@ -92,7 +103,9 @@ window.addEventListener('load', function(){
         
      })
      
+    
 
+     
      
 
   
