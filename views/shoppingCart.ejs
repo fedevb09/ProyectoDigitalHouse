@@ -23,7 +23,18 @@
     <%- include ("./partials/header") %>
 
     <main class="maincarrito">
-        <div id="product-list" class="col-md-6 cart-card"></div>
+        <div id="product-list" class="col-md-6 cart-card">
+            <div class='card text-center mb-6'>
+                <div class='card-body' style="height:60px;">
+                    <strong class='cart-image-container'>Imagen</strong>
+                    <strong>Producto</strong>
+                    <strong>Precio unitario</strong>
+                    <strong>Cantidad</strong>
+                    <strong id='totalPrice'>Total</strong>
+                    <strong style="width: 9%;"></strong>
+                </div>
+            </div>
+        </div>
 
         <div class="modulo_pago">
             <form action="" method="">

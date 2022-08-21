@@ -36,7 +36,7 @@ window.addEventListener('load', function(){
                             <strong>${product.data.productName}</strong>
                             <strong>$${product.data.price}</strong>
                             <strong><input class='quantity-input' type='number' value='${producto1.quantity}'> </strong>
-                            <strong id='totalPrice'>$${product.data.price*producto1.quantity}</strong>
+                            <strong id='totalPrice'>${product.data.price*producto1.quantity}</strong>
 
                             <a href='#' class='btn btn-danger' id='${producto1.id}' name='delete'>Delete</a>
                         </div>
@@ -47,7 +47,7 @@ window.addEventListener('load', function(){
                     
                     subTotal.innerText = `$${cartTotalPrice}`
                     total.innerText = `$${cartTotalPrice+200}`
-
+                    
                 })
 
 
