@@ -2,7 +2,13 @@ window.addEventListener('load', function(){
     let btn=document.querySelector('.buy-button');
     let id=document.querySelector('.productId').innerHTML;
     let name=document.querySelector('.productName').innerHTML;
+    let main = document.querySelector('main')
     let carrito=JSON.parse(localStorage.getItem('carrito'))
+
+    function removeElement(){
+       
+    }
+    
 
 
     if(carrito == null){
@@ -19,6 +25,31 @@ window.addEventListener('load', function(){
     }
 
     btn.addEventListener('click', function() {
+        let div = document.querySelector('.succesful-add')
+        if(div){
+               
+                div.style.color = 'green'
+        
+            
+        }
+
+        const succesfullAdded = document.createElement('div')
+        succesfullAdded.classList.add('succesful-add')
+        main.appendChild(succesfullAdded)
+        console.log(main);
+        succesfullAdded.innerHTML= ' <p>Agregado al carrito</p><i class="fa-solid fa-circle-check"></i>'
+
+        
+        
+
+        const deleteTimeout = setTimeout(removeDiv, 2000);
+
+        function removeDiv() {
+            let div = document.querySelector('.succesful-add')
+            div.remove()
+        }
+
+
 
         carrito=JSON.parse(localStorage.getItem('carrito'))
 

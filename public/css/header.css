@@ -395,6 +395,35 @@ body .darkCard{
     font-weight: 800;
 margin: 5px 5.5px;
 }
+.succesful-add{
+    width: 180px;
+    height: 40px;
+    color: white;
+    background-color: #8de18e;
+    position: absolute;
+    top:180px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    right: 10px;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+    /* animation: hide .6s linear 2.5s 1 forwards; */
+}
+@keyframes pulse{
+    0%{opacity: 0;}
+    20%{opacity: 1;}
+    80%{opacity: 1;}
+    100%{opacity: 0;}
+
+  }
+
+
 
 
 @media (max-width: 1200px){
