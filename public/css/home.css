@@ -37,7 +37,10 @@ main{
     padding-top: 2%;
     width: 100%;
     height: 100%;
+}
 
+.containerCarousel{
+    width: 100%;
 }
 
 .featured{
@@ -73,6 +76,8 @@ main{
     flex-direction: row;
     justify-content: space-evenly;
     margin: 2% 0;
+    width: 100%;
+    height: 100%;
 
 }
 
@@ -83,6 +88,50 @@ main{
     height: 100%;
     margin-left: 12%;
 }
+
+
+
+.productCarousel{
+   background-color: white;
+   display: flex;
+   width: 40%;
+   justify-content: center;
+   align-items: center;
+   margin-left: 28%;
+   border-radius: 20px;
+   border: none;
+   transition: all 450ms;
+   padding: 1%;
+   aspect-ratio: 1/1.2;
+   background: rgba(0, 0, 0, 0.102);
+   flex-direction: column;
+    align-items: center;
+}
+
+.carousel-control-prev-icon{
+    filter: invert(1);
+}
+
+.carousel-control-next{
+    filter: invert(1);
+}
+
+.productCarousel:hover{
+    box-shadow: 10px 0 0 0 black;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    overflow: hidden;
+    border-radius: 5px;
+    aspect-ratio: 1/1.006;
+    margin-bottom: 3%;
+}
+
+
 
 .product{
     background-color: white;
@@ -242,10 +291,12 @@ main{
 .descriptions{
     width: 90%;
 }
+
 }
 .products{
     max-width: 1400px;
     margin: auto;
     margin-bottom: 5%;
 }
+
 
