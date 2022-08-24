@@ -91,7 +91,7 @@ nav ul:hover .cerrar-sesion{
 .header-searchbar-input{
     background-color: white;
     font-size: 18px;
-    width: 40%;
+    width: 80%;
     padding: 7.5px;
     border-radius: 10px 0px 0px 10px;
     border: none;
@@ -115,7 +115,7 @@ nav ul:hover .cerrar-sesion{
     flex-direction: row;
     position: relative;
     align-items: center;
-    flex-grow: 2;
+    right: 80px;
     padding: 5px;
     border-radius: 10px;
 
@@ -204,7 +204,7 @@ position: absolute;
 border-radius: 5px;
 padding: 10px;
 border: solid 1px black;
-width: 43.5%;
+width: 80%;
 top: 45px;
 left: 5px;
 transition-duration: 0.2s;
@@ -424,6 +424,18 @@ margin: 5px 5.5px;
 
   }
 
+.link-properties:hover{
+    text-decoration: none;
+}
+.header-nav-links:hover{
+    text-decoration: none;
+}
+#search-bar:hover{
+    text-decoration: none;
+}
+.form-header-searchbar{
+    width: 60vw;
+}
 
 
 
@@ -476,6 +488,8 @@ margin: 5px 5.5px;
     .form-header-searchbar{
         position: absolute;
         left: 110px;
+        width: 45vw;
+
     }
     .nav-container nav{
         width: 30%;
@@ -527,10 +541,7 @@ margin: 5px 5.5px;
         display: flex;
         height: 80px;
     }
-    .header-searchbar-input{
-        width: 25vw;
-        
-    }
+
     .nav-container nav {
         width: 40%;
         z-index: 1001;
@@ -558,6 +569,72 @@ margin: 5px 5.5px;
     .ligth-mode {
         right: 10px;
         top: 85px;
+    }
+    .form-header-searchbar{
+        width: 30vw;
+        
+    }
+    .search-results{
+        width: 140%;
+        left: -20px;
+    }
+    #productname{
+        font-size: 0.7rem;
+        scale: .7;
+    }
+    .lis p{
+        font-size: 0.7rem;
+    }
+    .responsive-search-bar{
+        width: 100%;
+        left: 0;
+        height: 70px;
+        z-index: 111111;
+        border-radius: 0;
+        top: 0px;
+        background-color: white;
+        height: 100vh;
+    }
+    .x{
+        position: absolute;
+        top: 8px;
+        right: 30px;
+        font-size: 3rem;
+        color: black;
+        z-index: 11111111111;
+        padding: 5px;
+        cursor: pointer;
+    }
+    .fa-xmark{
+        color: black;
+    }
+    .responsive-input{
+        position: absolute;
+        top:70px;
+        border: none;
+        
+    }
+    .responsive-input:focus {
+        border: none;
+    }
+
+    .responsive-input:active {
+        border: none;
+    }
+    .responsive-lupa{
+        position : absolute;
+        top :70px;
+        right :0px;
+    }
+    .responsive-results{
+        position:absolute;
+        top:110px;
+        left: 0;
+        right: 0;
+        
+    }
+    input{
+        outline: none;
     }
 
 }
