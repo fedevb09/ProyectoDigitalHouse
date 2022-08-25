@@ -1,4 +1,5 @@
-const path = require ('path')
+const path = require ('path');
+const { Sequelize, sequelize } = require('../src/database/models');
 const db = require('../src/database/models');
 
 const Products = db.Product;
@@ -22,10 +23,13 @@ const apiController = {
             let prueba1= await Products.count({
                 attributes: ["categoryId"],
                 group: "categoryId" })
-            let prueba2 = await Products.findAll()
+            let prueba2 = await Products.findAll({})
 
             countByCategory=prueba1
-            dataProducts=prueba2
+            let newData = await sequelize.query(`SELECT * FROM products
+            INNER JOIN categories ON products.categoryId = categories.id`) 
+            console.log(newData);
+            dataProducts=newData
         }
 
         asignacion()
