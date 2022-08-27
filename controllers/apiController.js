@@ -4,6 +4,7 @@ const db = require('../src/database/models');
 
 const Products = db.Product;
 const Users = db.User
+const Categories = db.Category;
 
 const apiController = {
 
@@ -25,6 +26,8 @@ const apiController = {
                 group: "categoryId" })
             let prueba2 = await Products.findAll({})
 
+            totalProducts = prueba2
+
             countByCategory=prueba1
             let newData = await sequelize.query(`SELECT * FROM products
             INNER JOIN categories ON products.categoryId = categories.id`) 
@@ -35,7 +38,7 @@ const apiController = {
         asignacion()
         .then(()=>{res.status(200).json({
             status: 200,
-            count: dataProducts.length,
+            count: totalProducts.length,
             countByCategory:countByCategory,
             data: dataProducts
         })})
@@ -81,6 +84,14 @@ const apiController = {
             user.dataValues.profileImage = `http://localhost:8000/images/users/${user.dataValues.profileImage}`
             res.status(200).json({
                 data: user 
+            })
+        })
+    },
+    categories: (req,res)=>{
+        Categories.findAll()
+        .then(cat=>{
+            res.status(200).json({
+                data:cat
             })
         })
     }
