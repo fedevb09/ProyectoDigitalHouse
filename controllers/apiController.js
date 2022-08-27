@@ -29,7 +29,7 @@ const apiController = {
             totalProducts = prueba2
 
             countByCategory=prueba1
-            let newData = await sequelize.query(`SELECT * FROM products
+            let newData = await sequelize.query(`SELECT products.id, products.productName, products.price, products.img1, products.sizes, products.creatorName, products.stock, categories.name  FROM products
             INNER JOIN categories ON products.categoryId = categories.id`) 
             console.log(newData);
             dataProducts=newData
