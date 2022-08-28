@@ -22,7 +22,6 @@
         <section style="background-image: url('../images/general-bg.webp')">
             <div class="form-container">
             <h2>¡Crea tu cuenta en artplace!</h2>
-            <h4>Completa el formulario de registro</h4>
                 <form action="/users/register" method="POST" enctype="multipart/form-data">
                     <label for="nombre">Nombre completo</label>
                     <input type="text" name="fullName" id="fullName" value="<%=(locals.old && old.fullName? old.fullName : null)%>">

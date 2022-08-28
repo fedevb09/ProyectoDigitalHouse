@@ -259,7 +259,7 @@ main{
     .products{
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         aspect-ratio: 1/1.2;
     }
     .product{
@@ -292,11 +292,13 @@ main{
     width: 90%;
 }
 
+
 }
 .products{
     max-width: 1400px;
     margin: auto;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
+
 }
 
 

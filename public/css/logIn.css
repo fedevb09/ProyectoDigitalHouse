@@ -24,22 +24,23 @@ header{
     background-color: white;
     display: flex;
     flex-direction: column;
-    border: solid 3px #FE1F62;
+    border: solid 3px #4f4f4f;
     border-radius: 10px;
-    width: 25%;
-    margin: 70px;
+    margin: 70px 0px;
+    width: 40%;
+    align-items: center;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 h2{
-    color:white;
-    text-shadow: 2px 0 0 rgb(0, 0, 0), -2px 0 0 rgb(0,0,0), 0 2px 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
+    color:black;
     text-align: center;
     margin-top: 3%;
 }
@@ -47,7 +48,11 @@ h2{
 .loginContainer input{
     border-radius: 10px;
     padding-left: 1%;
-    border: solid 2px #FE1F62;
+    margin-left: 5%;
+    border: solid 2px #4f4f4f;
+    padding: 3px;
+    padding-top: 5px;
+    width: 80%;
 }
 
 .loginContainer label{
@@ -70,7 +75,7 @@ h2{
     border-radius: 5px;
     align-items: center;
     justify-content: center;
-    padding: 13px 20px 10px 20px;
+    padding: 13px 30px 10px 20px;
     margin-bottom: 30px;
     box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.92);
     transition-duration: 0.5s;
@@ -79,6 +84,10 @@ h2{
 .loginButton button:hover{
     box-shadow: 0px 0px 6px 3px black;
     font-weight: 500;
+}
+form .login-checkbox{
+    margin-left: 0 !important;
+    padding: 10px;
 }
 
 @media (max-width: 460px) {

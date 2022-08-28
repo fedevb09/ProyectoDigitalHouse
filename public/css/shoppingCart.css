@@ -12,6 +12,7 @@ body{
     display: flex;
     justify-content: space-evenly;
     padding-top: 50px;
+    padding-bottom: 100px
 }
 
 .carrito{
@@ -121,6 +122,9 @@ img{
     color: black;
 }
 @media (max-width: 768px) {
+    .card-body{
+        font-size: 0.8rem;
+    }
 
     .maincarrito{
         width: 100%;
@@ -139,6 +143,7 @@ img{
         justify-content: center;
     }
     .modulo_pago{
+        margin-top: 40px;
         align-items: center;
         width: 70%;
         align-self: center;
@@ -183,11 +188,9 @@ width: 100%;
         justify-content: center;
         padding-top: 50px;
         flex-direction: column;
+        
     }
 
-    .carrito{
-        padding-right: 0px;
-    }
 
     .carrito table thead{
         display:none
@@ -223,6 +226,9 @@ width: 100%;
     }
     .modulo_pago{
         width: 90%;
+    }
+    .card-body{
+        font-size: 0.7rem;
     }
 
 }

@@ -6,6 +6,8 @@ window.addEventListener('load', function(){
     let titles = document.querySelectorAll('.featured')
     let innerBox = document.querySelector('.inner-border')
     let icon = document.querySelector('#activeDarkMode i')
+    let carrusel = document.querySelector('.productCarousel');
+    
 
 
     activeButton.addEventListener('click', function(e){
@@ -21,6 +23,7 @@ window.addEventListener('load', function(){
         activeButton.classList.toggle('ligth-mode')
         icon.classList.toggle('fa-moon')
         icon.classList.toggle('fa-sun')
+        carrusel.classList.toggle('dark-carrusel')
     })
 
 

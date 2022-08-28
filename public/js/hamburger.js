@@ -2,6 +2,10 @@ window.addEventListener('load', function(){
 
     let hamburger = document.querySelector('#hamburger')
     let menu = document.querySelector('.deployed-hamburger')
+
+    let profileImage = document.querySelector('.miniature-img-box-overflowH')
+    let profileMenu = document.querySelector('.profile-menu-1')
+    let profileButtons = document.querySelectorAll('.cerrar-sesion')
     
 
     hamburger.addEventListener('click', function(){
@@ -44,6 +48,16 @@ window.addEventListener('load', function(){
       
 
     } )
+
+    profileImage.addEventListener('click', function(e){
+        e.preventDefault()
+    profileMenu.classList.toggle('open-profile-menu')
+    profileButtons.forEach(element => {
+            element.classList.toggle('open-profile-menu')
+        });
+
+    })
+
   
 
 })

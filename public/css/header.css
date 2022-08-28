@@ -73,8 +73,8 @@ aspect-ratio:initial
     visibility: hidden;
     width: 110px;
 }
-
-nav ul:hover .cerrar-sesion{
+/*  Abre el menu con clase '.cerrar-sesion' */
+.open-profile-menu{
     display: flow-root;
     z-index: 1001;
     visibility:visible
@@ -437,6 +437,10 @@ margin: 5px 5.5px;
     width: 60vw;
 }
 
+.dark-carrusel{
+    background-color: rgb(255 255 255 / 70%);
+}
+
 
 
 @media (max-width: 1200px){
@@ -519,9 +523,17 @@ margin: 5px 5.5px;
         margin-top: -20%;
         justify-content: center;
     }
+    .profile{
+        display: none;
+    }
 }
 
 @media (max-width: 480px){
+    
+    .productCarousel{
+        width: 65%;
+        margin-left: 19%;
+    }
     .nav-site{
         display: none;
     }
@@ -635,6 +647,12 @@ margin: 5px 5.5px;
     }
     input{
         outline: none;
+    }
+    .nav-icons {
+        display: flex;
+        justify-content: space-around;
+        align-content: flex-end;
+        padding: 0;
     }
 
 }
