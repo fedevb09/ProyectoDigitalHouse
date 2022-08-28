@@ -8,10 +8,13 @@ window.addEventListener('load', function(){
     let icon = document.querySelector('#activeDarkMode i')
     let carrusel = document.querySelector('.productCarousel');
     
-
-
+    
+    
     activeButton.addEventListener('click', function(e){
+        console.log('asdasd');
 
+        let profileTexts = document.querySelectorAll('.profile-texts')
+        
         body.classList.toggle('darkBody')
         cards.forEach(card => {
             card.classList.toggle('darkCard')
@@ -23,7 +26,13 @@ window.addEventListener('load', function(){
         activeButton.classList.toggle('ligth-mode')
         icon.classList.toggle('fa-moon')
         icon.classList.toggle('fa-sun')
-        carrusel.classList.toggle('dark-carrusel')
+        if(carrusel){
+            carrusel.classList.toggle('dark-carrusel')
+        }
+
+        profileTexts.forEach(element => {
+            element.classList.toggle('dark-profile')
+        });
     })
 
 

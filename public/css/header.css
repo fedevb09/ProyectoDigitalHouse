@@ -440,6 +440,9 @@ margin: 5px 5.5px;
 .dark-carrusel{
     background-color: rgb(255 255 255 / 70%);
 }
+.dark-profile{
+    color: white;
+}
 
 
 
@@ -462,6 +465,9 @@ margin: 5px 5.5px;
 
 
 @media (max-width: 760px){
+    .responsive-login{
+        display: none;
+    }
     .nav-site{
         display: none;
     }
@@ -559,8 +565,9 @@ margin: 5px 5.5px;
         z-index: 1001;
     }
     .responsive-login{
-        display: block;
-        font-size: 0.8em;
+        display: none;
+        visibility: hidden;
+        font-size: 0.001em;
     }
     .isesion{
        display: none;
@@ -654,5 +661,9 @@ margin: 5px 5.5px;
         align-content: flex-end;
         padding: 0;
     }
+    .sesion-links{
+        display: none;
+    }
+
 
 }

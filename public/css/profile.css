@@ -18,8 +18,8 @@ main a:link, a:visited, a:active {
     color: black;
     
 }
-main{
-    margin: 10% 0;
+.sec{
+    margin-top: 90px;
 }
 h2{
     font-size: 35px;
@@ -55,7 +55,7 @@ h2{
 }
 
 .imgNameEmailContainer img{
-    width: 30%;
+    width: 140px;
     aspect-ratio: 1 ;
     border-radius:50%;
     height: 30% ;
@@ -84,6 +84,9 @@ h2{
     align-items: center;
     justify-content: center;
 }
+.nombreEmail h2{
+text-align: center;
+}
 
 .buttonContainer button{
 
@@ -98,6 +101,7 @@ h2{
     box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.92);
     transition-duration: 0.5s;
 }
+
 @media (max-width: 480px){
 .buttonContainer button:hover{
     box-shadow: 0px 0px 6px 3px black;

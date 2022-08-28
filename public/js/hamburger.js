@@ -19,6 +19,11 @@ window.addEventListener('load', function(){
             <li><a href='/users/logout'>Cerrar sesión</a></li>
             </ul>`
         }
+        if(!loged){
+            profile = `<ul class='profile-list'>
+            <li class><a href='/users/profile'>Iniciar sesión</a></li>
+            </ul>`
+        }
         
         menu.innerHTML= `
 
