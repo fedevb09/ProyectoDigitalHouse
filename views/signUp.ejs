@@ -29,7 +29,7 @@
                     <p style="color:red" id="fullNameError"> <%= (locals.errors && errors.fullName ? errors.fullName.msg : null) %> </p>
 
                     <label for="userName">Correo electónico</label>
-                    <input type="text" name="email" id="email" value="<%=(locals.old && old.email? old.email : null)%>">
+                    <input type="email" name="email" id="email" value="<%=(locals.old && old.email? old.email : null)%>">
                     <p style="color:red" id="emailError"> <%= (locals.errors && errors.email? errors.email.msg : null) %> </p>
 
                         
@@ -42,7 +42,7 @@
                     <p style="color:red" id="birthDateError"> <%= (locals.errors && errors.birthDate? errors.birthDate.msg : null) %> </p>
 
                     <label for="adress">Dirección</label>
-                    <input type="text" name="adress" id="adress" value="">
+                    <input type="text" name="adress" id="adress" value="" >
                     <p style="color:red" id="adressError"></p>
 
                     <label for="postalCode">Código postal</label>
@@ -50,7 +50,7 @@
                     <p style="color:red" id="postalCodeError"></p>
 
                     <label for="phone">Télefono de contacto</label>
-                    <input type="text" name="phone" id="phone" value="">
+                    <input type="number" name="phone" id="phone" value="">
                     <p style="color:red" id="phoneError"></p>
 
                     <div class="profilePicInput">
