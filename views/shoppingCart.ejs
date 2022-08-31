@@ -37,8 +37,7 @@
         </div>
 
         <div class="modulo_pago">
-            <form action="" method="">
-                
+            <form class="iraPagar" action="" method="">
                 <div class="bono">
                     <label for="codigo" class="codigo">Ingresa código de descuento:
                         <input type="text" name="código" id="codigo" class="discount-code-input">
@@ -60,9 +59,6 @@
                             <span id="total-span">$0</span>
                         </div>
                         <button class="boton-pagar"> Ir a Pagar </button>
-                
-                
-
             </form>
             
 
@@ -74,5 +70,7 @@
 
     <%- include ("./partials/footer") %> 
     <script src="/js/cart.js"></script>
+    <script src="/js/iraPagar.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
