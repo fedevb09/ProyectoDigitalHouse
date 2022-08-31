@@ -646,6 +646,9 @@ margin: 5px 5.5px;
         right :0px;
     }
     .responsive-results{
+        border-left: none;
+        border-bottom: none;
+        border-radius: 0px;
         position:absolute;
         top:110px;
         left: 0;

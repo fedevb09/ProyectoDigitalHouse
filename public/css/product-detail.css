@@ -263,7 +263,7 @@ align-items: center;
     display: inline-block;
     padding-right: 6px;
     transition-duration: 0.5s;
-    color: black;
+    color: #FE1F62;
 }
 
 .recomended-product-img:hover{
@@ -283,6 +283,10 @@ align-items: center;
 }
 .productId{
     opacity: 0;
+}
+
+.detail-dark-mode{
+    color: white;
 }
 
 @media (max-width: 760px){
