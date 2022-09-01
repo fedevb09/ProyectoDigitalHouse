@@ -222,6 +222,9 @@ main{
 
 }
 
+.containerCarousel{
+    width: 86%;
+}
 
 
 @media (max-width: 1200px){
